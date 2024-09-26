@@ -41,7 +41,7 @@ const ContactDetails = () => {
 const ConatactUsBanner = () => {
   return (
     <div className="border-2 border-transparent w-full flex justify-center items-center ">
-      <div className="shadow-lg border-transparent bxs:h-[550px] h-[400px] w-[80%] bxs:mx-5 bxs:my-5 mx-3 mt-10 rounded-lg bg-gradient-to-r from-black via-40% to-primary md:to-90%  to-60%   flex justify-between overflow-hidden relative">
+      <div className="shadow-lg border-transparent bxs:h-[550px] h-[400px] w-[80%] bxs:mx-5 bxs:my-5 mx-3 mt-10 rounded-lg bg-gradient-to-r from-newprimary via-40% to-primary md:to-90%  to-60%   flex justify-between overflow-hidden relative">
         <div className="bigmd:flex hidden flex-col items-center justify-center flex-1 mx-5 my-10 text-white">
           <ContactDetails />
         </div>

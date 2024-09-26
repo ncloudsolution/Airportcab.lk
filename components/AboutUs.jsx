@@ -69,12 +69,12 @@ const AboutUs = () => {
                   <p className="lg:mb-8 mb-5  bxs:text-[16px] text-[14px] text-body-color dark:text-dark-6">
                     {textcontent.aboutus_txt2}
                   </p>
-                  <a
+                  {/* <a
                     href="/day-trips"
                     className="inline-flex items-center justify-center py-3 text-base  text-center text-black font-semibold border border-transparent rounded-md px-7 bg-primary hover:bg-opacity-90"
                   >
                     Explore a Day Trip
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
