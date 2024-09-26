@@ -1,0 +1,102 @@
+[
+  {
+    "type": "Flex",
+    "minpassengers": 1,
+    "maxpassengers": 2,
+    "weightFactor": 100,
+    "img": "/Vehicles/alto.png",
+    "luggages": 2,
+    "handbaggages": 2,
+    "category": "A"
+  },
+  {
+    "type": "Mini Car",
+    "minpassengers": 1,
+    "maxpassengers": 2,
+    "weightFactor": 110,
+    "img": "/Vehicles/wagonR.png",
+    "luggages": 2,
+    "handbaggages": 3,
+    "category": "A"
+  },
+  {
+    "type": "Sedan Car",
+    "minpassengers": 1,
+    "maxpassengers": 3,
+    "weightFactor": 150,
+    "img": "/Vehicles/sedan.png",
+    "luggages": 3,
+    "handbaggages": 3,
+    "category": "A"
+  },
+  {
+    "type": "SUV",
+    "minpassengers": 1,
+    "maxpassengers": 3,
+    "weightFactor": 180,
+    "img": "/Vehicles/vezzel.png",
+    "luggages": 3,
+    "handbaggages": 3,
+    "category": "A"
+  },
+  {
+    "type": "Mini Van",
+    "minpassengers": 1,
+    "maxpassengers": 3,
+    "weightFactor": 140,
+    "img": "/Vehicles/miniVanEvery.png",
+    "luggages": 4,
+    "handbaggages": 4,
+    "category": "B"
+  },
+  {
+    "type": "Mini Van",
+    "minpassengers": 1,
+    "maxpassengers": 5,
+    "weightFactor": 160,
+    "img": "/Vehicles/nissane200.png",
+    "luggages": 6,
+    "handbaggages": 6,
+    "category": "B"
+  },
+  {
+    "type": "Van",
+    "minpassengers": 1,
+    "maxpassengers": 6,
+    "weightFactor": 225,
+    "img": "/Vehicles/kdh.png",
+    "luggages": 7,
+    "handbaggages": 7,
+    "category": "B"
+  },
+  {
+    "type": "Mini Bus",
+    "minpassengers": 1,
+    "maxpassengers": 8,
+    "weightFactor": 250,
+    "img": "/Vehicles/highroof.png",
+    "luggages": 10,
+    "handbaggages": 10,
+    "category": "C"
+  },
+  {
+    "type": "Bus",
+    "minpassengers": 10,
+    "maxpassengers": 16,
+    "weightFactor": 325,
+    "img": "/Vehicles/rosaBus.png",
+    "luggages": 20,
+    "handbaggages": 20,
+    "category": "C"
+  },
+  {
+    "type": "Coach Bus",
+    "minpassengers": 16,
+    "maxpassengers": 45,
+    "weightFactor": 650,
+    "img": "/Vehicles/coachBus.png",
+    "luggages": 45,
+    "handbaggages": 50,
+    "category": "C"
+  }
+]

@@ -1,0 +1,39 @@
+"use client";
+import { useRef } from "react";
+
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+import { MdOutlineDateRange } from "react-icons/md";
+
+const CustomTourDatePicker = ({ selectedDate, onChange, placeholder }) => {
+  const datePickerRef = useRef(null);
+
+  const handleOuterDivClick = () => {
+    // Programmatically trigger click event on the DatePicker (to set click the outer div)
+    datePickerRef.current && datePickerRef.current.setOpen(true);
+  };
+
+  return (
+    <div
+      className="px-3 py-1 sm:text-[16px] text-[14px] outline-none   w-full  rounded border-[1px] border-black bg-white flex justify-between"
+      onClick={handleOuterDivClick}
+    >
+      <DatePicker
+        ref={datePickerRef}
+        className="outline-none"
+        selected={selectedDate}
+        onChange={onChange}
+        minDate={new Date()}
+        showTimeSelect
+        dateFormat="Pp"
+        calendarClassName="date-style"
+        placeholderText={placeholder}
+      />
+
+      <MdOutlineDateRange className="text-[20px]" />
+    </div>
+  );
+};
+
+export default CustomTourDatePicker;
