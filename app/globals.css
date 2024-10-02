@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply p-0 m-0 box-border;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl mr-[10%] ml-[10%] py-1  font-serif;
+  }
+
+  p {
+    @apply text-zinc-600;
+  }
+
+  .paymentstyle {
+    @apply bg-[#00000026] hover:bg-[#00000030] rounded p-[5px] fill-[#00000090] hover:fill-black transition-all duration-300;
+  }
+
+  .FooterLink {
+    margin-bottom: 20px; /* Adjust this value as per your requirement */
+  }
+
+  .skeleton {
+    @apply bg-[#ddd] rounded-sm;
+  }
+  .title {
+    @apply w-[50%] h-[20px] mb-[12px] mt-[10px];
+  }
+  .title-max {
+    @apply w-[70%] h-[20px] mb-[12px] mt-[10px];
+  }
+  .mini-title {
+    @apply w-[40%] h-[15px] mb-[12px] mt-[-5px];
+  }
+
+  .description {
+    @apply w-[80%] h-[12px] mb-[8px];
+  }
+
+  .para {
+    @apply w-[100%] h-[12px] mb-[8px];
+  }
+
+  .image {
+    @apply w-[80%] aspect-square  my-[10px] rounded-lg;
+  }
+
+  /*testing*/
+  /* .rasta-stripes {
+    .react-datepicker__week:nth-child(3n + 1) {
+      background-color: #215005;
+    }
+    .react-datepicker__week:nth-child(3n + 2) {
+      background-color: #eea429;
+    }
+    .react-datepicker__week:nth-child(3n + 3) {
+      background-color: #a82a15;
+    }
+  } */
+
+  .date-style {
+    display: flex !important;
+    background-color: white !important;
+  }
+
+  .react-datepicker-wrapper,
+  .react-datepicker__input-container,
+  .react-datepicker__input-container input {
+    display: block;
+    width: 100%;
+  }
+
+  .react-datepicker__input-container input {
+    width: 100%;
+  }
+
+  .PhoneInputInput {
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+
+    /* Anything you want  */
+  }
+  @media (max-width: 379px) {
+    .PhoneInputInput {
+      font-size: 14px;
+    }
+  }
+}

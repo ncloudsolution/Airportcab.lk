@@ -1,0 +1,7 @@
+[
+  { "id": 1, "type": "Vehicle with the driver" },
+  { "id": 2, "type": "Vehicle without a drive" },
+  { "id": 3, "type": "Three-wheeler" },
+  { "id": 4, "type": "Motor Bikes" },
+  { "id": 5, "type": "Bicycles" }
+]

@@ -1,0 +1,920 @@
+[
+  {
+    "travelPoints": "Colombo to Kandy",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["06:30", "09:40"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 8000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 6000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["05:30", "08:25"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 8000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 6000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Colombo to Nanu Oya",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["06:30", "13:53"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["05:30", "12:07"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Colombo to Ella",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["06:30", "16:36"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["05:30", "14:50"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Colombo to Badulla",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["06:30", "17:37"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["05:30", "16:01"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "travelPoints": "Kandy to Nanu Oya",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["09:40", "13:51"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["08:25", "12:07"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Kandy to Ella",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["09:40", "16:36"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["08:25", "14:50"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Kandy to Badulla",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["09:40", "17:37"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["08:25", "16:01"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Nanu Oya to Ella",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["13:53", "16:36"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 9000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 6000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["12:07", "14:50"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 9000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 6000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Nanu Oya to Badulla",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["13:53", "17:37"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["12:07", "16:01"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Ella to Badulla",
+    "trainList": [
+      {
+        "trainName": "1001 Dunhinda Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["06:30", "17:37"],
+        "travelTime": ["16:36", "17:37"],
+        "availableDays": ["Sun", "Tue", "Fri"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 10000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 7000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 5000
+          }
+        ]
+      },
+      {
+        "trainName": "1041 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["05:30", "16:01"],
+        "travelTime": ["14:50", "16:01"],
+        "availableDays": ["Thu", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 10000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 7000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 5000
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "travelPoints": "Badulla to Ella",
+    "trainList": [
+      {
+        "trainName": "1002 Dunhinda Odyssey",
+        "trainPoints": ["Badulla", "Colombo Fort"],
+        "trainTime": ["08:00", "18:51"],
+        "travelTime": ["08:00", "08:57"],
+        "availableDays": ["Mon", "Wed", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 10000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 7000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 5000
+          }
+        ]
+      },
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["09:15", "10:25"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 10000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 7000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Badulla to Nanu Oya",
+    "trainList": [
+      {
+        "trainName": "1002 Dunhinda Odyssey",
+        "trainPoints": ["Badulla", "Colombo Fort"],
+        "trainTime": ["08:00", "18:51"],
+        "travelTime": ["08:00", "12:05"],
+        "availableDays": ["Mon", "Wed", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      },
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["09:15", "12:50"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Badulla to Kandy",
+    "trainList": [
+      {
+        "trainName": "1002 Dunhinda Odyssey",
+        "trainPoints": ["Badulla", "Colombo Fort"],
+        "trainTime": ["08:00", "18:51"],
+        "travelTime": ["08:00", "16:04"],
+        "availableDays": ["Mon", "Wed", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      },
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["09:15", "16:35"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Badulla to Colombo",
+    "trainList": [
+      {
+        "trainName": "1002 Dunhinda Odyssey",
+        "trainPoints": ["Badulla", "Colombo Fort"],
+        "trainTime": ["08:00", "18:51"],
+        "travelTime": ["08:00", "18:51"],
+        "availableDays": ["Mon", "Wed", "Sat"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      },
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["09:15", "19:20"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 16000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Ella to Nanu Oya",
+    "trainList": [
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["10:25", "14:50"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 8000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 6000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Ella to Kandy",
+    "trainList": [
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["10:25", "16:35"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Ella to Colombo",
+    "trainList": [
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["10:25", "19:20"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 15000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 12000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 10000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Nanu Oya to Kandy",
+    "trainList": [
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["14:50", "16:35"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 8000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 6000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Nanu Oya to Colombo",
+    "trainList": [
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["14:50", "19:20"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 14000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 10000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 6000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travelPoints": "Kandy to Colombo",
+    "trainList": [
+      {
+        "trainName": "1042 Ella Odyssey",
+        "trainPoints": ["Colombo Fort", "Badulla"],
+        "trainTime": ["09:15", "19:20"],
+        "travelTime": ["16:35", "19:20"],
+        "availableDays": ["Fri", "Sun"],
+        "types": [
+          {
+            "class": "Air Conditioned First Class Reserved",
+            "seats": 176,
+            "price": 12000
+          },
+          {
+            "class": "Second Class Reserved",
+            "seats": 114,
+            "price": 8000
+          },
+          {
+            "class": "Third Class Reserved",
+            "seats": 39,
+            "price": 6000
+          }
+        ]
+      }
+    ]
+  }
+]
