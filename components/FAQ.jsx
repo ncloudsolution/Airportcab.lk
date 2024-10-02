@@ -217,7 +217,7 @@ const QuizBox = ({ quiz, answer, isExpanded, onToggle }) => {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-indigo-600"
+            className="text-indigo-600 font-medium"
           >
             {word}
           </Link>
@@ -239,7 +239,7 @@ const QuizBox = ({ quiz, answer, isExpanded, onToggle }) => {
           <Link
             key={index}
             href={href}
-            className="text-[#19763b]"
+            className="text-[#19763b] font-medium"
             target="_blank"
           >
             {printedNumber}
