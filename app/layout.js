@@ -22,7 +22,7 @@ export const metadata = {
   description:
     "Book your Sri Lanka adventure with ease! Explore top airport transfers, customized tour packages, and day tours. Need train bookings or want to plan your own trip? Find the best deals and services all in one place. Start your journey today with seamless tour booking in Sri Lanka.",
   keywords:
-    "cab service, taxi service, airport taxi service, cab near me, taxi cab, taxi booking, taxi service near me, book taxi online, cab booking, taxi company, cab service near me, taxi near me, taxi cab near me, taxi company near me, cab company near me, cab company, taxi number, airport transport",
+    "Srilanka airport taxi price list, Airport Taxi Srilanka taxi contact Numbers, Katunayake airport taxi service, BIA taxi price, Best airport transfer Colombo, Cab service Colombo, Taxi Service colombo, Colombo airport taxi service, Airport drop taxi, Airport pickup taxi,cab service, taxi service, airport taxi service, cab near me, taxi cab, taxi booking, taxi service near me, book taxi online, cab booking, taxi company, cab service near me, taxi near me, taxi cab near me, taxi company near me, cab company near me, cab company, taxi number, airport transport,",
   icons: { icon: ["/favicon.ico"] },
 };
 

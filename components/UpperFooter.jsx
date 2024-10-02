@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-import bg from "@/public/Footers/bgimg1.jpeg";
+// import bg from "@/public/Footers/bgimg1.jpeg";
+import bg from "@/public/Footers/flight.jpg";
 import logo from "@/public/Navbar/cablk.jpg";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ const UpperFooter = () => {
           className="size-[100%]  object-cover object-right xs:object-center"
         />
 
-        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute top-0 left-0  w-full flex justify-center bigmd:py-20 py-10 ">
           <div className="text-primary  flex flex-col midxl:w-[70%] w-[90%] bg-transparent items-center ">
             <div className="text-[34px] font-semibold  pb-[50px]">
@@ -39,7 +40,7 @@ const UpperFooter = () => {
 
                 <div className="my-2">
                   {" "}
-                  118/5 st Joseph street, Grandpass, Colombo 14, Sri Lanka,
+                  No : 262/5A Church Rd, Liyanagemulla, Seeduwa, Sri Lanaka
                 </div>
               </div>
 
@@ -74,10 +75,10 @@ const UpperFooter = () => {
                 <div className="mb-2 flex justify-center gap-1">
                   Call -
                   <div>
-                    +94719 885 885 <br /> +94712 100 500
-                    <br /> +94781 820 820
-                    <br />
-                    +94781 720 720
+                    <Link href="tel:+94719885885">+94 71 9885 885</Link> <br />
+                    <Link href="tel:+94712100500">+94 71 2100 500</Link> <br />
+                    <Link href="tel:+94781820820">+94 78 1820 820</Link> <br />
+                    <Link href="tel:+94781720720">+94 78 1720 720</Link> <br />
                   </div>
                 </div>
                 <div className="my-2">email - Info@tourbookingsrilanka.com</div>
@@ -107,7 +108,7 @@ const UpperFooter = () => {
                 </Link>
                 <Link
                   target="_blank"
-                  href="https://web.facebook.com/easycabandtours?mibextid=ZbWKwL&_rdc=1&_rdr"
+                  href="https://facebook.com/airportcab.lk"
                   className="xs:size-[50px] size-[45px]   rounded-full bg-primary flex justify-center items-center"
                 >
                   <FaFacebookF className="text-white text-[25px]" />
@@ -128,7 +129,7 @@ const UpperFooter = () => {
                 </Link>
                 <Link
                   target="_blank"
-                  href="https://youtu.be/QXXXz8MipHA"
+                  href="https://www.youtube.com/@airportcabsrilanka"
                   className="xs:size-[50px] size-[45px]  rounded-full bg-primary flex justify-center items-center"
                 >
                   <FaYoutube className="text-white text-[28px] " />

@@ -490,7 +490,7 @@ export const CustomerEmail = ({ tourDetails }) => {
                             backgroundColor: "#CD201F",
                             margin: "0px 5px 0px 5px",
                           }}
-                          href={`https://youtu.be/QXXXz8MipHA`}
+                          href={`https://www.youtube.com/@airportcabsrilanka`}
                         >
                           Youtube
                         </Button>
@@ -500,7 +500,7 @@ export const CustomerEmail = ({ tourDetails }) => {
                             backgroundColor: "#1877F2",
                             margin: "0px 0px 0px 5px",
                           }}
-                          href={`https://web.facebook.com/easycabandtours?mibextid=ZbWKwL&_rdc=1&_rdr`}
+                          href={`https://facebook.com/airportcab.lk`}
                         >
                           Facebook
                         </Button>
@@ -528,8 +528,8 @@ export const CustomerEmail = ({ tourDetails }) => {
                 color: "rgb(0,0,0, 0.7)",
               }}
             >
-              © 2024 | 118/ 5 st Joseph street, Grandpass, Colombo 14, Sri
-              Lanaka | www.Airportcab.lk
+              © 2024 | No : 262/5A Church Rd, Liyanagemulla, Seeduwa, Sri Lanaka
+              | www.airportcab.lk
             </Text>
           </Container>
         </Container>

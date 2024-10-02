@@ -29,8 +29,8 @@ const ContactDetails = () => {
         <div className="flex items-start gap-x-2 bxs:text-[18px] text-[14px]">
           <IoLocation className="bigmd:text-white text-black bxs:text-[20px] text-[16px] " />
           <div className="text-left bxs:w-[250px] w-[200px]">
-            <div>118/ 5 st Joseph street, Grandpass,</div>
-            <div>Colombo 14, Sri Lanaka.</div>
+            <div>No : 262/5A Church Rd, Liyanagemulla,</div>
+            <div>Seeduwa, Sri Lanaka.</div>
           </div>
         </div>
       </div>
