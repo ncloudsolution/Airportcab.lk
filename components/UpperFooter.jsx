@@ -81,7 +81,7 @@ const UpperFooter = () => {
                     <Link href="tel:+94781720720">+94 78 1720 720</Link> <br />
                   </div>
                 </div>
-                <div className="my-2">email - Info@tourbookingsrilanka.com</div>
+                <div className="my-2">email - Info@airport.lk</div>
                 <div className="my-2">web - www.airportcab.lk</div>
               </div>
 

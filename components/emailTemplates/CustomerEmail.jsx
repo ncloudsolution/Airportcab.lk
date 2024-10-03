@@ -460,7 +460,7 @@ export const CustomerEmail = ({ tourDetails }) => {
                       <Column align="center">
                         <Button
                           style={{ ...button, margin: "0px 5px 0px 0px" }}
-                          href={`mailto:easycabandtours@gmail.com`}
+                          href={`mailto:Info@airport.lk`}
                         >
                           Email
                         </Button>
