@@ -140,11 +140,11 @@ function NavBar() {
                           Airport Transport
                         </Link>
                         <Link
-                          href={"/point-to-point"}
+                          href={"/taxi-service"}
                           className="border-b-2 border-b-white  w-full"
                           onClick={NavFunction}
                         >
-                          Point to Point
+                          Taxi Service
                         </Link>
                         <Link
                           href={"/journey-on-rails"}
@@ -166,14 +166,14 @@ function NavBar() {
                           onClick={NavFunction}
                         >
                           Tour Packages
-                        </Link>
+                        </Link>*/}
                         <Link
                           href={"/custom-tour-package"}
                           className="border-b-2 border-b-white  w-full"
                           onClick={NavFunction}
                         >
                           Custom Tour
-                        </Link> */}
+                        </Link>
                       </div>
                     </div>
                   )}
@@ -201,7 +201,7 @@ function NavBar() {
                   </li>
                   <li className="px-1 md:border-b-0 md:hover:text-secondary md:hover:bg-transparent">
                     <a
-                      href="mailto:Info@airport.lk"
+                      href="mailto:info@airportcab.lk"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={NavFunction}

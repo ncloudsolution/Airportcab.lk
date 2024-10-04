@@ -109,7 +109,7 @@ const FaqContent = () => {
 
   return (
     <div
-      className="flex relative flex-col py-24 z-0
+      className="flex relative flex-col py-14 z-0
      gap-y-8 items-center justify-center w-full  bg-gray-100"
     >
       {/**bg-gradient-radial from-white to-newprimary  bg-gradient-to-b from-newprimary to-indigo-500 **/}

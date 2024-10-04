@@ -436,7 +436,7 @@ export const CustomTourPackageCustomerEmail = ({ customTourDetails }) => {
                       <Column align="center">
                         <Button
                           style={{ ...button, margin: "0px 5px 0px 0px" }}
-                          href={`mailto:easycabandtours@gmail.com`}
+                          href={`mailto:info@airportcab.lk`}
                         >
                           Email
                         </Button>
@@ -466,7 +466,7 @@ export const CustomTourPackageCustomerEmail = ({ customTourDetails }) => {
                             backgroundColor: "#CD201F",
                             margin: "0px 5px 0px 5px",
                           }}
-                          href={`https://youtu.be/QXXXz8MipHA`}
+                          href={`https://www.youtube.com/@airportcabsrilanka`}
                         >
                           Youtube
                         </Button>
@@ -476,7 +476,7 @@ export const CustomTourPackageCustomerEmail = ({ customTourDetails }) => {
                             backgroundColor: "#1877F2",
                             margin: "0px 0px 0px 5px",
                           }}
-                          href={`https://www.facebook.com/tourbookingsrilankan`}
+                          href={`https://web.facebook.com/airportcab.lk`}
                         >
                           Facebook
                         </Button>
@@ -496,8 +496,8 @@ export const CustomTourPackageCustomerEmail = ({ customTourDetails }) => {
                 color: "rgb(0,0,0, 0.7)",
               }}
             >
-              © 2024 | 118/ 5 st Joseph street, Grandpass, Colombo 14, Sri
-              Lanaka | www.tourbookingsrilanka.com
+              © 2024 | No : 262/5A Church Rd, Liyanagemulla, Seeduwa, Sri Lanaka
+              | www.airportcab.lk
             </Text>
           </Container>
         </Container>
