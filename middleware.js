@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function middleware(request) {
   const RestrictedRoutes = [
-    "/custom-tour-package",
+    // "/custom-tour-package",
     "/day-trips",
     "/tour-packages",
     "/destinations",

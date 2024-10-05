@@ -4,6 +4,7 @@
 // import GoogleReviews from "@/components/GoogleReviews";
 import MainTab from "@/components/MainTab";
 import FAQ from "@/components/FAQ";
+import PopularDestination from "@/components/PopularDestination";
 
 // import PlanYourOwnTripHome from "@/components/PlanYourOwnTripHome";
 
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <>
       <MainTab />
-
+      <PopularDestination />
       <FAQ />
 
       {/** <MainSlider />**/}

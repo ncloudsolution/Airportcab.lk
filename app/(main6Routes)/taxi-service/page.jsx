@@ -1,9 +1,9 @@
 import P2PComp from "./P2PComp";
 
 export const metadata = {
-  title: "Point to Point Transfer",
+  title: "Taxi Service",
   description:
-    "Reliable point-to-point transfer services for hassle-free travel. Book seamless rides with professional drivers. Offering airport transfers, hotel pickups, and city-wide transport. Affordable rates, easy booking, and 24/7 availability. Safe, timely, and stress-free travel.",
+    "Reliable taxi service for hassle-free travel. Book seamless rides with professional drivers. Offering airport transfers, hotel pickups, and city-wide transport. Affordable rates, easy booking, and 24/7 availability. Safe, timely, and stress-free travel.",
   keywords:
     "Airport to city transfer, Point-to-point transfer services, Private point-to-point transfers, Door-to-door transportation, Luxury point-to-point transfers, Private car transfers",
   icons: {

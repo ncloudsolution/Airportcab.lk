@@ -13,7 +13,7 @@ const AbsoluteFooter = () => {
           <div className="flex mb-2 bigmd:mb-0">Copyright 2024 ©</div>
           {/*PART2 */}
           <div className="font-semibold mx-[5px] flex xs:flex-row flex-col items-center ">
-            <div> Ceylon Taxi and Tours (PVT) Ltd </div>
+            <div> Airportcab </div>
             <div className="xs:mx-[5px] hidden xs:flex"> - </div>
             <div className="mb-2 xs:mb-0">All Rights Reserved.</div>
           </div>

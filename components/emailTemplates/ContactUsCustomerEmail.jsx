@@ -331,7 +331,7 @@ export const ContactUsCustomerEmail = ({ ContactusDetails }) => {
                       <Column align="center">
                         <Button
                           style={{ ...button, margin: "0px 5px 0px 0px" }}
-                          href={`mailto:Info@airport.lk`}
+                          href={`mailto:info@airportcab.lk`}
                         >
                           Email
                         </Button>

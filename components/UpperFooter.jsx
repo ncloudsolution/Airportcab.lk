@@ -51,8 +51,8 @@ const UpperFooter = () => {
                 >
                   Airport Transport
                 </Link>
-                <Link href="/point-to-point" className="hover:text-white">
-                  Point to Point
+                <Link href="/taxi-service" className="hover:text-white">
+                  Taxi Service
                 </Link>
                 <Link
                   href="/journey-on-rails"
@@ -65,10 +65,10 @@ const UpperFooter = () => {
                 </Link>
                 <Link href="/tour-packages" className="hover:text-white my-2">
                   Tour Package
-                </Link>
+                </Link>*/}
                 <Link href="/custom-tour-package" className="hover:text-white">
                   Custom Tour
-                </Link> */}
+                </Link>
               </div>
 
               <div className="flex flex-col  text-center mb-[40px]">
@@ -81,7 +81,7 @@ const UpperFooter = () => {
                     <Link href="tel:+94781720720">+94 78 1720 720</Link> <br />
                   </div>
                 </div>
-                <div className="my-2">email - Info@airport.lk</div>
+                <div className="my-2">email - info@airportcab.lk</div>
                 <div className="my-2">web - www.airportcab.lk</div>
               </div>
 
@@ -101,7 +101,7 @@ const UpperFooter = () => {
               <div className="flex gap-5 bigmd:mt-[30px] mt-[20px]">
                 <Link
                   target="_blank"
-                  href="mailto:easycabandtours@gmail.com"
+                  href="mailto:info@airportcab.lk"
                   className="xs:size-[50px] size-[45px]  rounded-full bg-primary flex justify-center items-center"
                 >
                   <IoIosMailUnread className="text-white text-[32px]" />

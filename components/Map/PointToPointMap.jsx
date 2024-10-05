@@ -159,7 +159,7 @@ const PointToPointMap = ({ children }) => {
       <div className="flex flex-col items-center w-full">
         <div className=" flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg  rounded-lg  mb-10">
           <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-white">
-            Point To Point
+            Taxi Service
           </div>
           <RiPinDistanceFill className="text-[35px] text-primary" />
           <div className="flex mt-6 mb-8 bigmd:w-[838px] bxs:w-[464px] xxxs:w-[314px] w-[294px] px-8  my-10">
