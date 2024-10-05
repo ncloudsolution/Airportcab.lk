@@ -187,7 +187,7 @@ function NavBar() {
                 <div className=" flex justify-center py-2">
                   <li className="px-1 md:border-b-0 md:hover:text-secondary md:hover:bg-transparent">
                     <a
-                      href="https://web.facebook.com/easycabandtours?mibextid=ZbWKwL&_rdc=1&_rdr"
+                      href="https://facebook.com/airportcab.lk"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={NavFunction}
@@ -201,7 +201,7 @@ function NavBar() {
                   </li>
                   <li className="px-1 md:border-b-0 md:hover:text-secondary md:hover:bg-transparent">
                     <a
-                      href="mailto:easycabandtours@gmail.com"
+                      href="mailto:Info@airport.lk"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={NavFunction}

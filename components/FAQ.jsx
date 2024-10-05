@@ -169,7 +169,89 @@ const FaqContent = () => {
 export default FAQ;
 
 // QuizBox Component
+// const QuizBox = ({ quiz, answer, isExpanded, onToggle }) => {
+//   return (
+//     <div className="flex flex-col w-full shadow-md">
+//       <div
+//         className={`${
+//           isExpanded ? "rounded-t-md" : "rounded-md"
+//         } md:px-5 px-3 py-2 flex justify-between items-center bg-white`}
+//         onClick={onToggle}
+//       >
+//         <div className="font-semibold md:text-[18px] text-[14px]">{quiz}</div>
+//         <IoIosArrowDown
+//           className={`${
+//             isExpanded ? "rotate-180" : "rotate-0"
+//           } duration-500 transition-all w-[20px] ml-2`}
+//         />
+//       </div>
+//       <div
+//         className={`${
+//           isExpanded
+//             ? "h-auto opacity-100 py-2 border-t-2 border-indigo-300"
+//             : "h-0 opacity-0"
+//         } text-left w-full bg-white text-gray-700 font-light transition-all duration-500 rounded-b-md md:px-5 px-3 overflow-hidden md:text-[16px] text-[12px]`}
+//       >
+//         {answer}
+//       </div>
+//     </div>
+//   );
+// };
+
 const QuizBox = ({ quiz, answer, isExpanded, onToggle }) => {
+  // Function to identify and convert phone numbers, WhatsApp numbers, and URLs into clickable links
+  const formatAnswer = (text) => {
+    // Regular expression to detect URLs
+    const urlRegex = /(https?:\/\/[^\s]+|[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+    // Regular expression to detect phone numbers (both WhatsApp and regular numbers)
+    const phoneRegex =
+      /(\+?\d{1,4}[\s-]?\(?\d+\)?[\s-]?\d+[\s-]?\d+[\s-]?\d+)/g;
+
+    return text.split(" ").map((word, index) => {
+      // If it's a URL or domain (like airportcab.lk)
+      if (urlRegex.test(word)) {
+        const url = word.startsWith("http") ? word : `https://${word}`;
+        return (
+          <Link
+            key={index}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 font-medium"
+          >
+            {word}
+          </Link>
+        );
+      }
+
+      // If it's a phone number, determine if it's for WhatsApp or a regular call
+      if (phoneRegex.test(word)) {
+        const isWhatsApp = word.includes("+94712100500"); // Assuming WhatsApp uses this number in the example
+        const number = word.replace(/\D/g, ""); // Strip non-digit characters
+        const href = isWhatsApp ? `https://wa.me/${number}` : `tel:${number}`;
+
+        const printedNumber = `+94 ${number.slice(2, 4)} ${number.slice(
+          4,
+          8
+        )} ${number.slice(8)}`;
+
+        return (
+          <Link
+            key={index}
+            href={href}
+            className="text-[#19763b] font-medium"
+            target="_blank"
+          >
+            {printedNumber}
+          </Link>
+        );
+      }
+
+      // Otherwise, return the word as is
+      return "  " + word + "  ";
+    });
+  };
+
   return (
     <div className="flex flex-col w-full shadow-md">
       <div
@@ -192,7 +274,7 @@ const QuizBox = ({ quiz, answer, isExpanded, onToggle }) => {
             : "h-0 opacity-0"
         } text-left w-full bg-white text-gray-700 font-light transition-all duration-500 rounded-b-md md:px-5 px-3 overflow-hidden md:text-[16px] text-[12px]`}
       >
-        {answer}
+        {formatAnswer(answer)}
       </div>
     </div>
   );
