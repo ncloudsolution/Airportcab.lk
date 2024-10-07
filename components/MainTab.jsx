@@ -134,7 +134,7 @@ const MainTab = () => {
                 } p-1 px-2   rounded cursor-pointer transition-all duration-500`}
                 onClick={handlePointToPoint}
               >
-                Point to Point
+                Taxi Service
               </div>
 
               <div
@@ -189,7 +189,7 @@ const MainTab = () => {
                     isPointToPointClicked ? "bg-primary" : "bg-white"
                   }  text-[16px] flex-1 text-black  rounded bxs:py-2 py-[6px] px-4 font-semibold`}
                 >
-                  Point To Point
+                  Taxi Service
                 </div>
               </div>
 

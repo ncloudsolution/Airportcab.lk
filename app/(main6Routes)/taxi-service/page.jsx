@@ -1,11 +1,12 @@
 import P2PComp from "./P2PComp";
 
 export const metadata = {
-  title: "Taxi Service",
+  title:
+    "Colombo Taxi Service Price List: Best & Cheap Rates, Cost per Km, Contact Us for Affordable Rides!",
   description:
-    "Reliable taxi service for hassle-free travel. Book seamless rides with professional drivers. Offering airport transfers, hotel pickups, and city-wide transport. Affordable rates, easy booking, and 24/7 availability. Safe, timely, and stress-free travel.",
+    "Discover the best taxi service in Sri Lanka with AirportCab.lk! Enjoy affordable airport taxi prices and convenient taxi services in Colombo. Need a taxi service near you? We offer the cheapest rates and reliable transportation for your journeys. Contact us for quick bookings and exceptional service!",
   keywords:
-    "Airport to city transfer, Point-to-point transfer services, Private point-to-point transfers, Door-to-door transportation, Luxury point-to-point transfers, Private car transfers",
+    "cheap taxi service, airport taxi, best taxi prices, taxi price per km, Colombo taxi cost, contact taxi number, affordable taxi in Colombo",
   icons: {
     icon: ["/pointtopoint.ico"],
   },
