@@ -4,11 +4,11 @@ import man3 from "@/public/Others/man3.jpg";
 
 export const metadata = {
   title:
-    "Plan Your Sri Lanka Trip: Customize Tours, Transfers & More | Make My Tour | Best Travel Packages & Airport Transfers",
+    "Create Your Own Sri Lanka Itinerary: Discover Top Tourist Attractions, Best Tour Packages, Ideal Visiting Times & Prices for an Unforgettable Trip!",
   description:
-    "Plan your own trip to Sri Lanka with our expert guide. Discover top attractions, beautiful beaches, and cultural landmarks. Enjoy personalized airport transfers and day tours. Your ideal Sri Lankan adventure starts here!",
+    "Create your perfect Sri Lanka itinerary! Discover top tourism places, customize your tour package, and find the best times to visit. Explore diverse attractions, from stunning beaches to cultural sites, all while considering affordable prices. Start planning your dream trip to Sri Lanka today!",
   keywords:
-    "Plan your own trip Sri Lanka, Sri Lanka travel guide, DIY Sri Lanka itinerary, Sri Lanka vacation planning, Sri Lanka travel tips, Sri Lanka attractions, Sri Lanka trip planning",
+    "make own trip, Sri Lanka itinerary, tourism places, tour package, best time to visit Sri Lanka, travel cost, Sri Lanka tours",
   icons: {
     icon: ["/customtour.ico"],
   },

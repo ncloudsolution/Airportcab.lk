@@ -130,7 +130,7 @@ function NavBar() {
                     )}
                   </div>
                   {isServicesActive && (
-                    <div className="absolute md:top-[80px] top-[138px]  bg-newprimary md:border-t-2  md:border-t-black py-2 px-3 rounded-b-md">
+                    <div className="absolute md:top-[80px] top-[138px]  bg-newprimary md:border-t-2 text-primary md:border-t-black py-2 px-3 rounded-b-md">
                       <div className="flex flex-col gap-1 items-start font-normal text-left">
                         <Link
                           href={"/airport-pickup-and-drop"}

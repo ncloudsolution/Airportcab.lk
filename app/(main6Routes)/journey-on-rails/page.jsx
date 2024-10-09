@@ -1,11 +1,12 @@
 import RailsComp from "./RailsComp";
 
 export const metadata = {
-  title: "Journey On Rails",
+  title:
+    "Train Booking in Sri Lanka | Railway Timetable, Seat Booking & Ticket Prices | Online Reservations & Contact Info",
   description:
-    "Book your unforgettable train journey with Dunhida Ella Odyssey in Sri Lanka. Enjoy scenic rides through lush landscapes and vibrant cultural sites. Discover top-rated train booking options for a memorable adventure. Secure your seat now for an extraordinary travel experience!",
+    "Book Sri Lanka train tickets online easily with our platform. Check the latest Sri Lanka railway time table, seat availability, and ticket prices. Get real-time updates, seat booking options, and direct contact support. Fast and convenient railway booking service for all your travel needs across Sri Lanka",
   keywords:
-    "Train reservation Sri Lanka, Online train ticket booking, Cheap Train Tickets, Railway Booking System, Sri Lanka Railway Booking, Discount Train Fares",
+    "Train booking, Sri Lanka railway timetable, seat booking, ticket prices, online reservations, railway contact, Sri Lanka trains, book train seats",
   icons: {
     icon: ["/train.ico"],
   },

@@ -14,15 +14,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    // absolute:
-    //   "Tour Booking Sri Lanka | Airport Transfers, Tour Packages, Day Tours, Train Tickets, Point-to-Point & Plan Your Trip | Best Travel Deals",
+    absolute:
+      "Airport Taxi | Best Price & Contact for BIA Transfers - Sri Lanka",
     default: "Airportcab.lk",
     template: "%s | Airportcab.lk",
   },
   description:
-    "Book your Sri Lanka adventure with ease! Explore top airport transfers, customized tour packages, and day tours. Need train bookings or want to plan your own trip? Find the best deals and services all in one place. Start your journey today with seamless tour booking in Sri Lanka.",
+    "Affordable Sri Lanka airport taxi services from Katunayake to Colombo. Check BIA taxi prices, book your airport transfer with ease. Call our reliable Katunayake airport taxi service for the best rates. Trusted Colombo airport taxi contact number for fast, convenient airport transfers",
   keywords:
-    "Srilanka airport taxi price list, Airport Taxi Srilanka taxi contact Numbers, Katunayake airport taxi service, BIA taxi price, Best airport transfer Colombo, Cab service Colombo, Taxi Service colombo, Colombo airport taxi service, Airport drop taxi, Airport pickup taxi,cab service, taxi service, airport taxi service, cab near me, taxi cab, taxi booking, taxi service near me, book taxi online, cab booking, taxi company, cab service near me, taxi near me, taxi cab near me, taxi company near me, cab company near me, cab company, taxi number, airport transport,",
+    "Srilanka airport taxi price list Colombo, Best airport taxi Srilanka, srilanka airport taxi price per km, cheap airport taxi,  bandaranaike international airport, airport taxi service contact number, colombo airport taxi service, katunayake airport ",
   icons: { icon: ["/favicon.ico"] },
 };
 

@@ -37,7 +37,7 @@ export const CustomTourPackageCustomerEmail = ({ customTourDetails }) => {
                   <Img
                     height={60}
                     // src={"https://i.ibb.co/84NTTCw/bgremovedlogo.png"}
-                    src={"https://i.ibb.co/WfXK6bZ/tblogo.png"}
+                    src={"https://i.ibb.co/80wTQm2/cablk.jpg"}
                   />
                 </Column>
                 <Column align="right">
