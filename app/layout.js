@@ -9,6 +9,7 @@ import UpperFooter from "@/components/UpperFooter";
 
 import Script from "next/script";
 import FoloatingActionBtn from "@/components/standalone/FoloatingActionBtn";
+import CallBtn from "@/components/standalone/CallBtn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
           <div className="  relative  min-h-[100vh]   w-full">
             <NavBar />
 
+            <CallBtn />
             <FoloatingActionBtn />
             <main className="min-h-[23vh] xs:mt-[80px] mt-[60px] px-0">
               {children}
