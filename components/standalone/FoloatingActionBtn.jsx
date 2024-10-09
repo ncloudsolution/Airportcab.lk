@@ -13,13 +13,24 @@ const FoloatingActionBtn = () => {
       <div className="flex items-center">
         <div className="flex flex-col gap-y-1">
           <Link
+            href="tel:+94719885885"
+            target="_blank"
+            className={` ${
+              isClicked
+                ? "scale-100 -translate-x-[20px] duration-300 transition-all"
+                : "translate-x-20 scale-0 translate-y-10"
+            }  duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#109c44] rounded-md text-white text-[12px] flex justify-center items-center`}
+          >
+            Call Us
+          </Link>
+          <Link
             href="mailto:info@airportcab.lk"
             target="_blank"
             className={` ${
               isClicked
                 ? "scale-100 -translate-x-[20px] duration-300 transition-all"
-                : "translate-x-20 scale-0 translate-y-5"
-            }  duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#FF0000] rounded-md text-white text-[12px] flex `}
+                : "translate-x-20 scale-0 translate-y-0"
+            }  duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#FF0000] rounded-md text-white text-[12px] flex justify-center items-cente`}
           >
             Email Us
           </Link>
@@ -29,8 +40,8 @@ const FoloatingActionBtn = () => {
             className={` ${
               isClicked
                 ? "scale-100 -translate-x-[20px] duration-300 transition-all"
-                : "translate-x-20 scale-0"
-            }  duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#25D366] rounded-md text-white text-[12px] flex `}
+                : "translate-x-20 scale-0 translate-y-0"
+            }  duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#25D366] rounded-md text-white text-[12px] flex justify-center items-cente`}
           >
             WhatsApp Us
           </Link>
@@ -40,8 +51,8 @@ const FoloatingActionBtn = () => {
             className={` ${
               isClicked
                 ? "scale-100 -translate-x-[20px] duration-300 transition-all"
-                : "translate-x-20 scale-0 -translate-y-5"
-            } duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#24A1DE] rounded-md text-white text-[12px] flex `}
+                : "translate-x-20 scale-0 -translate-y-10"
+            } duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#24A1DE] rounded-md text-white text-[12px] flex justify-center items-cente`}
           >
             Telegram Us
           </Link>
