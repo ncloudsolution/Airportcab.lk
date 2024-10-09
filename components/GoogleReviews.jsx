@@ -122,8 +122,11 @@ const GoogleReviews = () => {
   console.log(reviews);
 
   return (
-    <div className="w-full flex flex-col text-center items-center px-5 ">
-      <Title title={"Most Recent Reviews"} />
+    <div className="w-full flex flex-col text-center items-center px-5 bg-slate-100 ">
+      {/* <Title title={"Most Recent Reviews"} /> */}
+      <div className="2xl:text-[50px] bigmd:text-[40px] text-[32px] font-semibold mb-5">
+        Most Recent Reviews
+      </div>
       <div className="flex items-center justify-center w-full">
         <div onClick={leftHandler} className="cursor-pointer">
           <SliderBtn side={"left"} />
@@ -131,10 +134,10 @@ const GoogleReviews = () => {
 
         <div className="w-[90%] flex p-5 bg-transparent">
           <div
-            className="flex w-full overflow-hidden rounded-xl bg-white py-2"
+            className="flex w-full overflow-hidden rounded-xl bg-transparent py-2"
             ref={elementRef}
           >
-            <div className="flex gap-5 bg-white">
+            <div className="flex gap-5 bg-transparent">
               {reviews.map((review, index) => (
                 <div
                   style={{
@@ -178,12 +181,12 @@ const GoogleReviews = () => {
           <SliderBtn side={"right"} />
         </div>
       </div>
-      <Link
+      {/* <Link
         href="https://www.google.lk/search?sca_esv=eb29a46433157e1a&sca_upv=1&sxsrf=ADLYWIImbbuiMtrycICs22pyGG-8N-VBgg%3A1725438539992&q=booking+trip+srilanka+padukka+reviews&uds=ADvngMhgJg-4M5HhU_b4PR5CeYmmSNv134nXCi99aca0NrE5j12OTU_808CMAa57CwAu_SBLp3jQFlxGTr3ycsGgrgUdKgyHkT4kRFN17ZiSekPKt_5yfvj3iniSJ72IPLqizeQXc_1oH_8cyEeeMiuXdG7PgLHlZjBQfrQM4yXCkJi_LN7Tp0qX8s8eUPSZgtKdhxDpF-IQ9M9br7U8Bsg4LWOcuRUQAOMX-3iCbiW4I-N2g10dkJSzC6dvlQ1jJMRB8s6xPVtOqtykTb9qrIgIDlRKHIgtGRvFCKvrXaceDEyBaZ025UWKmX6cyekmqOC2WRHXZsIi8qUGYLdpzVU89Kyy7SUr2EgasaOj3kvD_8d4gwf-dmKnWo_VCtW_STcg0DWdJY4C31aD25gS5TZtg-nV_QjALbMShxJcKvhHMHbEonxA0QrDY04T6vK-lRg-520N7gvNxhtFhMXubQK0zpxAwoc3sjLhU66XLCW5ZFCc0hxeOMUAJLjxMRbCn7b8AyA4ld0OPHEerbEp1YFPiTIDhCX4WDlxiOp_GAgOJAJSvISuBGo&si=ACC90nwjPmqJHrCEt6ewASzksVFQDX8zco_7MgBaIawvaF4-7rsiQGq6YmgHwsNdkb5ouasnZs4ZnYPkZe_MDstnohK6orqkto6V756xAwcyRNY_8Cr4Vw-d5f6-rV7u198DlpQXDfE2TvLsAAVOoJGQCWYw4G5CmA%3D%3D&sa=X&ved=2ahUKEwip84e676iIAxXE-DgGHcr5B4YQk8gLegQIIxAB&ictx=1&stq=1&ebo=3"
         className="mb-10 px-5 py-2 rounded-md bg-primary text-black"
       >
         More Reviews
-      </Link>
+      </Link> */}
     </div>
   );
 };

@@ -25,11 +25,11 @@ const PopularDestination = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center w-full bg-gradient-to-b from-newprimary to bg-slate-100 gap-10 py-10 xxs:px-5 px-3">
+      <div className="flex flex-col justify-center items-center  bg-gradient-to-b from-newprimary to bg-slate-100 gap-10 py-10 xxs:px-5 px-3">
         <div className="2xl:text-[50px] bigmd:text-[40px] text-[30px] text-center font-semibold text-white">
           Popular Pickups
         </div>
-        <div className="w-full grid 2xl:grid-cols-9 lg:grid-cols-6 bigmd:grid-cols-4 xs:grid-cols-3 grid-cols-2 bigmd:gap-5 gap-3">
+        <div className="w-full bigmd:w-fit grid 2xl:grid-cols-9 lg:grid-cols-6 bigmd:grid-cols-4 xs:grid-cols-3 grid-cols-2 bigmd:gap-5 gap-3">
           {popular.map((town, index) => (
             <div
               key={index}
