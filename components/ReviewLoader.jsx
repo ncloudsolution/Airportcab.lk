@@ -13,8 +13,8 @@ const ReviewLoader = () => {
         </div>
 
         <div className="w-[90%] flex p-5 bg-transparent">
-          <div className="flex w-full overflow-hidden rounded-xl bg-white py-2">
-            <div className="flex w-full gap-5 bg-white xxs:h-[270px] h-full">
+          <div className="flex w-full overflow-hidden rounded-xl bg-slate-100 py-2">
+            <div className="flex w-full gap-5 bg-transparent xxs:h-[270px] h-full">
               <div className="w-full border-[1px] border-gray-400 rounded-xl shadow-md">
                 <ReviewSkeleton />
               </div>

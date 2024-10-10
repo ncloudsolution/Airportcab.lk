@@ -147,7 +147,7 @@ const GoogleReviews = () => {
                     width: `${size}px`,
                   }}
                   key={index}
-                  className="flex bg-white flex-col border-[1px] border-gray-400 text-left p-[20px] xxs:h-[270px] h-full rounded-xl shadow-md translate-x-0 transition-all duration-1000"
+                  className="flex bg-white flex-col border-[1px] border-gray-400 text-left px-[20px] py-[15px] h-[270px] rounded-xl shadow-md translate-x-0 transition-all duration-1000"
                 >
                   <div className="flex items-start">
                     <div className="rounded-full max-w-[50px]">
