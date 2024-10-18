@@ -149,8 +149,8 @@ const ContactUsOwnerEmail = ({ ContactusDetails }) => {
               width: 680,
             }}
           >
-            © 2024 | 118/ 5 St Joseph Street, Grandpass, Colombo 14, Sri Lanka |
-            www.tourbookingsrilanka.com
+            © 2024 | No : 262/5A Church Rd, Liyanagemulla, Seeduwa, Sri Lanaka |
+            www.airportcab.lk
           </Text>
         </Container>
       </Body>
