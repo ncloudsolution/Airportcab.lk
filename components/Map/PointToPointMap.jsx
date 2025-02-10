@@ -22,6 +22,7 @@ import { FaUser } from "react-icons/fa6";
 import { FaBriefcase } from "react-icons/fa";
 import { FaRegSnowflake } from "react-icons/fa";
 import { BsHandbagFill } from "react-icons/bs";
+import useFineCurrency from "@/hooks/useFineCurrency";
 
 const center = { lat: 6.9271, lng: 79.8612 };
 
@@ -56,6 +57,9 @@ const PointToPointMap = ({ children }) => {
   const passengerCountRef = useRef();
 
   const mapRef = useRef();
+
+  const { lkrRate, usdRate, euroRate, usdSymbol, euroSymbol, lkrSymbol } =
+    useFineCurrency();
 
   //scroll to after the submission
 
@@ -335,28 +339,35 @@ const PointToPointMap = ({ children }) => {
                             <div>Air Conditioning</div>
                           </div>
                         </div>
-
-                        <div className="bg-black text-white py-2 rounded w-full text-center flex flex-col items-center">
-                          <div className="flex text-[18px]">
-                            <div className="pr-1">
-                              {tourDetails.converedCurrencySymbol}
-                            </div>
+                        <div className="text-white overflow-hidden rounded w-full text-center flex flex-col items-center">
+                          <div className="flex py-1 text-[14px] bg-black w-full justify-center text-white">
+                            <div className="pr-1">{lkrSymbol}</div>
                             <div>
                               {returnTour
-                                ? (
-                                    tourDetails.conversionRate *
-                                    vehicle.price *
-                                    2
-                                  ).toFixed(2)
-                                : (
-                                    tourDetails.conversionRate * vehicle.price
-                                  ).toFixed(2)}
+                                ? (lkrRate * vehicle.price * 2).toFixed(2)
+                                : (lkrRate * vehicle.price).toFixed(2)}
                             </div>
                           </div>
-                          {/* <div className="bigmd:text-[12px] text-[10px] text-yellow-500 w-full  px-2 text-center">
-                          Highway Charges and other Charges are Not Included
-                        </div> */}
+
+                          <div className="flex py-1 text-[14px] bg-slate-300 w-full justify-center text-black">
+                            <div className="pr-1">{usdSymbol}</div>
+                            <div>
+                              {returnTour
+                                ? (usdRate * vehicle.price * 2).toFixed(2)
+                                : (usdRate * vehicle.price).toFixed(2)}
+                            </div>
+                          </div>
+
+                          <div className="flex py-1 text-[14px] bg-slate-200 w-full justify-center text-black">
+                            <div className="pr-1">{euroSymbol}</div>
+                            <div>
+                              {returnTour
+                                ? (euroRate * vehicle.price * 2).toFixed(2)
+                                : (euroRate * vehicle.price).toFixed(2)}
+                            </div>
+                          </div>
                         </div>
+
                         <button
                           className="bg-yellow-500 w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
                           onClick={() => {
