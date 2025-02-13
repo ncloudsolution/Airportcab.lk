@@ -112,7 +112,7 @@ const TrainMap = ({ children }) => {
                   placeholder="No.Passengers"
                   type="number"
                   min="1"
-                  className="p-2 text-[12px] xs:text-[14px] bigmd:mt-0 mt-[40px]  outline-none  h-[39px]  bigmd:w-[150px] w-full shadow-md rounded border-[1px] border-black "
+                  className="p-2 text-[12px] xs:text-[14px] bigmd:mt-0 mt-[40px]  outline-none  h-[39px]  bigmd:w-[150px] w-full shadow-md rounded border-[1px] border-primary "
                 />
               </div>
 
@@ -135,53 +135,17 @@ const TrainMap = ({ children }) => {
           </div>
 
           {submitError && (
-            <div className="text-errorpink bg-white px-4 py-2 rounded mb-4">
+            <div className="text-errorpink bg-gray-200 px-4 py-2 rounded mb-4">
               {submitError}
             </div>
           )}
         </div>
 
         {isSubmit && !submitError && (
-          <div className="w-[100vw] bg-white">
+          <div className="w-[100vw] bg-gray-200 border-b-2 border-primary ">
             <div className="w-full flex justify-center">
-              <div className="border-2 border-transparent midxl:w-[1400px] mobile:w-[1000px] w-[800px] flex gap-x-10 xs:mt-8 mb-0  bigmd:flex-row flex-col bigmd:items-start items-center gap-2 mt-6">
-                {/* {filterdTrains.map((train, index) => (
-                <div key={index}>
-                  <div className="flex flex-col">
-                    <div className="bg-red-400">
-                      {train.trainList.trainName}
-                    </div>
-                    <div>
-                      {train.trainList.trainPoints[0]}
-                      to {train.trainList.trainPoints[1]}
-                    </div>
-                    <div>
-                      {train.trainList.travelTime[0]}to{" "}
-                      {train.trainList.travelTime[1]}
-                    </div> 
-                     <div>
-                      {train.trainList.availableDays.map((day, index) => (
-                        <div key={index}>{day}</div>
-                      ))}
-                    </div>
-                    <div>
-                      {train.trainList.types.map((type, index) => (
-                        <div key={index}>
-                          <div>{type.class}</div>
-                          <div>{type.price}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))} */}
+              <div className=" midxl:w-[1400px] mobile:w-[1000px] w-[800px] flex gap-x-10 xs:mt-8 mb-0  bigmd:flex-row flex-col bigmd:items-start items-center gap-2 mt-6">
                 <div className="flex flex-col w-full items-center ">
-                  {/* {tourDetails.trainTourPoints && isSubmit && !submitError &&(
-                  <div className="font-light text-[30px] text-center">
-                    {tourDetails.trainTourPoints}
-                  </div>
-                )} */}
-
                   {filterdTrains.map((train, index) => (
                     <div
                       key={index}
@@ -283,7 +247,8 @@ const TrainMap = ({ children }) => {
                                     className={` ${
                                       type.class ===
                                       "Air Conditioned First Class Reserved"
-                                        ? "bg-gradient-to-b from-gold via-gold-light to-gold-dark text-white font-medium"
+                                        ? // ? "bg-gradient-to-b from-gold via-gold-light to-gold-dark text-white font-medium"
+                                          "bg-primary text-white font-medium"
                                         : type.class === "Observation Saloon"
                                         ? "bg-gradient-to-r from-black from-2% via-gold to-black to-98% text-white"
                                         : type.class === "Second Class Reserved"
@@ -345,7 +310,7 @@ const TrainMap = ({ children }) => {
                               className="bg-transparent relative text-black w-full flex flex-col bigmd:flex-row mb-6 p-4 rounded-lg border-[2px] border-black shadow-md justify-between "
                             >
                               {isDateActive === index && (
-                                <div className=" bg-yellow-400 absolute z-40 w-full flex flex-col justify-center items-center -translate-x-4 -translate-y-4 h-full rounded-md ">
+                                <div className=" bg-primary text-white absolute z-40 w-full flex flex-col justify-center items-center -translate-x-4 -translate-y-4 h-full rounded-md ">
                                   <div className="flex flex-col items-center">
                                     <div className="text-[20px] font-semibold mb-3">
                                       Select Pickup Date
@@ -433,7 +398,7 @@ const TrainMap = ({ children }) => {
                         </div> */}
                                 </div>
                                 <button
-                                  className="bg-yellow-500 w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
+                                  className="bg-primary text-white w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
                                   onClick={() => {
                                     //
 

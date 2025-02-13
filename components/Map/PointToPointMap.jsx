@@ -245,7 +245,7 @@ const PointToPointMap = ({ children }) => {
           </div>
 
           {submitError && (
-            <div className="text-errorpink bg-white px-4 py-2 rounded mb-4">
+            <div className="text-errorpink bg-gray-200 px-4 py-2 rounded mb-4">
               {submitError}
             </div>
           )}
@@ -264,8 +264,8 @@ const PointToPointMap = ({ children }) => {
 
         <div>
           {!submitError && distance && duration && (
-            <div className="w-[100vw] bg-white flex justify-center">
-              <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-yellow-400 text-black rounded mt-8 mb-6 w-fit">
+            <div className="w-[100vw] bg-gray-200 flex justify-center">
+              <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-primary text-white rounded mt-8 mb-6 w-fit">
                 <div>Distance : {distance}</div>
                 <div className="font-bold xs:flex hidden">||</div>
                 <div>Duration : {duration}</div>
@@ -277,7 +277,7 @@ const PointToPointMap = ({ children }) => {
         <div>
           {isSubmit && !submitError && (
             <div
-              className="w-[100vw] bg-white flex justify-center border-b-[1px] border-b-black"
+              className="w-[100vw] bg-gradient-to-b from-gray-200 via-white to-gray-200 flex justify-center border-b-[1px] border-b-primary"
               ref={mapRef}
             >
               <div className="midxl:w-[1400px] mobile:w-[1000px]  w-[800px] flex gap-x-10 xs:mt-8 mt-4 mb-16 mobile:flex-row flex-col bigmd:items-start items-center border-2 border-transparent gap-5 p-4">
@@ -369,7 +369,7 @@ const PointToPointMap = ({ children }) => {
                         </div>
 
                         <button
-                          className="bg-yellow-500 w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
+                          className="bg-primary text-white w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
                           onClick={() => {
                             //
                             setTourDetails((prevTourDetails) => ({

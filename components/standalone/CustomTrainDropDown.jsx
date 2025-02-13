@@ -70,7 +70,7 @@ const CustomTrainDropDown = () => {
             className={`py-2 px-3 text-[12px] xs:text-[14px] hover:bg-black hover:text-white flex items-center m-1 rounded
             ${
               station?.travelPoints?.toLowerCase() ===
-                selected?.toLowerCase() && "bg-primary text-black"
+                selected?.toLowerCase() && "bg-primary text-white"
             }
             ${
               station?.travelPoints?.toLowerCase().startsWith(inputValue)
