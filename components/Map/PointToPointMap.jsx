@@ -161,8 +161,8 @@ const PointToPointMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full">
-        <div className=" flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg  rounded-lg  mb-10">
-          <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-white">
+        <div className=" flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg  mb-10">
+          <div className="text-black bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium">
             Taxi Service
           </div>
           <RiPinDistanceFill className="text-[35px] text-primary" />
@@ -228,13 +228,13 @@ const PointToPointMap = ({ children }) => {
                 <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-2  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
                   <button
                     type="submit"
-                    className="bg-primary text-black p-2 rounded bigmd:w-fit flex-1 bigmd:block "
+                    className="bg-primary text-white p-2 rounded bigmd:w-fit flex-1 bigmd:block "
                     onClick={calculateRoute}
                   >
                     Calculate Route
                   </button>
                   <button
-                    className="bg-black text-primary border-[1px] border-primary bigmd:px-1 px-2 py-2 rounded bigmd:w-fit :flex-1 bigmd:block"
+                    className=" text-primary border-[1px] border-primary bigmd:px-1 px-2 py-2 rounded bigmd:w-fit :flex-1 bigmd:block"
                     onClick={clearRoute}
                   >
                     Clear Route

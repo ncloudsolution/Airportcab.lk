@@ -10,7 +10,7 @@ import UpperFooter from "@/components/UpperFooter";
 import Script from "next/script";
 import FoloatingActionBtn from "@/components/standalone/FoloatingActionBtn";
 import CallBtn from "@/components/standalone/CallBtn";
-import NewNavBar from "@/components/NewNavBar";
+import NewNavBar from "@/components/v2/NewNavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 

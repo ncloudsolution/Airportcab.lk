@@ -124,7 +124,7 @@ const GoogleReviews = () => {
   return (
     <div className="w-full flex flex-col text-center items-center px-5 bg-slate-100 ">
       {/* <Title title={"Most Recent Reviews"} /> */}
-      <div className="2xl:text-[50px] bigmd:text-[40px] text-[32px] font-semibold mb-5">
+      <div className="2xl:text-[50px] bigmd:text-[40px] text-[30px] font-semibold mb-5">
         Most Recent Reviews
       </div>
       <div className="flex items-center justify-center w-full">
@@ -147,7 +147,7 @@ const GoogleReviews = () => {
                     width: `${size}px`,
                   }}
                   key={index}
-                  className="flex bg-white flex-col border-[1px] border-gray-400 text-left px-[20px] py-[15px] h-[270px] rounded-xl shadow-md translate-x-0 transition-all duration-1000"
+                  className="flex bg-white flex-col border-[1px] border-primary text-left px-[20px] py-[15px] h-[270px] rounded-xl shadow-md translate-x-0 transition-all duration-1000"
                 >
                   <div className="flex items-start">
                     <div className="rounded-full max-w-[50px]">
@@ -168,7 +168,7 @@ const GoogleReviews = () => {
                   <div>
                     <Stars count={review.rating} />
                   </div>
-                  <div className="flex break-keep overflow-y-auto scrollbar-thin scrollbar-thumb-customGray-900 scrollbar-track-customGray-400 pr-[10px]">
+                  <div className="text-[14px] flex break-keep overflow-y-auto scrollbar-thin scrollbar-thumb-customGray-900 scrollbar-track-customGray-400 pr-[10px]">
                     {review.text}
                   </div>
                 </div>

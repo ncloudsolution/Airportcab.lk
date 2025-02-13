@@ -94,8 +94,8 @@ const TrainMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full border-transparent border-2">
-        <div className="flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg  rounded-lg  mb-10">
-          <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-white">
+        <div className="flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg  mb-10">
+          <div className="text-black bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium ">
             Journey On Rails
           </div>
           <FaTrain className="text-[30px] text-primary mb-2" />
@@ -124,7 +124,7 @@ const TrainMap = ({ children }) => {
                 <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-2  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
                   <button
                     type="submit"
-                    className="bg-primary text-black p-2 rounded bigmd:w-fit flex-1 bigmd:block "
+                    className="bg-primary text-white p-2 rounded bigmd:w-fit flex-1 bigmd:block "
                     onClick={calculateRoute}
                   >
                     Search Train

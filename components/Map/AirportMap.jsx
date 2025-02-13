@@ -215,8 +215,8 @@ const AirportMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full">
-        <div className="flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg rounded-lg mb-10">
-          <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-white">
+        <div className="flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg mb-10">
+          <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-black">
             Airport Pickup / Drop
           </div>
           <MdLocalAirport className="text-[35px] text-primary" />
@@ -227,8 +227,8 @@ const AirportMap = ({ children }) => {
                   onClick={handlePickup}
                   className={`${
                     isPickup
-                      ? "bg-primary text-black"
-                      : "border-[1px] border-white text-white"
+                      ? "bg-primary text-white"
+                      : "border-[1px] border-white text-black"
                   } w-1/2  py-2 rounded transition-all duration-500 flex items-center justify-center bxs:gap-x-5 gap-x-2`}
                 >
                   <MdFlightLand className="bxs:text-[35px] text-[30px]" />
@@ -238,8 +238,8 @@ const AirportMap = ({ children }) => {
                   onClick={handleDrop}
                   className={`${
                     isDrop
-                      ? "bg-primary text-black"
-                      : "border-[1px] border-white text-white"
+                      ? "bg-primary text-white"
+                      : "border-[1px] border-white text-black"
                   } w-1/2  py-2 rounded transition-all duration-500 flex items-center justify-center bxs:gap-x-5 gap-x-2`}
                 >
                   <MdFlightTakeoff className="bxs:text-[35px] text-[30px]" />
@@ -312,13 +312,13 @@ const AirportMap = ({ children }) => {
                 <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-[6px]  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
                   <button
                     type="submit"
-                    className="bg-primary text-black p-2 rounded bigmd:w-fit flex-1 bigmd:block "
+                    className="bg-primary text-white p-2 rounded bigmd:w-fit flex-1 bigmd:block "
                     onClick={calculateRoute}
                   >
                     Calculate Route
                   </button>
                   <button
-                    className="bg-black text-primary border-[1px] border-primary bigmd:px-1 px-2 py-2 rounded bigmd:w-fit :flex-1 bigmd:block"
+                    className=" text-primary border-[1px] border-primary bigmd:px-1 px-2 py-2 rounded bigmd:w-fit :flex-1 bigmd:block"
                     onClick={clearRoute}
                   >
                     Clear Route
@@ -356,7 +356,7 @@ const AirportMap = ({ children }) => {
       <div>
         {!submitError && distance && duration && (
           <div className="w-[100vw] bg-white flex justify-center">
-            <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-yellow-400 text-black rounded mt-8 mb-6 w-fit">
+            <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-primary text-white rounded mt-8 mb-6 w-fit">
               <div>Distance : {distance}</div>
               <div className="font-bold xs:flex hidden">||</div>
               <div>Duration : {duration}</div>
@@ -483,7 +483,7 @@ const AirportMap = ({ children }) => {
                         </div> */}
 
                       <button
-                        className="bg-yellow-500 w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
+                        className="bg-primary text-white w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
                         onClick={() => {
                           //
                           setTourDetails((prevTourDetails) => ({

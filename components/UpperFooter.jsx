@@ -3,7 +3,7 @@ import React from "react";
 
 // import bg from "@/public/Footers/bgimg1.jpeg";
 import bg from "@/public/Footers/flight.jpg";
-import logo from "@/public/Navbar/cablk.jpg";
+import newlogo from "@/public/Navbar/cablkmod.jpg";
 import Link from "next/link";
 
 import { FaFacebookF } from "react-icons/fa";
@@ -22,9 +22,9 @@ const UpperFooter = () => {
           className="size-[100%]  object-cover object-right xs:object-center"
         />
 
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="absolute top-0 left-0  w-full flex justify-center bigmd:py-20 py-10 ">
-          <div className="text-primary  flex flex-col midxl:w-[70%] w-[90%] bg-transparent items-center ">
+          <div className="text-white  flex flex-col midxl:w-[70%] w-[90%] bg-transparent items-center ">
             <div className="text-[34px] font-semibold  pb-[50px]">
               Get in Touch
             </div>
@@ -32,7 +32,7 @@ const UpperFooter = () => {
               <div className="flex flex-col text-center items-center mb-[40px]">
                 <div className="bg-white rounded-full mobile:size-[150px] size-[100px] flex justify-center items-center overflow-hidden">
                   <Image
-                    src={logo}
+                    src={newlogo}
                     alt=""
                     className="mobile:w-[120px] w-[70px]"
                   />

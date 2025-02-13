@@ -53,7 +53,7 @@ const Hierarchy = () => {
               className={`${
                 isActive
                   ? "text-primary border-primary"
-                  : "text-white border-white"
+                  : "text-black border-black"
               } xs:text-[30px] text-[16px] font-normal text-center border-[2px] rounded bigmd:p-2 p-1`}
             >
               {section.icon}
@@ -61,7 +61,7 @@ const Hierarchy = () => {
             {index < sections.length - 1 && (
               <div
                 className={`${
-                  isActiveforLine ? "bg-primary " : "bg-white "
+                  isActiveforLine ? "bg-primary " : "bg-black "
                 }  xs:mx-6 mx-4 xs:text-[24px] text-[16px] bigmd:w-[150px] xs:w-[60px] w-[40px] xs:h-1 h-[2px] rounded`}
               />
             )}
