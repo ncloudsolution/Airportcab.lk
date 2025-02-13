@@ -13,7 +13,7 @@ import GoogleReviews from "@/components/GoogleReviews";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col pt-[60px]">
       <MainTab />
       <PopularDestination />
       <FAQ />
@@ -41,6 +41,6 @@ export default function Home() {
       <div className="py-5 bg-slate-100">
         <GoogleReviews />
       </div>
-    </>
+    </div>
   );
 }

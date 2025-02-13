@@ -45,7 +45,7 @@ module.exports = {
         //   '2xl': '1536px',**/
       },
       colors: {
-        primary: "#eab308",
+        primary: "#cd0c03",
         newprimary: "#000131",
         Secondary: "#14d01f",
         errorpink: "#be185d",

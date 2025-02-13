@@ -91,7 +91,7 @@ const MainTab = () => {
   //
 
   return (
-    <>
+    <div>
       <BsCoin
         className={` ${
           isCurrencyActive ? "text-primary" : "text-newprimary"
@@ -102,12 +102,12 @@ const MainTab = () => {
         <CurrencyTab />
       </div>
       <div className="flex justify-center w-full bg-transparent px-0 ">
-        <div className="flex z-10 justify-center items-center flex-col bg-gradient-to-b from-primary  to-newprimary w-full bg-[length:100%_850px] bigmd:bg-[length:100%_600px] pt-10">
+        <div className="flex z-10 justify-center items-center flex-col bg-gradient-to-b from-primary  to-newprimary w-full bg-[length:100%_850px] bigmd:bg-[length:100%_600px]">
           <div className="bigmd:w-[778px] bxs:w-[404px] xxxs:w-[244px] w-[230px] flex justify-center">
             <div
               className={` ${
                 isCurrencyActive ? "mt-0" : "mt-0"
-              } w-full flex justify-center bg-[black]/50 rounded backdrop-blur-lg`}
+              } w-full flex justify-center bg-[black]/50 rounded backdrop-blur-lg mt-[40px]`}
             >
               <Hierarchy />
             </div>
@@ -236,7 +236,7 @@ const MainTab = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

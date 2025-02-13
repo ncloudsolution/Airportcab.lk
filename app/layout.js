@@ -10,6 +10,7 @@ import UpperFooter from "@/components/UpperFooter";
 import Script from "next/script";
 import FoloatingActionBtn from "@/components/standalone/FoloatingActionBtn";
 import CallBtn from "@/components/standalone/CallBtn";
+import NewNavBar from "@/components/NewNavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} `}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16563747465"
           strategy="afterInteractive"
@@ -51,20 +52,16 @@ export default function RootLayout({ children }) {
     `,
           }}
         />
-
+        <NewNavBar />
         <TourContextProvider>
-          <div className="  relative  min-h-[100vh]   w-full">
-            <NavBar />
+          {/* <NavBar /> */}
 
-            <CallBtn />
-            <FoloatingActionBtn />
-            <main className="min-h-[23vh] xs:mt-[80px] mt-[60px] px-0">
-              {children}
-            </main>
+          <main>{children}</main>
+          <CallBtn />
+          <FoloatingActionBtn />
 
-            <UpperFooter />
-            <AbsoluteFooter />
-          </div>
+          <UpperFooter />
+          <AbsoluteFooter />
         </TourContextProvider>
       </body>
     </html>
