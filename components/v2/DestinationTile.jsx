@@ -1,11 +1,27 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 import { FaRoad } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 import { RxLapTimer } from "react-icons/rx";
 import { GiReceiveMoney } from "react-icons/gi";
+import { useRouter } from "next/navigation";
+import { TourContext } from "@/context/TourContextProvider";
 
 const DestinationTile = ({ item }) => {
+  const router = useRouter();
+
+  const { tourDetails, setTourDetails } = useContext(TourContext);
+  const taxiHandleClick = (org, dest) => {
+    setTourDetails((prevTourDetails) => ({
+      ...prevTourDetails,
+      destinationpage: true,
+      destination: dest,
+      origin: org,
+    }));
+
+    router.push("/taxi-service");
+  };
   return (
     <div className="flex flex-col  shadow-md rounded-lg overflow-hidden bg-gray-100">
       <div className="relative h-[280px] w-full">
@@ -40,7 +56,10 @@ const DestinationTile = ({ item }) => {
           {item.price}
         </div>
 
-        <button className="w-full text-center bg-primary text-white py-2 rounded-md mt-2">
+        <button
+          className="w-full text-center bg-primary text-white py-2 rounded-md mt-2"
+          onClick={() => taxiHandleClick(item.origin, item.destination)}
+        >
           Book Now
         </button>
       </div>

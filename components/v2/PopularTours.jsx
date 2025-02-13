@@ -45,7 +45,7 @@ const PopularTours = () => {
 
   return (
     <>
-      <div className=" flex flex-col justify-center items-center  bg-gradient-to-b from-gray-300 to bg-slate-100 gap-10 py-10 xxs:px-5 px-3">
+      <div className=" flex flex-col justify-center items-center  bg-gradient-to-b from-gray-200 to bg-slate-100 gap-10 py-10 xxs:px-5 px-3">
         <div className="2xl:text-[50px] bigmd:text-[40px] text-[30px] text-center font-semibold text-black">
           Popular Destinations
         </div>

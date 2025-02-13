@@ -215,7 +215,7 @@ const AirportMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full">
-        <div className="flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg mb-10">
+        <div className="flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg">
           <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-black">
             Airport Pickup / Drop
           </div>
