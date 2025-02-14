@@ -10,7 +10,7 @@ export const metadata = {
 const TourBooking = () => {
   return (
     <>
-      <div className="w-full h-fit flex justify-center items-center">
+      <div className="w-full h-fit flex justify-center items-center pt-[60px]">
         <MidSummary />
       </div>
     </>

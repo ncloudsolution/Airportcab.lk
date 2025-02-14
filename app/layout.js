@@ -31,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} `}>
+      <body className={`${inter.className} relative`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16563747465"
           strategy="afterInteractive"

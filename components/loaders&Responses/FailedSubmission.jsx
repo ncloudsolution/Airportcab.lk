@@ -28,7 +28,7 @@ const FailedSubmission = ({ msg, navtext }) => {
 
         <Link
           onClick={handleScrollActive}
-          className=" sm:text-[24px] xxs:text-[20px]  xxxs:text-[18px] text-[16px] bg-primary px-8 py-2 font-semibold rounded mb-5 -translate-y-2 cursor-pointer"
+          className=" sm:text-[24px] xxs:text-[20px]  xxxs:text-[18px] text-[16px] bg-primary text-white px-8 py-2 font-semibold rounded mb-5 -translate-y-2 cursor-pointer"
           href="/"
         >
           {navtext}

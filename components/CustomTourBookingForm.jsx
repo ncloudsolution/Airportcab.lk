@@ -46,7 +46,7 @@ const CustomTourBookingForm = ({ children }) => {
       depatureDate === "" ||
       NameRef.current.value === "" ||
       EmailRef.current.value === "" ||
-      NicPassportRef.current.value === "" ||
+      // NicPassportRef.current.value === "" ||
       mobValue == "" ||
       whatsappMobValue == "" ||
       noOfAdults === "" ||
@@ -77,7 +77,7 @@ const CustomTourBookingForm = ({ children }) => {
       depatureTime: depatureDate.toTimeString(),
       customerName: NameRef.current.value,
       customerEmail: EmailRef.current.value,
-      customerNicPassportNo: NicPassportRef.current.value,
+      // customerNicPassportNo: NicPassportRef.current.value,
       customerMobileNo: mobValue,
       customerWhatsappNo: whatsappMobValue,
       noOfAdults: noOfAdults,
@@ -128,7 +128,7 @@ const CustomTourBookingForm = ({ children }) => {
     });
   };
   return (
-    <div className="mt-0 mb-4">
+    <div className="mt-0 mb-4 pt-[40px]">
       {(isLoading || responseMessage) && (
         <div className="w-full h-[90vh] flex items-center justify-center">
           {/* Your form or component elements go here */}
@@ -216,7 +216,7 @@ const CustomTourBookingForm = ({ children }) => {
                   className="flex-1 px-3 py-1 rounded border-[1px] border-black outline-none sm:text-[16px] text-[14px]"
                 />
               </div>
-              <div className="flex sm:flex-row flex-col w-full">
+              {/* <div className="flex sm:flex-row flex-col w-full">
                 <div className="w-[200px] sm:text-[18px] text-[16px] font-semibold">
                   NIC/Passport No
                 </div>
@@ -226,7 +226,7 @@ const CustomTourBookingForm = ({ children }) => {
                   type="text"
                   className="flex-1 px-3 py-1 rounded border-[1px] border-black outline-none sm:text-[16px] text-[14px]"
                 />
-              </div>
+              </div> */}
 
               <div className="flex sm:flex-row flex-col w-full ">
                 <div className="w-[200px]  sm:text-[18px] text-[16px] font-semibold">

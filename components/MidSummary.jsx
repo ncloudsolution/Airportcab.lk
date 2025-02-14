@@ -203,11 +203,11 @@ const MidSummary = () => {
 
   return (
     <>
-      <div className="mt-0 mb-4">
+      <div className="mt-0 mb-4 ">
         {tourDetails.vehicleType && (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center ">
             <CurrencyTab />
-            <div className="mb-10 w-[100vw] flex justify-center bg-newprimary">
+            <div className="mb-10 w-full flex justify-center bg-white shadow-md">
               <Hierarchy />
             </div>
             <div className="bg-transparent rounded border-[2px] border-primary p-2 mb-14 font-semibold gap-y-1 bigmd:w-[820px] bxs:w-[450px] w-[330px]">
@@ -322,13 +322,13 @@ highwayExit: station,
 
                     {/**highway section**/}
                     {tourDetails.tourType === "airport" ? (
-                      <div className="my-5  text-[12px] bg-primary p-3 rounded">
+                      <div className="my-5  text-[12px] bg-black text-white shadow-md p-3 rounded">
                         Highway charges are optional. If selected, no extra fees
                         are needed during the tour. Otherwise, you can be paid
                         at the highway counter.
                       </div>
                     ) : (
-                      <div className="my-5  text-[12px] bg-primary p-3 rounded">
+                      <div className="my-5  text-[12px] bg-black text-white shadow-md p-3 rounded">
                         Highway charges are not included, you can be paid
                         highway fair at the highway counter if needed.
                       </div>
@@ -563,7 +563,7 @@ highwayExit: station,
                                   }}
                                   className={` ${
                                     boardShow
-                                      ? "bg-primary text-black shadow-md "
+                                      ? "bg-primary text-white shadow-md "
                                       : "border-[1px] border-black"
                                   } w-full p-1 rounded transition-all duration-500 hover:cursor-pointer`}
                                 >
@@ -577,7 +577,7 @@ highwayExit: station,
                                   }}
                                   className={` ${
                                     !boardShow
-                                      ? "bg-primary text-black shadow-md"
+                                      ? "bg-primary text-white shadow-md"
                                       : "border-[1px] border-black"
                                   } w-full p-1 rounded transition-all duration-500 hover:cursor-pointer`}
                                 >

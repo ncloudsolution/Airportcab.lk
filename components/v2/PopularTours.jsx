@@ -1,45 +1,48 @@
 import React from "react";
 import DestinationTile from "./DestinationTile";
 import sigiriya from "@/public/popular/sigiriya-pop.jpg";
+import colombo from "@/public/popular/colombo-pop.jpg";
+import ella from "@/public/popular/ella-pop.jpg";
+import mirissa from "@/public/popular/mirissa-pop.jpg";
 import cardpointtopoint from "@/public/Tiles/card.webp";
 
 const PopularTours = () => {
   const items = [
     {
-      origin: "Colombo",
+      origin: "BIA Airport",
       destination: "Sigiriya",
       road: "Highway",
-      distance: "180 km",
-      time: "3 hours 40 mins",
-      price: "Starting from 17,800 LKR",
+      distance: "150 km",
+      time: "3 hours 10 mins",
+      price: "Starting from 49 USD / 47 EURO",
       img: sigiriya,
     },
     {
-      origin: "Colombo",
-      destination: "Mirissa",
+      origin: "BIA Airport",
+      destination: "Colombo",
       road: "Highway",
-      distance: "160 km",
-      time: "2 hours 30 mins",
-      price: "Starting from 15,600 LKR",
-      img: cardpointtopoint,
+      distance: "35 km",
+      time: "40 mins",
+      price: "Starting from 12 USD / 12 EURO ",
+      img: colombo,
     },
     {
-      origin: "Colombo",
-      destination: "Sigiriya",
+      origin: "BIA Airport",
+      destination: "Mirissa",
       road: "Highway",
       distance: "180 km",
-      time: "3 hours 40 mins",
-      price: "Starting from 17,800 LKR",
-      img: sigiriya,
+      time: "2 hours 45 mins",
+      price: "Starting from from 59 USD / 58 EURO",
+      img: mirissa,
     },
     {
-      origin: "Colombo",
-      destination: "Mirissa",
+      origin: "BIA Airport",
+      destination: "Ella",
       road: "Highway",
-      distance: "160 km",
-      time: "2 hours 30 mins",
-      price: "Starting from 15,600 LKR",
-      img: cardpointtopoint,
+      distance: "220 km",
+      time: "5 hours 45 mins",
+      price: "Starting from 110 USD / 105 EURO",
+      img: ella,
     },
   ];
 

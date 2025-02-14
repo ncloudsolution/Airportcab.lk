@@ -16,8 +16,9 @@ const DestinationTile = ({ item }) => {
     setTourDetails((prevTourDetails) => ({
       ...prevTourDetails,
       destinationpage: true,
+      isPickup: true,
       destination: dest,
-      origin: org,
+      origin: "Bandaranaike International Airport (CMB), Katunayake",
     }));
 
     router.push("/taxi-service");
@@ -41,10 +42,10 @@ const DestinationTile = ({ item }) => {
           <IoLocation size={20} className="text-primary" />
           {item.distance}
         </div>
-        <div className="flex gap-2 text-[14px]">
+        {/* <div className="flex gap-2 text-[14px]">
           <FaRoad size={20} className="text-primary" />
           {item.road}
-        </div>
+        </div> */}
 
         <div className="flex gap-2 text-[14px] ">
           <RxLapTimer size={20} className="text-primary" />
