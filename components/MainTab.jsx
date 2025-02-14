@@ -104,7 +104,7 @@ const MainTab = () => {
       <div className="flex justify-center w-full bg-transparent px-0 ">
         {/**bg-gradient-to-b from-primary  to-newprimary **/}
         <div className="flex z-10 justify-center items-center flex-col bg-gradient-to-b from-white  to-gray-200  w-full bg-[length:100%_850px] bigmd:bg-[length:100%_600px]">
-          <div className="bigmd:w-[778px] bxs:w-[404px] xxxs:w-[244px] w-[230px] flex justify-center">
+          <div className="w-[80%] flex justify-center">
             <div
               className={` ${
                 isCurrencyActive ? "mt-0" : "mt-0"

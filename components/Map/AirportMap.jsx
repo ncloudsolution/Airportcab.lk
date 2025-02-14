@@ -215,7 +215,7 @@ const AirportMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full">
-        <div className="flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg">
+        <div className="border-[1px] border-primary flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg">
           <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-black">
             Airport Pickup / Drop
           </div>
@@ -355,7 +355,7 @@ const AirportMap = ({ children }) => {
       </div>
       <div>
         {!submitError && distance && duration && (
-          <div className="w-[100vw] bg-gray-200 flex justify-center">
+          <div className="w-[100vw] bg-gray-200  flex justify-center">
             <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-primary text-white rounded mt-8 mb-6 w-fit">
               <div>Distance : {distance}</div>
               <div className="font-bold xs:flex hidden">||</div>

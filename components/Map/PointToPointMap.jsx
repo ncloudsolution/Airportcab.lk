@@ -161,7 +161,7 @@ const PointToPointMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full">
-        <div className=" flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg  mb-10">
+        <div className="border-[1px] border-primary flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg  mb-10">
           <div className="text-black bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium">
             Taxi Service
           </div>
