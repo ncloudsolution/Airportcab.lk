@@ -21,7 +21,7 @@ const Hierarchy = () => {
   const sections = [
     {
       name: "SEARCH",
-      url: ["/", "/airport-pickup-and-drop", "/point-to-point"],
+      url: ["/", "/airport-pickup-and-drop", "/taxi-service"],
       icon: <FaSearch />,
     },
     { name: "BOOKING", url: ["/tour-booking"], icon: <FaFileAlt /> },

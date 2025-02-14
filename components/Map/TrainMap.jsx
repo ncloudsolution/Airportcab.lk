@@ -103,7 +103,7 @@ const TrainMap = ({ children }) => {
             <div className="flex flex-col gap-y-3 w-full px-8 ">
               <div className="flex flex-col bigmd:flex-row gap-x-3 gap-y-3 bigmd:w-[778px] w-full">
                 {/**750px**/}
-                <div className="relative w-full flex-2">
+                <div className="relative w-full flex-2 z-50">
                   <CustomTrainDropDown />
                 </div>
 

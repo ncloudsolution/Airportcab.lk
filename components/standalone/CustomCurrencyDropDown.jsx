@@ -69,7 +69,7 @@ const CustomCurrencyDropDown = () => {
         {/* Dropdown button */}
         <div
           onClick={() => setOpen(!open)}
-          className={`bg-primary w-full border-[1px] text-[14px] border-black p-1 flex items-center justify-between rounded  ${
+          className={`bg-primary text-white w-full  text-[14px]  p-1 flex items-center justify-between rounded  ${
             !selected && "text-[#8e8e8e]"
           }`}
         >
@@ -112,7 +112,7 @@ const CustomCurrencyDropDown = () => {
                   key={currencyKey}
                   className={`py-2 px-3 text-[12px] bxs:text-[14px] hover:bg-black hover:text-white flex items-center m-1 rounded ${
                     currencyKey.toLowerCase() === selected.toLowerCase() &&
-                    "bg-primary text-black "
+                    "bg-primary text-white "
                   }`}
                   onClick={() => handleSelectCurrency(currencyKey)}
                 >
