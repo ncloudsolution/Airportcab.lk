@@ -9,6 +9,7 @@ import cardpointtopoint from "@/public/Tiles/card.webp";
 const PopularTours = () => {
   const items = [
     {
+      label: "BIA Airport to Sigiriya | Dambulla | Habarana",
       origin: "BIA Airport",
       destination: "Sigiriya",
       road: "Highway",
@@ -27,6 +28,7 @@ const PopularTours = () => {
       img: colombo,
     },
     {
+      label: "BIA Airport to Mirissa | Waligama | Ahangama",
       origin: "BIA Airport",
       destination: "Mirissa",
       road: "Highway",
@@ -50,7 +52,7 @@ const PopularTours = () => {
     <>
       <div className=" flex flex-col justify-center items-center  bg-gradient-to-b from-gray-200 to bg-slate-100 gap-10 py-10 xxs:px-5 px-3">
         <div className="2xl:text-[50px] bigmd:text-[40px] text-[30px] text-center font-semibold text-black">
-          Popular Destinations
+          Popular Destinations From Airport Taxi Fair
         </div>
         <div className="w-full bigmd:w-[90%] 2xl:w-[80%] px-5 gap-5 grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1">
           {items.map((item, index) => (

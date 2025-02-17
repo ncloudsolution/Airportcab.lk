@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import Flow from "@/components/standalone/Flow";
 import DescriptionTile from "@/components/DescriptionTile";
 import CurrencyFullBar from "@/components/CurrencyFullBar";
+import NewLoading from "@/components/skeletonUI/compoundElements/NewLoading";
 
 const AirportComp = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
@@ -28,7 +29,7 @@ const AirportComp = () => {
   if (!isLoaded || showSkeleton) {
     return (
       <>
-        <CarSkeleton />
+        <NewLoading />
       </>
     );
   }

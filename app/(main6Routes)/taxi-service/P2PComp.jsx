@@ -7,6 +7,7 @@ import Flow from "@/components/standalone/Flow";
 import DescriptionTile from "@/components/DescriptionTile";
 import PointToPointMap from "@/components/Map/PointToPointMap";
 import CurrencyFullBar from "@/components/CurrencyFullBar";
+import NewLoading from "@/components/skeletonUI/compoundElements/NewLoading";
 
 const P2PComp = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
@@ -28,7 +29,7 @@ const P2PComp = () => {
   if (!isLoaded || showSkeleton) {
     return (
       <>
-        <CarSkeleton />
+        <NewLoading />
       </>
     );
   }

@@ -7,6 +7,7 @@ import Flow from "@/components/standalone/Flow";
 import React, { useEffect, useState } from "react";
 import TrainStopPlacesCard from "@/components/TrainStopPlacesCard";
 import CurrencyFullBar from "@/components/CurrencyFullBar";
+import NewLoading from "@/components/skeletonUI/compoundElements/NewLoading";
 
 const PtoP = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
@@ -28,7 +29,7 @@ const PtoP = () => {
   if (showSkeleton) {
     return (
       <>
-        <CarSkeleton />
+        <NewLoading />
       </>
     );
   }
