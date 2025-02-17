@@ -24,7 +24,7 @@ export const metadata = {
   description:
     "Affordable Sri Lanka airport taxi services from Katunayake to Colombo. Check BIA taxi prices, book your airport transfer with ease. Call our reliable Katunayake airport taxi service for the best rates. Trusted Colombo airport taxi contact number for fast, convenient airport transfers",
   keywords:
-    "Srilanka airport taxi price list Colombo, Best airport taxi Srilanka, srilanka airport taxi price per km, cheap airport taxi,  bandaranaike international airport, airport taxi service contact number, colombo airport taxi service, katunayake airport ",
+    "Srilanka airport taxi price list Colombo, Best airport taxi Srilanka, srilanka airport taxi price per km, cheap airport taxi,  bandaranaike international airport, airport taxi service contact number, colombo airport taxi service, katunayake airport airport taxi, taxi booking, airport taxi online booking, book airport taxi, taxi transfers, taxi hire, airport to hotel taxi, airport taxi fare, airport taxi quote, online taxi booking, taxi service, hotel shuttle,taxi, car taxi ",
   icons: { icon: ["/favicon.ico"] },
 };
 
