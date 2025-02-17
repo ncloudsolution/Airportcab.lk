@@ -12,6 +12,11 @@ module.exports = {
         2000: "2000ms",
         3000: "3000ms",
       },
+      textShadow: {
+        sm: "1px 1px 2px rgba(0, 0, 0, 0.5)",
+        md: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+        lg: "3px 3px 6px rgba(0, 0, 0, 0.7)",
+      },
       boxShadow: {
         shimmershadow: "0 0 30px 30px rgba(255, 255, 255, 0.05)",
         popshadow:
@@ -58,6 +63,15 @@ module.exports = {
       },
 
       keyframes: {
+        newcarmoving: {
+          "0%": {
+            transform: "translateX(-60px)",
+          },
+          "25%": { transform: "translateX(0px)" },
+          "100%": {
+            transform: "translateX(20px)",
+          },
+        },
         carmoving: {
           "0%": {
             transform: "translateX(-250px)",
@@ -200,6 +214,7 @@ module.exports = {
       },
 
       animation: {
+        newcarmoving: "newcarmoving 20s ease-out infinite alternate",
         carmoving: "carmoving 2s ease-out infinite alternate",
         carmoving2: "carmoving2 2s ease-out infinite alternate",
         mapmoving: "mapmoving 1s ease-out infinite alternate",

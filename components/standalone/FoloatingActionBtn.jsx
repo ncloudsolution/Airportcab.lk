@@ -35,7 +35,7 @@ const FoloatingActionBtn = () => {
             Email Us
           </Link>
           <Link
-            href="https://wa.me/+94712100500"
+            href="https://wa.me/+94703199556"
             target="_blank"
             className={` ${
               isClicked

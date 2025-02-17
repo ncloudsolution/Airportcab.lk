@@ -10,7 +10,6 @@ export async function middleware(request) {
 
   //   const BaseUrl = "https://nextcms-gamma.vercel.app/";
   // const BaseUrl = "http://localhost:3000/";
-  const BaseUrl = "https://www.airportcab.lk/";
 
   const { nextUrl } = request;
 

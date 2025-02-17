@@ -16,6 +16,7 @@ import { BsCoin } from "react-icons/bs";
 
 import CurrencyTab from "./standalone/CurrencyTab";
 import { TourContext } from "@/context/TourContextProvider";
+import NewLoading from "./skeletonUI/compoundElements/NewLoading";
 
 const MainTab = () => {
   const [isPointToPointClicked, setIsPointToPointClicked] = useState(false);
@@ -54,7 +55,8 @@ const MainTab = () => {
   if (!isLoaded || showSkeleton) {
     return (
       <>
-        <CarSkeleton />
+        {/* <CarSkeleton /> */}
+        <NewLoading />
       </>
     );
   }

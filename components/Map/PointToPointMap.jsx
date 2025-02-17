@@ -23,6 +23,7 @@ import { FaBriefcase } from "react-icons/fa";
 import { FaRegSnowflake } from "react-icons/fa";
 import { BsHandbagFill } from "react-icons/bs";
 import useFineCurrency from "@/hooks/useFineCurrency";
+import { IoCarSport } from "react-icons/io5";
 
 const center = { lat: 6.9271, lng: 79.8612 };
 
@@ -225,19 +226,23 @@ const PointToPointMap = ({ children }) => {
                   </div>
                 )}
 
-                <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-2  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
-                  <button
-                    type="submit"
-                    className="bg-primary text-white p-2 rounded bigmd:w-fit flex-1 bigmd:block "
-                    onClick={calculateRoute}
-                  >
-                    Calculate Route
-                  </button>
+                <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-[6px]  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
+                  <div className="rounded-md bg-primary flex items-center flex-1 gap-2 justify-center text-white">
+                    <IoCarSport className="text-[20px]" />
+                    <button
+                      type="submit"
+                      className=" "
+                      onClick={calculateRoute}
+                    >
+                      Search
+                    </button>
+                  </div>
+
                   <button
                     className=" text-primary border-[1px] border-primary bigmd:px-1 px-2 py-2 rounded bigmd:w-fit :flex-1 bigmd:block"
                     onClick={clearRoute}
                   >
-                    Clear Route
+                    Clear Search
                   </button>
                 </div>
               </div>

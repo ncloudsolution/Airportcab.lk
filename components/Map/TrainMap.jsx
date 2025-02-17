@@ -121,12 +121,9 @@ const TrainMap = ({ children }) => {
               </div> */}
 
               <div className="flex gap-x-3 relative  flex-col bigmd:flex-row gap-y-3">
-                <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-2  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
-                  <button
-                    type="submit"
-                    className="bg-primary text-white p-2 rounded bigmd:w-fit flex-1 bigmd:block "
-                    onClick={calculateRoute}
-                  >
+                <div className="py-2 rounded-md bg-primary flex items-center flex-1 gap-3 justify-center text-white">
+                  <FaTrain className="text-[20px]" />
+                  <button type="submit" className=" " onClick={calculateRoute}>
                     Search Train
                   </button>
                 </div>
