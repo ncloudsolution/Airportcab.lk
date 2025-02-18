@@ -13,9 +13,9 @@ export const metadata = {
 
 const Contact = () => {
   return (
-    <>
+    <div className="">
       <ContactUsForm />
-    </>
+    </div>
   );
 };
 

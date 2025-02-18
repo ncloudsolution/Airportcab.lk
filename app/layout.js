@@ -10,6 +10,7 @@ import UpperFooter from "@/components/UpperFooter";
 import Script from "next/script";
 import FoloatingActionBtn from "@/components/standalone/FoloatingActionBtn";
 import CallBtn from "@/components/standalone/CallBtn";
+import NewNavBar from "@/components/v2/NewNavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,14 +24,14 @@ export const metadata = {
   description:
     "Affordable Sri Lanka airport taxi services from Katunayake to Colombo. Check BIA taxi prices, book your airport transfer with ease. Call our reliable Katunayake airport taxi service for the best rates. Trusted Colombo airport taxi contact number for fast, convenient airport transfers",
   keywords:
-    "Srilanka airport taxi price list Colombo, Best airport taxi Srilanka, srilanka airport taxi price per km, cheap airport taxi,  bandaranaike international airport, airport taxi service contact number, colombo airport taxi service, katunayake airport ",
+    "Srilanka airport taxi price list Colombo, Best airport taxi Srilanka, srilanka airport taxi price per km, cheap airport taxi,  bandaranaike international airport, airport taxi service contact number, colombo airport taxi service, katunayake airport airport taxi, taxi booking, airport taxi online booking, book airport taxi, taxi transfers, taxi hire, airport to hotel taxi, airport taxi fare, airport taxi quote, online taxi booking, taxi service, hotel shuttle,taxi, car taxi ",
   icons: { icon: ["/favicon.ico"] },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} relative`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16563747465"
           strategy="afterInteractive"
@@ -51,20 +52,16 @@ export default function RootLayout({ children }) {
     `,
           }}
         />
-
+        <NewNavBar />
         <TourContextProvider>
-          <div className="  relative  min-h-[100vh]   w-full">
-            <NavBar />
+          {/* <NavBar /> */}
 
-            <CallBtn />
-            <FoloatingActionBtn />
-            <main className="min-h-[23vh] xs:mt-[80px] mt-[60px] px-0">
-              {children}
-            </main>
+          <main>{children}</main>
+          <CallBtn />
+          <FoloatingActionBtn />
 
-            <UpperFooter />
-            <AbsoluteFooter />
-          </div>
+          <UpperFooter />
+          <AbsoluteFooter />
         </TourContextProvider>
       </body>
     </html>

@@ -37,7 +37,7 @@ const RadioBtnContainer = ({ fullboardDisable = false }) => {
                 onClick={() => handleChange(option)}
               >
                 {selectedMealOption.includes(option) && (
-                  <IoIosDoneAll className="text-black text-[20px]" />
+                  <IoIosDoneAll className="text-white text-[20px]" />
                 )}
               </div>
             </div>

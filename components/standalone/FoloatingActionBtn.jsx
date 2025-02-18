@@ -30,12 +30,12 @@ const FoloatingActionBtn = () => {
               isClicked
                 ? "scale-100 -translate-x-[20px] duration-300 transition-all"
                 : "translate-x-20 scale-0 translate-y-5"
-            }  duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#FF0000] rounded-md text-white text-[12px] flex justify-center items-cente`}
+            }  duration-300 transition-all z-30 py-2 px-3 scale-0 bg-[#FF0000] rounded-md text-white text-[12px] flex justify-center items-center`}
           >
             Email Us
           </Link>
           <Link
-            href="https://wa.me/+94712100500"
+            href="https://wa.me/+94703199556"
             target="_blank"
             className={` ${
               isClicked
@@ -58,7 +58,7 @@ const FoloatingActionBtn = () => {
           </Link>
         </div>
         <div
-          className="p-2 flex justify-center items-center w-[60px] h-[60px] rounded-full bg-white border-[5px] border-primary shadow-customercareshadow z-40 overflow-hidden"
+          className="p-2 flex justify-center items-center w-[60px] h-[60px] rounded-full bg-white border-[3px] border-primary shadow-customercareshadow z-40 overflow-hidden"
           onClick={() => setIsClicked(!isClicked)}
         >
           <Image

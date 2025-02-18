@@ -1,46 +1,19 @@
-// import AboutSrilanka from "@/components/AboutSrilanka";
-// import AboutUs from "@/components/AboutUs";
-// import Activities from "@/components/Activities";
-// import GoogleReviews from "@/components/GoogleReviews";
 import MainTab from "@/components/MainTab";
 import FAQ from "@/components/FAQ";
 import PopularDestination from "@/components/PopularDestination";
 import GoogleReviews from "@/components/GoogleReviews";
-
-// import PlanYourOwnTripHome from "@/components/PlanYourOwnTripHome";
-
-// import TourSlider from "@/components/TourSlider";
+import PopularTours from "@/components/v2/PopularTours";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col pt-[60px]">
       <MainTab />
+      <PopularTours />
       <PopularDestination />
       <FAQ />
-
-      {/** <MainSlider />**/}
-
-      {/* <div className="my-10">
-        <TourSlider />
-      </div>
-
-      <div className="xs:my-20 xxs:my-10 my-5">
-        <AboutSrilanka />
-      </div>
-
-      <div className="xs:my-20 xxs:my-10 my-5">
-        <PlanYourOwnTripHome />
-      </div>
-
-      <div className="my-5">
-        <AboutUs />
-      </div>
-
-      <Activities />*/}
-
       <div className="py-5 bg-slate-100">
         <GoogleReviews />
       </div>
-    </>
+    </div>
   );
 }

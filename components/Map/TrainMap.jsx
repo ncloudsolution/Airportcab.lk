@@ -94,8 +94,8 @@ const TrainMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full border-transparent border-2">
-        <div className="flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg  rounded-lg  mb-10">
-          <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-white">
+        <div className="border-[1px] border-primary flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg  mb-10">
+          <div className="text-black bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium ">
             Journey On Rails
           </div>
           <FaTrain className="text-[30px] text-primary mb-2" />
@@ -103,7 +103,7 @@ const TrainMap = ({ children }) => {
             <div className="flex flex-col gap-y-3 w-full px-8 ">
               <div className="flex flex-col bigmd:flex-row gap-x-3 gap-y-3 bigmd:w-[778px] w-full">
                 {/**750px**/}
-                <div className="relative w-full flex-2">
+                <div className="relative w-full flex-2 z-50">
                   <CustomTrainDropDown />
                 </div>
 
@@ -112,7 +112,7 @@ const TrainMap = ({ children }) => {
                   placeholder="No.Passengers"
                   type="number"
                   min="1"
-                  className="p-2 text-[12px] xs:text-[14px] bigmd:mt-0 mt-[40px]  outline-none  h-[39px]  bigmd:w-[150px] w-full shadow-md rounded border-[1px] border-black "
+                  className="p-2 text-[12px] xs:text-[14px] bigmd:mt-0 mt-[40px]  outline-none  h-[39px]  bigmd:w-[150px] w-full shadow-md rounded border-[1px] border-primary "
                 />
               </div>
 
@@ -121,12 +121,9 @@ const TrainMap = ({ children }) => {
               </div> */}
 
               <div className="flex gap-x-3 relative  flex-col bigmd:flex-row gap-y-3">
-                <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-2  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
-                  <button
-                    type="submit"
-                    className="bg-primary text-black p-2 rounded bigmd:w-fit flex-1 bigmd:block "
-                    onClick={calculateRoute}
-                  >
+                <div className="py-2 rounded-md bg-primary flex items-center flex-1 gap-3 justify-center text-white">
+                  <FaTrain className="text-[20px]" />
+                  <button type="submit" className=" " onClick={calculateRoute}>
                     Search Train
                   </button>
                 </div>
@@ -135,53 +132,17 @@ const TrainMap = ({ children }) => {
           </div>
 
           {submitError && (
-            <div className="text-errorpink bg-white px-4 py-2 rounded mb-4">
+            <div className="text-errorpink bg-gray-200 px-4 py-2 rounded mb-4">
               {submitError}
             </div>
           )}
         </div>
 
         {isSubmit && !submitError && (
-          <div className="w-[100vw] bg-white">
+          <div className="w-[100vw] bg-gray-200 border-b-2 border-primary ">
             <div className="w-full flex justify-center">
-              <div className="border-2 border-transparent midxl:w-[1400px] mobile:w-[1000px] w-[800px] flex gap-x-10 xs:mt-8 mb-0  bigmd:flex-row flex-col bigmd:items-start items-center gap-2 mt-6">
-                {/* {filterdTrains.map((train, index) => (
-                <div key={index}>
-                  <div className="flex flex-col">
-                    <div className="bg-red-400">
-                      {train.trainList.trainName}
-                    </div>
-                    <div>
-                      {train.trainList.trainPoints[0]}
-                      to {train.trainList.trainPoints[1]}
-                    </div>
-                    <div>
-                      {train.trainList.travelTime[0]}to{" "}
-                      {train.trainList.travelTime[1]}
-                    </div> 
-                     <div>
-                      {train.trainList.availableDays.map((day, index) => (
-                        <div key={index}>{day}</div>
-                      ))}
-                    </div>
-                    <div>
-                      {train.trainList.types.map((type, index) => (
-                        <div key={index}>
-                          <div>{type.class}</div>
-                          <div>{type.price}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))} */}
+              <div className=" midxl:w-[1400px] mobile:w-[1000px] w-[800px] flex gap-x-10 xs:mt-8 mb-0  bigmd:flex-row flex-col bigmd:items-start items-center gap-2 mt-6">
                 <div className="flex flex-col w-full items-center ">
-                  {/* {tourDetails.trainTourPoints && isSubmit && !submitError &&(
-                  <div className="font-light text-[30px] text-center">
-                    {tourDetails.trainTourPoints}
-                  </div>
-                )} */}
-
                   {filterdTrains.map((train, index) => (
                     <div
                       key={index}
@@ -283,7 +244,8 @@ const TrainMap = ({ children }) => {
                                     className={` ${
                                       type.class ===
                                       "Air Conditioned First Class Reserved"
-                                        ? "bg-gradient-to-b from-gold via-gold-light to-gold-dark text-white font-medium"
+                                        ? // ? "bg-gradient-to-b from-gold via-gold-light to-gold-dark text-white font-medium"
+                                          "bg-primary text-white font-medium"
                                         : type.class === "Observation Saloon"
                                         ? "bg-gradient-to-r from-black from-2% via-gold to-black to-98% text-white"
                                         : type.class === "Second Class Reserved"
@@ -345,7 +307,7 @@ const TrainMap = ({ children }) => {
                               className="bg-transparent relative text-black w-full flex flex-col bigmd:flex-row mb-6 p-4 rounded-lg border-[2px] border-black shadow-md justify-between "
                             >
                               {isDateActive === index && (
-                                <div className=" bg-yellow-400 absolute z-40 w-full flex flex-col justify-center items-center -translate-x-4 -translate-y-4 h-full rounded-md ">
+                                <div className=" bg-primary text-white absolute z-40 w-full flex flex-col justify-center items-center -translate-x-4 -translate-y-4 h-full rounded-md ">
                                   <div className="flex flex-col items-center">
                                     <div className="text-[20px] font-semibold mb-3">
                                       Select Pickup Date
@@ -433,7 +395,7 @@ const TrainMap = ({ children }) => {
                         </div> */}
                                 </div>
                                 <button
-                                  className="bg-yellow-500 w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
+                                  className="bg-primary text-white w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
                                   onClick={() => {
                                     //
 

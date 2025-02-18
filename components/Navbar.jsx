@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import Image from "next/image";
 
-import newlogo from "@/public/Navbar/cablk.jpg";
+import newlogo from "@/public/Navbar/cablkmod.jpg";
 import menu from "@/public/Navbar/menu.svg";
 import close from "@/public/Navbar/close.svg";
 
@@ -48,16 +48,15 @@ function NavBar() {
   return (
     <div>
       {/* <nav class="w-full bg-gradient-to-r from-white from-40% to-primary bg-opacity-100 fixed top-0 left-0 right-0 z-10 "> */}
-      <nav class="  bg-gradient-to-r from-primary to-newprimary xs:h-[80px] h-[60px] bg-opacity-100 fixed top-0 left-0 right-0 z-30 w-[100vw]">
-        <div className="bg-white midxl:w-[35%] md:w-[30%] xs:w-[45%] xxs:w-[50%] w-[60%] -translate-x-10 skew-x-[-30deg] absolute xs:h-[80px] h-[60px] z-20 shadow-navshadow">
-          <a href="/" className="h-full">
-            <Image
-              className=" xs:size-[85px] size-[60px] py-2  z-30 skew-x-[30deg] midxl:translate-x-20 translate-x-16"
-              src={newlogo}
-              alt="logo"
-            />
-          </a>
-        </div>
+      <nav class=" py-2 flex from-primary xs:h-[80px] h-[60px] fixed w-full">
+        <a href="/" className="h-full ">
+          <Image
+            className=" h-full object-contain object-left "
+            src={newlogo}
+            alt="logo"
+          />
+        </a>
+
         <div className="justify-between  mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between  md:block">

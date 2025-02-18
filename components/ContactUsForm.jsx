@@ -111,7 +111,7 @@ const ContactUsForm = () => {
   };
 
   return (
-    <>
+    <div className="pt-[40px]">
       {(isLoading || responseMessage) && (
         <div className="w-full h-[90vh] flex items-center justify-center">
           {/* Your form or component elements go here */}
@@ -217,7 +217,7 @@ const ContactUsForm = () => {
                       <input
                         placeholder="Inquiry Regarding Tour Details and Booking Information"
                         type="submit"
-                        className="w-full p-2 mb-5 rounded bg-primary text-black outline-none xs:text-[18px] text-[16px]"
+                        className="w-full p-2 mb-5 rounded bg-primary text-white outline-none xs:text-[18px] text-[16px]"
                         value="Submit"
                       />
                     </div>
@@ -228,7 +228,7 @@ const ContactUsForm = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

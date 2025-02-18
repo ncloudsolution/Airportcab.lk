@@ -217,10 +217,10 @@ Duration: ${tourDetails.duration}`;
         {!isLoading && !responseMessage && tourDetails.vehicleType && (
           <div className="flex flex-col items-center">
             <CurrencyTab />
-            <div className="mb-10 w-[100vw] flex justify-center bg-newprimary">
+            <div className="mb-10 w-full flex justify-center bg-white shadow-md">
               <Hierarchy />
             </div>
-            <div className=" rounded border-[2px] border-primary  bg-primary text-black p-4 mb-14 font-semibold gap-y-1 w-fit">
+            <div className=" rounded border-[2px] border-primary  bg-white shadow-md text-black p-4 mb-14 font-semibold gap-y-1 w-fit">
               <div className="text-center text-[30px]">Tour Summary</div>
 
               <div className="flex flex-col border-2 border-transparent  xs:text-[15px] xxs:text-[13px] text-[12px]">

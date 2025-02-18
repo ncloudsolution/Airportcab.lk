@@ -446,7 +446,7 @@ export const CustomTourPackageCustomerEmail = ({ customTourDetails }) => {
                             backgroundColor: "#075e54",
                             margin: "0px 5px 0px 5px",
                           }}
-                          href={`https://wa.me/+94712100500`}
+                          href={`https://wa.me/+94703199556`}
                         >
                           WhatsApp
                         </Button>

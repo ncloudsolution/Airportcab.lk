@@ -5,7 +5,7 @@ import React from "react";
 const CarSkeleton = () => {
   return (
     <>
-      <div className="w-full xxs:h-[100vh] h-[85vh] flex justify-center items-center bg-gradient-radial from-white to-gray-200">
+      <div className="w-full xxs:h-[100vh] h-[85vh] flex justify-center items-center bg-gradient-to-b from-white  to-gray-200 ">
         {/** for car 1
         <div className="text-[40px] font-medium absolute -translate-y-[150px] animate-cartext">
           Find your Driver

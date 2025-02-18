@@ -7,6 +7,7 @@ import Flow from "@/components/standalone/Flow";
 import DescriptionTile from "@/components/DescriptionTile";
 import PointToPointMap from "@/components/Map/PointToPointMap";
 import CurrencyFullBar from "@/components/CurrencyFullBar";
+import NewLoading from "@/components/skeletonUI/compoundElements/NewLoading";
 
 const P2PComp = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
@@ -28,15 +29,15 @@ const P2PComp = () => {
   if (!isLoaded || showSkeleton) {
     return (
       <>
-        <CarSkeleton />
+        <NewLoading />
       </>
     );
   }
   return (
-    <>
+    <div className="pt-[60px]">
       <CurrencyFullBar />
-      <div className=" flex flex-col justify-center items-center bg-gradient-to-t from-primary to-newprimary">
-        <div className="xs:mt-10 mt-5 bigmd:w-[838px] bxs:w-[464px] xxxs:w-[314px] w-[294px] px-8 rounded-md flex justify-center bg-black">
+      <div className=" flex flex-col justify-center items-center bg-gradient-to-t from-white to-gray-200">
+        <div className="xs:mt-10 bigmd:w-[838px] bxs:w-[464px] xxxs:w-[314px] w-[294px] px-8 rounded-md flex justify-center bg-[white]/50 shadow-lg backdrop-blur-lg mt-[40px]">
           <Hierarchy />
         </div>
         <div className="flex flex-col items-center  -scroll-mb-14">
@@ -52,7 +53,7 @@ const P2PComp = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

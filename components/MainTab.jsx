@@ -16,6 +16,7 @@ import { BsCoin } from "react-icons/bs";
 
 import CurrencyTab from "./standalone/CurrencyTab";
 import { TourContext } from "@/context/TourContextProvider";
+import NewLoading from "./skeletonUI/compoundElements/NewLoading";
 
 const MainTab = () => {
   const [isPointToPointClicked, setIsPointToPointClicked] = useState(false);
@@ -54,7 +55,8 @@ const MainTab = () => {
   if (!isLoaded || showSkeleton) {
     return (
       <>
-        <CarSkeleton />
+        {/* <CarSkeleton /> */}
+        <NewLoading />
       </>
     );
   }
@@ -91,7 +93,7 @@ const MainTab = () => {
   //
 
   return (
-    <>
+    <div>
       <BsCoin
         className={` ${
           isCurrencyActive ? "text-primary" : "text-newprimary"
@@ -102,12 +104,13 @@ const MainTab = () => {
         <CurrencyTab />
       </div>
       <div className="flex justify-center w-full bg-transparent px-0 ">
-        <div className="flex z-10 justify-center items-center flex-col bg-gradient-to-b from-primary  to-newprimary w-full bg-[length:100%_850px] bigmd:bg-[length:100%_600px] pt-10">
-          <div className="bigmd:w-[778px] bxs:w-[404px] xxxs:w-[244px] w-[230px] flex justify-center">
+        {/**bg-gradient-to-b from-primary  to-newprimary **/}
+        <div className="flex z-10 justify-center items-center flex-col bg-gradient-to-b from-white  to-gray-200  w-full bg-[length:100%_850px] bigmd:bg-[length:100%_600px]">
+          <div className="w-[80%] flex justify-center">
             <div
               className={` ${
                 isCurrencyActive ? "mt-0" : "mt-0"
-              } w-full flex justify-center bg-[black]/50 rounded backdrop-blur-lg`}
+              } w-full flex justify-center bg-[white]/50 shadow-lg rounded-md backdrop-blur-lg mt-[40px]`}
             >
               <Hierarchy />
             </div>
@@ -118,7 +121,7 @@ const MainTab = () => {
               <div
                 className={`${
                   isAirportClicked
-                    ? "bg-newprimary text-primary"
+                    ? "bg-primary text-white"
                     : "bg-white text-black"
                 } p-1 px-2   rounded cursor-pointer transition-all duration-500`}
                 onClick={handleAirport}
@@ -129,7 +132,7 @@ const MainTab = () => {
               <div
                 className={`${
                   isPointToPointClicked
-                    ? "bg-newprimary text-primary"
+                    ? "bg-primary text-white"
                     : "bg-white text-black"
                 } p-1 px-2   rounded cursor-pointer transition-all duration-500`}
                 onClick={handlePointToPoint}
@@ -140,7 +143,7 @@ const MainTab = () => {
               <div
                 className={`${
                   isTrainClicked
-                    ? "bg-newprimary text-primary"
+                    ? "bg-primary text-white"
                     : "bg-white text-black"
                 } p-1 px-2   rounded cursor-pointer transition-all duration-500`}
                 onClick={handleTrain}
@@ -163,13 +166,17 @@ const MainTab = () => {
               >
                 <MdLocalAirport
                   className={` ${
-                    isAirportClicked ? "bg-primary" : "bg-white"
-                  } bxs:size-[40px] size-[35px] text-black  rounded p-[6px]`}
+                    isAirportClicked
+                      ? "bg-primary text-white"
+                      : "bg-white text-black"
+                  } bxs:size-[40px] text-black size-[35px]  rounded p-[6px]`}
                 />
                 <div
                   className={` ${
-                    isAirportClicked ? "bg-primary" : "bg-white"
-                  }  text-[16px] flex-1 text-black  rounded bxs:py-2 py-[6px] px-4 font-semibold`}
+                    isAirportClicked
+                      ? "bg-primary text-white"
+                      : "bg-white text-black"
+                  }  text-[16px] flex-1   rounded bxs:py-2 py-[6px] px-4 font-semibold`}
                 >
                   Airport Transport
                 </div>
@@ -181,13 +188,17 @@ const MainTab = () => {
               >
                 <RiPinDistanceFill
                   className={` ${
-                    isPointToPointClicked ? "bg-primary" : "bg-white"
-                  } bxs:size-[40px] size-[35px] text-black  rounded p-[6px]`}
+                    isPointToPointClicked
+                      ? "bg-primary text-white"
+                      : "bg-white text-black"
+                  } bxs:size-[40px] size-[35px]   rounded p-[6px]`}
                 />
                 <div
                   className={` ${
-                    isPointToPointClicked ? "bg-primary" : "bg-white"
-                  }  text-[16px] flex-1 text-black  rounded bxs:py-2 py-[6px] px-4 font-semibold`}
+                    isPointToPointClicked
+                      ? "bg-primary text-white"
+                      : "bg-white text-black"
+                  }  text-[16px] flex-1 text-blacke  rounded bxs:py-2 py-[6px] px-4 font-semibold`}
                 >
                   Taxi Service
                 </div>
@@ -196,13 +207,17 @@ const MainTab = () => {
               <div className="flex items-center gap-x-4 " onClick={handleTrain}>
                 <FaTrain
                   className={` ${
-                    isTrainClicked ? "bg-primary" : "bg-white"
-                  } bxs:size-[40px] size-[35px] text-black  rounded p-[6px]`}
+                    isTrainClicked
+                      ? "bg-primary text-white"
+                      : "bg-white text-black"
+                  } bxs:size-[40px] size-[35px]   rounded p-[6px]`}
                 />
                 <div
                   className={` ${
-                    isTrainClicked ? "bg-primary" : "bg-white"
-                  }  text-[16px] flex-1 text-black  rounded bxs:py-2 py-[6px] px-4 font-semibold`}
+                    isTrainClicked
+                      ? "bg-primary text-white"
+                      : "bg-white text-black"
+                  }  text-[16px] flex-1 text-blacke  rounded bxs:py-2 py-[6px] px-4 font-semibold`}
                 >
                   Train Booking
                 </div>
@@ -236,7 +251,7 @@ const MainTab = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

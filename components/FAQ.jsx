@@ -59,7 +59,7 @@ const FAQ = () => {
   return (
     <Suspense
       fallback={
-        <div className="px-5 py-2 text-indigo-500 bg-white rounded-md">
+        <div className="px-5 py-2 text-primary bg-white rounded-md">
           FAQ Loading...
         </div>
       }
@@ -117,7 +117,7 @@ const FaqContent = () => {
       <div className="flex 2xl:w-[60%] w-[90%] md:px-5 px-3 2xl:py-2 py-1 bg-white rounded-md shadow-xl">
         <input
           type="text"
-          className="flex-1 outline-none md:text-[18px] text-[14px] text-indigo-500 font-semibold placeholder:md:text-[18px] placeholder:text-[14px] placeholder:font-normal placeholder:text-indigo-500"
+          className="flex-1 outline-none md:text-[16px] text-[14px] text-primary font-semibold placeholder:md:text-[18px] placeholder:text-[14px] placeholder:font-normal placeholder:text-primary/50"
           onChange={(e) => setInputValue(e.target.value)}
           ref={inputRef}
           placeholder="Search Your Problem"
@@ -125,14 +125,16 @@ const FaqContent = () => {
         />
         <Link href={`?search=${inputValue}`}>
           <IoIosSearch
-            className="text-indigo-500 2xl:size-[30px] size-[25px]"
+            className="text-primary 2xl:size-[30px] size-[25px]"
             onClick={() => inputRef.current.focus()}
           />
         </Link>
       </div>
 
       <div className="flex flex-col justify-center items-center 2xl:w-[60%] w-[90%] gap-10">
-        <div className="text-[70px] font-semibold">FAQ</div>
+        <div className="2xl:text-[50px] bigmd:text-[40px] text-[30px] font-semibold">
+          FAQ
+        </div>
 
         <div className="flex flex-col  gap-y-5">
           {selectedArray.map((qu, index) => (
@@ -145,7 +147,7 @@ const FaqContent = () => {
             />
           ))}
           {selectedArray.length < 1 && (
-            <div className="md:text-[18px] text-[14px] py-2 text-center">
+            <div className="md:text-[16px] text-[14px] py-2 text-center">
               Sorry, no matches found. Please try a different search term.
             </div>
           )}
@@ -153,11 +155,11 @@ const FaqContent = () => {
       </div>
 
       <div
-        className="absolute bottom-[2%] 2xl:right-[20%] right-[5%] bg-white rounded-md p-2 shadow-custom size-[50px] flex items-center justify-center shadow-md"
+        className="absolute -bottom-[2%] 2xl:right-[20%] right-[5%] bg-white rounded-md p-2 shadow-custom size-[50px] flex items-center justify-center shadow-md"
         onClick={HandleToggleAll}
       >
         <GoCircle
-          className={`text-indigo-500 rounded-full transition-all duration-500 ${
+          className={`text-primary rounded-full transition-all duration-500 ${
             expandedIndices.length === 0 ? "text-[35px]" : "text-[25px]"
           }`}
         />
@@ -260,7 +262,7 @@ const QuizBox = ({ quiz, answer, isExpanded, onToggle }) => {
         } md:px-5 px-3 py-2 flex justify-between items-center bg-white`}
         onClick={onToggle}
       >
-        <div className="font-semibold md:text-[18px] text-[14px]">{quiz}</div>
+        <div className="font-semibold md:text-[16px] text-[14px]">{quiz}</div>
         <IoIosArrowDown
           className={`${
             isExpanded ? "rotate-180" : "rotate-0"

@@ -22,6 +22,8 @@ import { FaUser } from "react-icons/fa6";
 import { FaBriefcase } from "react-icons/fa";
 import { FaRegSnowflake } from "react-icons/fa";
 import { BsHandbagFill } from "react-icons/bs";
+import useFineCurrency from "@/hooks/useFineCurrency";
+import { IoCarSport } from "react-icons/io5";
 
 const center = { lat: 6.9271, lng: 79.8612 };
 
@@ -56,6 +58,9 @@ const PointToPointMap = ({ children }) => {
   const passengerCountRef = useRef();
 
   const mapRef = useRef();
+
+  const { lkrRate, usdRate, euroRate, usdSymbol, euroSymbol, lkrSymbol } =
+    useFineCurrency();
 
   //scroll to after the submission
 
@@ -157,8 +162,8 @@ const PointToPointMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full">
-        <div className=" flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg  rounded-lg  mb-10">
-          <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-white">
+        <div className="border-[1px] border-primary flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg  mb-10">
+          <div className="text-black bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium">
             Taxi Service
           </div>
           <RiPinDistanceFill className="text-[35px] text-primary" />
@@ -221,19 +226,23 @@ const PointToPointMap = ({ children }) => {
                   </div>
                 )}
 
-                <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-2  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
+                <div className="flex flex-1 justify-between gap-x-4 bigmd:gap-x-[6px]  xxs:text-[16px] text-[12px] font-medium xxs:font-normal">
+                  <div className="rounded-md bg-primary flex items-center flex-1 gap-2 justify-center text-white">
+                    <IoCarSport className="text-[20px]" />
+                    <button
+                      type="submit"
+                      className=" "
+                      onClick={calculateRoute}
+                    >
+                      Search
+                    </button>
+                  </div>
+
                   <button
-                    type="submit"
-                    className="bg-primary text-black p-2 rounded bigmd:w-fit flex-1 bigmd:block "
-                    onClick={calculateRoute}
-                  >
-                    Calculate Route
-                  </button>
-                  <button
-                    className="bg-black text-primary border-[1px] border-primary bigmd:px-1 px-2 py-2 rounded bigmd:w-fit :flex-1 bigmd:block"
+                    className=" text-primary border-[1px] border-primary bigmd:px-1 px-2 py-2 rounded bigmd:w-fit :flex-1 bigmd:block"
                     onClick={clearRoute}
                   >
-                    Clear Route
+                    Clear Search
                   </button>
                 </div>
               </div>
@@ -241,7 +250,7 @@ const PointToPointMap = ({ children }) => {
           </div>
 
           {submitError && (
-            <div className="text-errorpink bg-white px-4 py-2 rounded mb-4">
+            <div className="text-errorpink bg-gray-200 px-4 py-2 rounded mb-4">
               {submitError}
             </div>
           )}
@@ -260,8 +269,8 @@ const PointToPointMap = ({ children }) => {
 
         <div>
           {!submitError && distance && duration && (
-            <div className="w-[100vw] bg-white flex justify-center">
-              <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-yellow-400 text-black rounded mt-8 mb-6 w-fit">
+            <div className="w-[100vw] bg-gray-200 flex justify-center">
+              <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-primary text-white rounded mt-8 mb-6 w-fit">
                 <div>Distance : {distance}</div>
                 <div className="font-bold xs:flex hidden">||</div>
                 <div>Duration : {duration}</div>
@@ -273,7 +282,7 @@ const PointToPointMap = ({ children }) => {
         <div>
           {isSubmit && !submitError && (
             <div
-              className="w-[100vw] bg-white flex justify-center border-b-[1px] border-b-black"
+              className="w-[100vw] bg-gradient-to-b from-gray-200 via-white to-gray-200 flex justify-center border-b-[1px] border-b-primary"
               ref={mapRef}
             >
               <div className="midxl:w-[1400px] mobile:w-[1000px]  w-[800px] flex gap-x-10 xs:mt-8 mt-4 mb-16 mobile:flex-row flex-col bigmd:items-start items-center border-2 border-transparent gap-5 p-4">
@@ -335,30 +344,37 @@ const PointToPointMap = ({ children }) => {
                             <div>Air Conditioning</div>
                           </div>
                         </div>
-
-                        <div className="bg-black text-white py-2 rounded w-full text-center flex flex-col items-center">
-                          <div className="flex text-[18px]">
-                            <div className="pr-1">
-                              {tourDetails.converedCurrencySymbol}
-                            </div>
+                        <div className="text-white overflow-hidden rounded w-full text-center flex flex-col items-center">
+                          <div className="flex py-1 text-[14px] bg-black w-full justify-center text-white">
+                            <div className="pr-1">{lkrSymbol}</div>
                             <div>
                               {returnTour
-                                ? (
-                                    tourDetails.conversionRate *
-                                    vehicle.price *
-                                    2
-                                  ).toFixed(2)
-                                : (
-                                    tourDetails.conversionRate * vehicle.price
-                                  ).toFixed(2)}
+                                ? (lkrRate * vehicle.price * 2).toFixed(2)
+                                : (lkrRate * vehicle.price).toFixed(2)}
                             </div>
                           </div>
-                          {/* <div className="bigmd:text-[12px] text-[10px] text-yellow-500 w-full  px-2 text-center">
-                          Highway Charges and other Charges are Not Included
-                        </div> */}
+
+                          <div className="flex py-1 text-[14px] bg-slate-300 w-full justify-center text-black">
+                            <div className="pr-1">{usdSymbol}</div>
+                            <div>
+                              {returnTour
+                                ? (usdRate * vehicle.price * 2).toFixed(2)
+                                : (usdRate * vehicle.price).toFixed(2)}
+                            </div>
+                          </div>
+
+                          <div className="flex py-1 text-[14px] bg-slate-200 w-full justify-center text-black">
+                            <div className="pr-1">{euroSymbol}</div>
+                            <div>
+                              {returnTour
+                                ? (euroRate * vehicle.price * 2).toFixed(2)
+                                : (euroRate * vehicle.price).toFixed(2)}
+                            </div>
+                          </div>
                         </div>
+
                         <button
-                          className="bg-yellow-500 w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
+                          className="bg-primary text-white w-full py-2 rounded font-semibold  hover:border-black border-2 border-transparent transition-all duration-500"
                           onClick={() => {
                             //
                             setTourDetails((prevTourDetails) => ({

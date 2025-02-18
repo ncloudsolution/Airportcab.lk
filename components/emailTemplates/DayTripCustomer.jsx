@@ -399,7 +399,7 @@ const DayTripCustomer = ({ dayTripDetails }) => {
                             backgroundColor: "#075e54",
                             margin: "0px 5px 0px 5px",
                           }}
-                          href={`https://wa.me/+94712100500`}
+                          href={`https://wa.me/+94703199556`}
                         >
                           WhatsApp
                         </Button>
@@ -449,8 +449,8 @@ const DayTripCustomer = ({ dayTripDetails }) => {
                 color: "rgb(0,0,0, 0.7)",
               }}
             >
-              © 2024 | 118/ 5 st Joseph street, Grandpass, Colombo 14, Sri
-              Lanaka | www.tourbookingsrilanka.com
+              © 2024 | No : 262/5A Church Rd, Liyanagemulla, Seeduwa, Sri Lanaka
+              | www.airportcab.lk
             </Text>
           </Container>
         </Container>

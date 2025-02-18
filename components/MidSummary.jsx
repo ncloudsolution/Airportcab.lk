@@ -28,7 +28,7 @@ const MidSummary = () => {
   const cusMobileRef = useRef();
   const cusWhatsappMobileRef = useRef();
   const cusFlightNoRef = useRef();
-  const cusNicPassportRef = useRef();
+  // const cusNicPassportRef = useRef();
   const cusDisplayNameRef = useRef();
 
   const cusLuggageCountRef = useRef();
@@ -57,7 +57,7 @@ const MidSummary = () => {
       cusEmailRef.current.value === "" ||
       cusMobileRef.current.value === "" ||
       cusLuggageCountRef.current.value === "" ||
-      cusNicPassportRef.current.value === "" ||
+      // cusNicPassportRef.current.value === "" ||
       (tourDetails.tourType === "airport" &&
         (cusFlightNoRef.current.value === "" || arrivalDate === "")) /*|| 
       file === null*/ // Uncomment this if you need to check if a file is uploaded
@@ -87,7 +87,7 @@ const MidSummary = () => {
       ...prevDetails,
       customerName: cusNameRef.current.value,
       customerEmail: cusEmailRef.current.value,
-      customerNicPassport: cusNicPassportRef.current.value,
+      // customerNicPassport: cusNicPassportRef.current.value,
       cusDisplayName: boardShow ? cusDisplayNameRef.current.value : "",
       customerMobileNo: cusMobileRef.current.value,
       customerWhatsappMobileNo: cusWhatsappMobileRef.current.value,
@@ -149,13 +149,13 @@ const MidSummary = () => {
     }));
   };
 
-  const handleCustomerNicPassport = (e) => {
-    const newCustomerNicPassport = e.target.value; // Get input value
-    setTourDetails((prevTourDetails) => ({
-      ...prevTourDetails,
-      customerNicPassport: newCustomerNicPassport, // Update nic/passport in tourDetails
-    }));
-  };
+  // const handleCustomerNicPassport = (e) => {
+  //   const newCustomerNicPassport = e.target.value; // Get input value
+  //   setTourDetails((prevTourDetails) => ({
+  //     ...prevTourDetails,
+  //     customerNicPassport: newCustomerNicPassport, // Update nic/passport in tourDetails
+  //   }));
+  // };
 
   const handleLuggageCountChange = (e) => {
     const newLuggageCount = parseInt(e.target.value); // Parse input value to integer
@@ -203,11 +203,11 @@ const MidSummary = () => {
 
   return (
     <>
-      <div className="mt-0 mb-4">
+      <div className="mt-0 mb-4 ">
         {tourDetails.vehicleType && (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center ">
             <CurrencyTab />
-            <div className="mb-10 w-[100vw] flex justify-center bg-newprimary">
+            <div className="mb-10 w-full flex justify-center bg-white shadow-md">
               <Hierarchy />
             </div>
             <div className="bg-transparent rounded border-[2px] border-primary p-2 mb-14 font-semibold gap-y-1 bigmd:w-[820px] bxs:w-[450px] w-[330px]">
@@ -322,13 +322,13 @@ highwayExit: station,
 
                     {/**highway section**/}
                     {tourDetails.tourType === "airport" ? (
-                      <div className="my-5  text-[12px] bg-primary p-3 rounded">
+                      <div className="my-5  text-[12px] bg-black text-white shadow-md p-3 rounded">
                         Highway charges are optional. If selected, no extra fees
                         are needed during the tour. Otherwise, you can be paid
                         at the highway counter.
                       </div>
                     ) : (
-                      <div className="my-5  text-[12px] bg-primary p-3 rounded">
+                      <div className="my-5  text-[12px] bg-black text-white shadow-md p-3 rounded">
                         Highway charges are not included, you can be paid
                         highway fair at the highway counter if needed.
                       </div>
@@ -385,7 +385,7 @@ highwayExit: station,
                           />
                         </div>
 
-                        <div className="flex bxs:w-[400px] w-full bxs:items-center bxs:flex-row flex-col bxs:my-0 my-1">
+                        {/* <div className="flex bxs:w-[400px] w-full bxs:items-center bxs:flex-row flex-col bxs:my-0 my-1">
                           <span className="bxs:w-[180px] w-[150px] bg-transparent">
                             NIC/Passport No
                           </span>
@@ -397,7 +397,7 @@ highwayExit: station,
                             type="text"
                             className="p-1 font-normal text-[14px] outline-none bxs:w-[220px] w-full shadow-md rounded border-[1px] border-black "
                           />
-                        </div>
+                        </div> */}
 
                         {tourDetails.tourType === "airport" && (
                           <>
@@ -563,7 +563,7 @@ highwayExit: station,
                                   }}
                                   className={` ${
                                     boardShow
-                                      ? "bg-primary text-black shadow-md "
+                                      ? "bg-primary text-white shadow-md "
                                       : "border-[1px] border-black"
                                   } w-full p-1 rounded transition-all duration-500 hover:cursor-pointer`}
                                 >
@@ -577,7 +577,7 @@ highwayExit: station,
                                   }}
                                   className={` ${
                                     !boardShow
-                                      ? "bg-primary text-black shadow-md"
+                                      ? "bg-primary text-white shadow-md"
                                       : "border-[1px] border-black"
                                   } w-full p-1 rounded transition-all duration-500 hover:cursor-pointer`}
                                 >
