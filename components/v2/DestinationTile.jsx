@@ -15,13 +15,13 @@ const DestinationTile = ({ item }) => {
   const taxiHandleClick = (org, dest) => {
     setTourDetails((prevTourDetails) => ({
       ...prevTourDetails,
-      destinationpage: true,
+      destinationpage: false,
       isPickup: true,
       destination: dest,
       origin: "Bandaranaike International Airport (CMB), Katunayake",
     }));
 
-    router.push("/taxi-service");
+    router.push(`/airport-pickup-and-drop`);
   };
   return (
     <div className="flex flex-col  shadow-md rounded-lg overflow-hidden bg-gray-100">

@@ -30,7 +30,6 @@ const GoogleReviews = () => {
         setReviews(data);
       })
       .catch((error) => {
-        console.log("Failed to fetch Google reviews:", error.message);
         setError(error.message); // Set the error message in state
       });
   }, []);
@@ -118,8 +117,6 @@ const GoogleReviews = () => {
   if (!mounted || reviews.length == 0) {
     return <ReviewLoader />;
   }
-
-  console.log(reviews);
 
   return (
     <div className="w-full flex flex-col text-center items-center px-5 bg-slate-100 ">

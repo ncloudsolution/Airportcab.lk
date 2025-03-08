@@ -30,7 +30,7 @@ const NewNavBar = () => {
   };
 
   return (
-    <nav className="border-b-[1px] border-primary py-2 lg:px-8 xs:px-5 px-3 flex justify-center items-center fixed z-50 bg-white h-[60px] w-full shadow-md">
+    <nav className="border-b-[4px] border-black py-2 lg:px-8 xs:px-5 px-3 flex justify-center items-center fixed z-50 bg-white h-[60px] w-full shadow-md">
       <div className="bigmd:w-[90%] w-full justify-between ">
         <div className="flex justify-between w-full">
           {/* Logo Section */}

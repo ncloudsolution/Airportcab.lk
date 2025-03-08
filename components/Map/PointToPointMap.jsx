@@ -117,6 +117,7 @@ const PointToPointMap = ({ children }) => {
         travelMode: google.maps.TravelMode.DRIVING,
       });
 
+      console.log(results, "direction results");
       setSubmitError("");
       setIsSubmit(true);
       setDirectionsResponse(results);
@@ -144,6 +145,9 @@ const PointToPointMap = ({ children }) => {
         behavior: "smooth", // Smooth scrolling
       });
     } catch (error) {
+      setSubmitError(
+        "At least one of the origin or destination you enterd could not be geocoded"
+      );
       console.error("Error occurred while calculating route:", error);
       // Handle error as needed
     }

@@ -10,7 +10,7 @@ const PopularTours = () => {
   const items = [
     {
       label: "BIA Airport to Sigiriya | Dambulla | Habarana",
-      origin: "BIA Airport",
+      origin: "Bandaranaike International Airport (CMB), Katunayake",
       destination: "Sigiriya",
       road: "Highway",
       distance: "150 km",
@@ -19,7 +19,8 @@ const PopularTours = () => {
       img: sigiriya,
     },
     {
-      origin: "BIA Airport",
+      label: "BIA Airport to Colombo",
+      origin: "Bandaranaike International Airport (CMB), Katunayake",
       destination: "Colombo",
       road: "Highway",
       distance: "35 km",
@@ -29,7 +30,7 @@ const PopularTours = () => {
     },
     {
       label: "BIA Airport to Mirissa | Waligama | Ahangama",
-      origin: "BIA Airport",
+      origin: "Bandaranaike International Airport (CMB), Katunayake",
       destination: "Mirissa",
       road: "Highway",
       distance: "180 km",
@@ -38,7 +39,8 @@ const PopularTours = () => {
       img: mirissa,
     },
     {
-      origin: "BIA Airport",
+      label: "BIA Airport to Ella",
+      origin: "Bandaranaike International Airport (CMB), Katunayake",
       destination: "Ella",
       road: "Highway",
       distance: "220 km",
