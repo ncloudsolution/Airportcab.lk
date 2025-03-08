@@ -21,7 +21,9 @@ const DestinationTile = ({ item }) => {
       origin: "Bandaranaike International Airport (CMB), Katunayake",
     }));
 
-    router.push(`/airport-pickup-and-drop`);
+    router.push(
+      `/airport-pickup-and-drop?origin=${item.origin}&destination=${item.destination}`
+    );
   };
   return (
     <div className="flex flex-col  shadow-md rounded-lg overflow-hidden bg-gray-100">
