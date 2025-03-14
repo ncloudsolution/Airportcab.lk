@@ -16,13 +16,13 @@ const UpperFooter = () => {
   return (
     <>
       <div className="h-[980px]  xs:h-[750px] sm:h-[700px] bigmd:h-[550px]  w-full  overflow-hidden relative">
-        <Image
+        {/* <Image
           src={bg}
           alt=""
           className="size-[100%]  object-cover object-right xs:object-center"
-        />
+        /> */}
 
-        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="absolute inset-0 bg-black opacity-90"></div>
         <div className="absolute top-0 left-0  w-full flex justify-center bigmd:py-20 py-10 ">
           <div className="text-white  flex flex-col midxl:w-[70%] w-[90%] bg-transparent items-center ">
             <div className="text-[34px] font-semibold  pb-[50px]">

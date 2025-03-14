@@ -1,8 +1,10 @@
 import React from "react";
 import DestinationTile from "./DestinationTile";
 import sigiriya from "@/public/popular/sigiriya-pop.jpg";
+import sigiriya2 from "@/public/popular/sigiriya-pop-2.jpg";
 import colombo from "@/public/popular/colombo-pop.jpg";
 import ella from "@/public/popular/ella-pop.jpg";
+import ella2 from "@/public/popular/ella-pop-2.jpg";
 import mirissa from "@/public/popular/mirissa-pop.jpg";
 import cardpointtopoint from "@/public/Tiles/card.webp";
 
@@ -16,7 +18,7 @@ const PopularTours = () => {
       distance: "150 km",
       time: "3 hours 10 mins",
       price: "Starting from 49 USD / 47 EURO",
-      img: sigiriya,
+      img: sigiriya2,
     },
     {
       label: "BIA Airport to Colombo",
@@ -46,7 +48,7 @@ const PopularTours = () => {
       distance: "220 km",
       time: "5 hours 45 mins",
       price: "Starting from 110 USD / 105 EURO",
-      img: ella,
+      img: ella2,
     },
   ];
 
