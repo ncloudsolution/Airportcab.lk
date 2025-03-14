@@ -37,7 +37,7 @@ export const CustomerEmail = ({ tourDetails }) => {
                   <Img
                     height={60}
                     // src={"https://i.ibb.co/84NTTCw/bgremovedlogo.png"}
-                    src={"https://i.ibb.co/80wTQm2/cablk.jpg"}
+                    src={"https://i.ibb.co/PZ7zsdZc/brand-new-logo2.png"}
                   />
                 </Column>
                 <Column align="right">

@@ -4,6 +4,7 @@ import React from "react";
 // import bg from "@/public/Footers/bgimg1.jpeg";
 import bg from "@/public/Footers/flight.jpg";
 import newlogo from "@/public/Navbar/cablkmod.jpg";
+import brandnewlogo from "@/public/Navbar/brand-new-logo2.png";
 import Link from "next/link";
 
 import { FaFacebookF } from "react-icons/fa";
@@ -31,11 +32,7 @@ const UpperFooter = () => {
             <div className="w-full justify-around items-center grid bigmd:grid-cols-4  xs:grid-cols-2  grid-cols-1 font-medium ">
               <div className="flex flex-col text-center items-center mb-[40px]">
                 <div className="bg-white rounded-full mobile:size-[150px] size-[100px] flex justify-center items-center overflow-hidden">
-                  <Image
-                    src={newlogo}
-                    alt=""
-                    className="mobile:w-[120px] w-[70px]"
-                  />
+                  <Image src={brandnewlogo} alt="" className="mobile:w-full" />
                 </div>
 
                 <div className="my-2">
