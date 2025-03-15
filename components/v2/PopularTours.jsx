@@ -3,9 +3,12 @@ import DestinationTile from "./DestinationTile";
 import sigiriya from "@/public/popular/sigiriya-pop.jpg";
 import sigiriya2 from "@/public/popular/sigiriya-pop-2.jpg";
 import colombo from "@/public/popular/colombo-pop.jpg";
+import colombo2 from "@/public/popular/colombo-pop2.jpg";
+import colombo3 from "@/public/popular/colombo-pop3.jpg";
 import ella from "@/public/popular/ella-pop.jpg";
 import ella2 from "@/public/popular/ella-pop-2.jpg";
 import mirissa from "@/public/popular/mirissa-pop.jpg";
+import mirissa2 from "@/public/popular/mirissa-pop2.webp";
 import cardpointtopoint from "@/public/Tiles/card.webp";
 
 const PopularTours = () => {
@@ -28,7 +31,7 @@ const PopularTours = () => {
       distance: "35 km",
       time: "40 mins",
       price: "Starting from 12 USD / 12 EURO ",
-      img: colombo,
+      img: colombo3,
     },
     {
       label: "BIA Airport to Mirissa | Waligama | Ahangama",
@@ -38,7 +41,7 @@ const PopularTours = () => {
       distance: "180 km",
       time: "2 hours 45 mins",
       price: "Starting from from 59 USD / 58 EURO",
-      img: mirissa,
+      img: mirissa2,
     },
     {
       label: "BIA Airport to Ella",
