@@ -17,6 +17,7 @@ import { BsCoin } from "react-icons/bs";
 import CurrencyTab from "./standalone/CurrencyTab";
 import { TourContext } from "@/context/TourContextProvider";
 import NewLoading from "./skeletonUI/compoundElements/NewLoading";
+import PuffAnimationArea from "./v2/PuffAnimationArea";
 
 const MainTab = () => {
   const [isPointToPointClicked, setIsPointToPointClicked] = useState(false);
@@ -105,7 +106,7 @@ const MainTab = () => {
       </div>
       <div className="flex justify-center w-full bg-transparent px-0 ">
         {/**bg-gradient-to-b from-primary  to-newprimary **/}
-        <div className="flex z-10 justify-center items-center flex-col bg-gradient-to-b from-white  to-gray-200  w-full bg-[length:100%_850px] bigmd:bg-[length:100%_600px]">
+        <div className="flex z-10 justify-center items-center flex-col bg-gradient-to-b from-white  to-gray-200  w-full ">
           <div className="w-[80%] flex justify-center">
             <div
               className={` ${
@@ -116,8 +117,10 @@ const MainTab = () => {
             </div>
           </div>
 
-          <div className="flex flex-col bigmd:w-[778px] bxs:w-[404px] xxxs:w-[244px] w-[230px] items-start mt-5">
-            <div className="bigmd:flex  hidden gap-3 mt-3 mb-5 bxs:text-[16px] text-[12px] w-full justify-center">
+          {/* <div className="flex flex-col bigmd:w-[778px] bxs:w-[404px] xxxs:w-[244px] w-[230px] items-start"> */}
+          <div className="flex flex-col bigmd:w-[838px] bxs:w-[464px] xxxs:w-[314px] w-[294px] items-start">
+            <PuffAnimationArea />
+            <div className="bigmd:flex  hidden gap-3 mb-5 bxs:text-[16px] text-[12px] w-full justify-center">
               <div
                 className={`${
                   isAirportClicked
@@ -159,7 +162,7 @@ const MainTab = () => {
             </div>
 
             {/**mobile area**/}
-            <div className="bigmd:hidden  flex flex-col gap-3 text-[30px] text-white my-4 bxs:justify-start justify-center w-full ">
+            <div className="bigmd:hidden  flex flex-col gap-3 text-[30px] text-white mb-5 bxs:justify-start justify-center w-full ">
               <div
                 className="flex items-center gap-x-4 "
                 onClick={handleAirport}

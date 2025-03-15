@@ -139,7 +139,7 @@ const TrainMap = ({ children }) => {
         </div>
 
         {isSubmit && !submitError && (
-          <div className="w-[100vw] bg-gray-200 border-b-2 border-primary ">
+          <div className="w-[100vw]">
             <div className="w-full flex justify-center">
               <div className=" midxl:w-[1400px] mobile:w-[1000px] w-[800px] flex gap-x-10 xs:mt-8 mb-0  bigmd:flex-row flex-col bigmd:items-start items-center gap-2 mt-6">
                 <div className="flex flex-col w-full items-center ">
