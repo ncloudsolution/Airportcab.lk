@@ -99,37 +99,37 @@ const UpperFooter = () => {
                 <Link
                   target="_blank"
                   href="mailto:info@airportcab.lk"
-                  className="xs:size-[50px] size-[45px]  rounded-full bg-primary flex justify-center items-center"
+                  className="xs:size-[50px] size-[45px]  rounded-full text-green-500 bg-white flex justify-center items-center"
                 >
-                  <IoIosMailUnread className="text-white text-[32px]" />
+                  <IoIosMailUnread className="text-primary text-[32px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://facebook.com/airportcab.lk"
-                  className="xs:size-[50px] size-[45px]   rounded-full bg-primary flex justify-center items-center"
+                  className="xs:size-[50px] size-[45px]   rounded-full bg-white flex justify-center items-center"
                 >
-                  <FaFacebookF className="text-white text-[25px]" />
+                  <FaFacebookF className="text-primary text-[25px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://wa.me/+94712100500"
-                  className="xs:size-[50px] size-[45px] rounded-full bg-primary flex justify-center items-center"
+                  className="xs:size-[50px] size-[45px] rounded-full bg-white flex justify-center items-center"
                 >
-                  <BsWhatsapp className="text-white text-[28px]" />
+                  <BsWhatsapp className="text-primary text-[28px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://t.me/Tourbookingsrilanka"
-                  className="xs:size-[50px] size-[45px]  rounded-full bg-primary flex justify-center items-center"
+                  className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
                 >
-                  <FaTelegramPlane className="text-white text-[28px] -translate-x-[2px]" />
+                  <FaTelegramPlane className="text-primary text-[28px] -translate-x-[2px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://www.youtube.com/@airportcabsrilanka"
-                  className="xs:size-[50px] size-[45px]  rounded-full bg-primary flex justify-center items-center"
+                  className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
                 >
-                  <FaYoutube className="text-white text-[28px] " />
+                  <FaYoutube className="text-primary text-[28px] " />
                 </Link>
               </div>
             </div>
