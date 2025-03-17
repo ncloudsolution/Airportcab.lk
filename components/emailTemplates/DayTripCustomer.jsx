@@ -66,7 +66,7 @@ const DayTripCustomer = ({ dayTripDetails }) => {
                     <Img
                       style={{ paddingBottom: 10, margin: "0 auto" }}
                       height={200}
-                      src={"https://i.ibb.co/wNnSdp6/thankyou.jpg"}
+                      src={"https://i.ibb.co/FkhbJBb7/thankyou.jpg"}
                     />
                   </Row>
 
@@ -243,7 +243,7 @@ const DayTripCustomer = ({ dayTripDetails }) => {
                               width: "100%",
                               objectFit: "cover",
                             }}
-                            src={"https://i.ibb.co/ydtmqTh/airport.jpg"}
+                            src={"https://i.ibb.co/XxJX66p5/door.jpg"}
                           />
                         </div>
                         <Text
@@ -290,7 +290,7 @@ const DayTripCustomer = ({ dayTripDetails }) => {
                               width: "100%",
                               objectFit: "cover",
                             }}
-                            src={"https://i.ibb.co/4d4sChq/ptop.png"}
+                            src={"https://i.ibb.co/8nYFQxmR/door3.png"}
                           />
                         </div>
                         <Text
@@ -339,7 +339,7 @@ const DayTripCustomer = ({ dayTripDetails }) => {
                               width: "100%",
                               objectFit: "cover",
                             }}
-                            src={"https://i.ibb.co/VVZHbfX/train.jpg"}
+                            src={"https://i.ibb.co/27r5qLsx/train.jpg"}
                           />
                         </div>
                         <Text

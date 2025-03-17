@@ -11,7 +11,7 @@ const useFineCurrency = () => {
   const euroSymbol = currency.EUR;
   const lkrSymbol = currency.LKR;
 
-  console.log(currency.USD);
+  // console.log(currency.USD);
 
   return { lkrRate, usdRate, euroRate, usdSymbol, euroSymbol, lkrSymbol };
 };

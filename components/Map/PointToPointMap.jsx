@@ -117,6 +117,7 @@ const PointToPointMap = ({ children }) => {
         travelMode: google.maps.TravelMode.DRIVING,
       });
 
+      console.log(results, "direction results");
       setSubmitError("");
       setIsSubmit(true);
       setDirectionsResponse(results);
@@ -144,6 +145,9 @@ const PointToPointMap = ({ children }) => {
         behavior: "smooth", // Smooth scrolling
       });
     } catch (error) {
+      setSubmitError(
+        "At least one of the origin or destination you enterd could not be geocoded"
+      );
       console.error("Error occurred while calculating route:", error);
       // Handle error as needed
     }
@@ -269,7 +273,7 @@ const PointToPointMap = ({ children }) => {
 
         <div>
           {!submitError && distance && duration && (
-            <div className="w-[100vw] bg-gray-200 flex justify-center">
+            <div className="w-[100vw] flex justify-center">
               <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-primary text-white rounded mt-8 mb-6 w-fit">
                 <div>Distance : {distance}</div>
                 <div className="font-bold xs:flex hidden">||</div>
@@ -281,10 +285,7 @@ const PointToPointMap = ({ children }) => {
 
         <div>
           {isSubmit && !submitError && (
-            <div
-              className="w-[100vw] bg-gradient-to-b from-gray-200 via-white to-gray-200 flex justify-center border-b-[1px] border-b-primary"
-              ref={mapRef}
-            >
+            <div className="w-[100vw] flex justify-center" ref={mapRef}>
               <div className="midxl:w-[1400px] mobile:w-[1000px]  w-[800px] flex gap-x-10 xs:mt-8 mt-4 mb-16 mobile:flex-row flex-col bigmd:items-start items-center border-2 border-transparent gap-5 p-4">
                 <div className="midxl:w-[800px] bxs:w-full xs:w-[400px] xxxs:w-[300px] w-[250px]  midxl:h-[500px] bigmd:h-[300px]  xs:h-[400px] xxxs:h-[300px] h-[250px] aspect-square flex rounded-lg overflow-hidden shadow-md ">
                   <GoogleMap

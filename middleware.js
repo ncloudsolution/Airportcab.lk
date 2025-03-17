@@ -17,7 +17,7 @@ export async function middleware(request) {
     (route) => nextUrl.pathname == route
   );
 
-  console.log(isRestrictedRoute, "is Restricted Route");
+  // console.log(isRestrictedRoute, "is Restricted Route");
 
   if (isRestrictedRoute) {
     return NextResponse.redirect(new URL("/not-found", BaseUrl));

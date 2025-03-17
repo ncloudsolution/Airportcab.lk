@@ -1,15 +1,26 @@
 "use client";
 import AirportMap from "@/components/Map/AirportMap";
-import CarSkeleton from "@/components/skeletonUI/compoundElements/CarSkeleton";
 import Hierarchy from "@/components/standalone/Hierarchy";
 import { useJsApiLoader } from "@react-google-maps/api";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Flow from "@/components/standalone/Flow";
 import DescriptionTile from "@/components/DescriptionTile";
 import CurrencyFullBar from "@/components/CurrencyFullBar";
 import NewLoading from "@/components/skeletonUI/compoundElements/NewLoading";
+import { useSearchParams } from "next/navigation";
+import { TourContext } from "@/context/TourContextProvider";
 
 const AirportComp = () => {
+  const { tourDetails, setTourDetails } = useContext(TourContext);
+  const params = useSearchParams();
+  const dest = params.get("destination");
+  useEffect(() => {
+    setTourDetails((prevDetails) => ({
+      ...prevDetails,
+      destination: dest,
+    }));
+  });
+
   const [showSkeleton, setShowSkeleton] = useState(true);
   useEffect(() => {
     const timeoutId = setTimeout(() => {

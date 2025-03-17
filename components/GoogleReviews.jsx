@@ -30,7 +30,6 @@ const GoogleReviews = () => {
         setReviews(data);
       })
       .catch((error) => {
-        console.log("Failed to fetch Google reviews:", error.message);
         setError(error.message); // Set the error message in state
       });
   }, []);
@@ -73,16 +72,18 @@ const GoogleReviews = () => {
   );
 
   const [count, setCount] = useState(0);
-
+  console.log(count);
   const leftHandler = () => {
     if (count > 0) {
       setCount(count - 1);
+      console.log("left");
     }
   };
 
   const rightHandler = () => {
-    if (count < hoppingSizeValue - 1) {
+    if (count != 4 && count < hoppingSizeValue) {
       setCount(count + 1);
+      console.log("right");
     }
   };
 
@@ -107,11 +108,11 @@ const GoogleReviews = () => {
   const translationOffset =
     // columnSizebyScreenSizeValue != 1 ? 20 * count : 24 * count;
     columnSizebyScreenSizeValue == 1
-      ? 20 * count
+      ? 24 * count
       : // ? 18.5 * count
       columnSizebyScreenSizeValue == 2
-      ? 20 * count
-      : 20 * count;
+      ? 24 * count
+      : 24 * count;
   // : 34 * count;
 
   // Don't render the actual content until the component has mounted on the client
@@ -119,35 +120,32 @@ const GoogleReviews = () => {
     return <ReviewLoader />;
   }
 
-  console.log(reviews);
-
   return (
-    <div className="w-full flex flex-col text-center items-center px-5 bg-slate-100 ">
+    <div className="w-full flex flex-col text-center items-center px-5  bg-slate-100 ">
       {/* <Title title={"Most Recent Reviews"} /> */}
       <div className="2xl:text-[50px] bigmd:text-[40px] text-[30px] font-semibold mb-5">
         Most Recent Reviews
       </div>
-      <div className="flex items-center justify-center w-full">
+      <div className="relative flex items-center justify-center w-full ">
         <div onClick={leftHandler} className="cursor-pointer">
           <SliderBtn side={"left"} />
         </div>
-
-        <div className="w-[90%] flex p-5 bg-transparent">
+        <div className=" w-[calc(90%)] flex p-5 bg-transparent overflow-hidden">
           <div
-            className="flex w-full overflow-hidden rounded-xl bg-transparent py-2"
+            className="flex w-full rounded-xl bg-transparent py-5 transition-all duration-500"
             ref={elementRef}
+            style={{
+              transform: `translateX(-${count * size + translationOffset}px)`, // Move only the whole container
+            }}
           >
-            <div className="flex gap-5 bg-transparent">
+            <div className="flex gap-6 bg-transparent">
               {reviews.map((review, index) => (
                 <div
+                  key={index}
+                  className={`flex z-0 hover:z-10 scale-100 hover:scale-105 hover:bg-primary/80 hover:text-white bg-white flex-col border-[1px] border-primary text-left px-[20px] py-[15px] h-[270px] rounded-xl shadow-md transition-all duration-500`}
                   style={{
-                    transform: `translateX(-${
-                      count * size + translationOffset
-                    }px)`,
                     width: `${size}px`,
                   }}
-                  key={index}
-                  className="flex bg-white flex-col border-[1px] border-primary text-left px-[20px] py-[15px] h-[270px] rounded-xl shadow-md translate-x-0 transition-all duration-1000"
                 >
                   <div className="flex items-start">
                     <div className="rounded-full max-w-[50px]">
@@ -176,7 +174,6 @@ const GoogleReviews = () => {
             </div>
           </div>
         </div>
-
         <div onClick={rightHandler} className="cursor-pointer">
           <SliderBtn side={"right"} />
         </div>

@@ -37,7 +37,7 @@ export const CustomerEmail = ({ tourDetails }) => {
                   <Img
                     height={60}
                     // src={"https://i.ibb.co/84NTTCw/bgremovedlogo.png"}
-                    src={"https://i.ibb.co/80wTQm2/cablk.jpg"}
+                    src={"https://i.ibb.co/PZ7zsdZc/brand-new-logo2.png"}
                   />
                 </Column>
                 <Column align="right">
@@ -88,7 +88,8 @@ export const CustomerEmail = ({ tourDetails }) => {
                     <Img
                       style={{ paddingBottom: 10, margin: "0 auto" }}
                       height={200}
-                      src={"https://i.ibb.co/wNnSdp6/thankyou.jpg"}
+                      // src={"https://i.ibb.co/wNnSdp6/thankyou.jpg"}
+                      src={"https://i.ibb.co/FkhbJBb7/thankyou.jpg"}
                     />
                   </Row>
 
@@ -299,7 +300,8 @@ export const CustomerEmail = ({ tourDetails }) => {
                               width: "100%",
                               objectFit: "cover",
                             }}
-                            src={"https://i.ibb.co/ydtmqTh/airport.jpg"}
+                            // src={"https://i.ibb.co/ydtmqTh/airport.jpg"}
+                            src={"https://i.ibb.co/XxJX66p5/door.jpg"}
                           />
                         </div>
                         <Text
@@ -346,7 +348,8 @@ export const CustomerEmail = ({ tourDetails }) => {
                               width: "100%",
                               objectFit: "cover",
                             }}
-                            src={"https://i.ibb.co/4d4sChq/ptop.png"}
+                            // src={"https://i.ibb.co/4d4sChq/ptop.png"}
+                            src={"https://i.ibb.co/8nYFQxmR/door3.png"}
                           />
                         </div>
                         <Text
@@ -395,7 +398,8 @@ export const CustomerEmail = ({ tourDetails }) => {
                               width: "100%",
                               objectFit: "cover",
                             }}
-                            src={"https://i.ibb.co/VVZHbfX/train.jpg"}
+                            // src={"https://i.ibb.co/VVZHbfX/train.jpg"}
+                            src={"https://i.ibb.co/27r5qLsx/train.jpg"}
                           />
                         </div>
                         <Text
