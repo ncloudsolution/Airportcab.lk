@@ -22,7 +22,7 @@ const PuffAnimationArea = () => {
   return (
     <div className="py-5 flex gap-3 items-center font-semibold bxs:text-[20px] xxs:text-[16px] text-[15px]">
       <PuffComponent size={size} />
-      <div>Looking for taxi, make your booking</div>
+      <div>Looking for taxi? Make your booking</div>
     </div>
   );
 };

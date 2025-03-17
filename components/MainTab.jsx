@@ -1,16 +1,14 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import PointToPointMap from "./Map/PointToPointMap";
 import AirportMap from "./Map/AirportMap";
 import TrainMap from "./Map/TrainMap";
-import CarSkeleton from "./skeletonUI/compoundElements/CarSkeleton";
 import { useJsApiLoader } from "@react-google-maps/api";
 // import Link from "next/link";
 
 import { RiPinDistanceFill } from "react-icons/ri";
 import { MdLocalAirport } from "react-icons/md";
 import { FaTrain } from "react-icons/fa6";
-import { IoCarSportSharp } from "react-icons/io5";
 import Hierarchy from "./standalone/Hierarchy";
 import { BsCoin } from "react-icons/bs";
 
@@ -20,6 +18,7 @@ import NewLoading from "./skeletonUI/compoundElements/NewLoading";
 import PuffAnimationArea from "./v2/PuffAnimationArea";
 
 const MainTab = () => {
+  const libraries = useMemo(() => ["places"], []);
   const [isPointToPointClicked, setIsPointToPointClicked] = useState(false);
   const [isAirportClicked, setIsAirportClicked] = useState(true);
   const [isTrainClicked, setIsTrainClicked] = useState(false);
@@ -39,18 +38,13 @@ const MainTab = () => {
 
   const [showSkeleton, setShowSkeleton] = useState(true);
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setShowSkeleton(false);
-    }, 2000); // 3 seconds delay - 1s for google api load and 2 second timeout
-    return () => clearTimeout(timeoutId);
+    setShowSkeleton(false);
   }, []);
 
-  const libraries = ["places"];
-  setTimeout(() => {}, 1000);
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY,
     region: "lk",
-    libraries: libraries,
+    libraries,
   });
 
   if (!isLoaded || showSkeleton) {

@@ -2,7 +2,7 @@
 import AirportMap from "@/components/Map/AirportMap";
 import Hierarchy from "@/components/standalone/Hierarchy";
 import { useJsApiLoader } from "@react-google-maps/api";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import Flow from "@/components/standalone/Flow";
 import DescriptionTile from "@/components/DescriptionTile";
 import CurrencyFullBar from "@/components/CurrencyFullBar";
@@ -11,30 +11,27 @@ import { useSearchParams } from "next/navigation";
 import { TourContext } from "@/context/TourContextProvider";
 
 const AirportComp = () => {
+  const libraries = useMemo(() => ["places"], []);
   const { tourDetails, setTourDetails } = useContext(TourContext);
   const params = useSearchParams();
   const dest = params.get("destination");
   useEffect(() => {
-    setTourDetails((prevDetails) => ({
-      ...prevDetails,
-      destination: dest,
-    }));
-  });
+    setTourDetails((prevDetails) =>
+      prevDetails.destination === dest
+        ? prevDetails
+        : { ...prevDetails, destination: dest }
+    );
+  }, [dest, setTourDetails]);
 
   const [showSkeleton, setShowSkeleton] = useState(true);
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setShowSkeleton(false);
-    }, 1000); // 3 seconds delay - 1s for google api load and 2 second timeout
-    return () => clearTimeout(timeoutId);
+    setShowSkeleton(false);
   }, []);
-
-  const libraries = ["places"];
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY,
     region: "lk",
-    libraries: libraries,
+    libraries,
   });
 
   if (!isLoaded || showSkeleton) {

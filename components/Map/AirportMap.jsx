@@ -530,6 +530,7 @@ const AirportMap = ({ children }) => {
                             duration: duration,
                             pageTwoToken: true,
                           }));
+                          console.log("****");
 
                           router.push("/tour-booking");
                         }}

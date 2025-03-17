@@ -31,13 +31,17 @@ const NewNavBar = () => {
   };
 
   return (
-    <nav className="border-b-[4px] border-black py-2 lg:px-8 xs:px-5 px-3 flex justify-center items-center fixed z-50 bg-white h-[60px] w-full shadow-md">
+    <nav className="border-b-[4px] border-primary py-2 lg:px-8 xs:px-5 px-3 flex justify-center items-center fixed z-50 bg-white h-[60px] w-full shadow-md">
       <div className="bigmd:w-[90%] w-full justify-between ">
         <div className="flex justify-between w-full">
           {/* Logo Section */}
           <div className="flex gap-1">
             <a href="/" className="h-full w-fit">
-              <Image className="h-[44px] w-fit" src={brandnewlogo} alt="logo" />
+              <Image
+                className="xxs:h-[44px] h-[35px] w-fit"
+                src={brandnewlogo}
+                alt="logo"
+              />
             </a>
             <div className="flex flex-col justify-center">
               <div className="font-semibold xs:text-[16px] text-[14px]">
