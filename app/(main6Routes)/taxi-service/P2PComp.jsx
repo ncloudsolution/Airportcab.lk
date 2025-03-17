@@ -12,10 +12,7 @@ import NewLoading from "@/components/skeletonUI/compoundElements/NewLoading";
 const P2PComp = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setShowSkeleton(false);
-    }, 1000); // 3 seconds delay - 1s for google api load and 2 second timeout
-    return () => clearTimeout(timeoutId);
+    setShowSkeleton(false);
   }, []);
 
   const libraries = ["places"];
