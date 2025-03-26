@@ -114,7 +114,7 @@ const MainTab = () => {
           {/* <div className="flex flex-col bigmd:w-[778px] bxs:w-[404px] xxxs:w-[244px] w-[230px] items-start"> */}
           <div className="flex flex-col bigmd:w-[838px] bxs:w-[464px] xxxs:w-[314px] w-[294px] items-start">
             <PuffAnimationArea />
-            <div className="bigmd:flex  hidden gap-3 mb-5 bxs:text-[16px] text-[12px] w-full justify-center">
+            <div className="bigmd:flex  hidden gap-3  bxs:text-[16px] text-[12px] w-full justify-center">
               <div
                 className={`${
                   isAirportClicked

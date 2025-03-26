@@ -12,6 +12,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { IoIosMailUnread } from "react-icons/io";
+import { FaTripadvisor } from "react-icons/fa";
 
 const UpperFooter = () => {
   return (
@@ -130,6 +131,13 @@ const UpperFooter = () => {
                   className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
                 >
                   <FaYoutube className="text-primary text-[28px] " />
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://www.tripadvisor.com/Attraction_Review-g1500185-d33021905-Reviews-Airport_Cab_LK-Katunayake_Negombo_Western_Province.html"
+                  className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
+                >
+                  <FaTripadvisor className="text-primary text-[28px] " />
                 </Link>
               </div>
             </div>

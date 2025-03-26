@@ -220,7 +220,7 @@ const AirportMap = ({ children }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full">
-        <div className="border-[1px] border-primary flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg">
+        <div className="mb-8 mt-8 border-[1px] border-primary flex flex-col items-center justify-center bg-[white]/30 backdrop-blur-lg shadow-xl rounded-lg">
           <div className="bxs:text-[30px] xxxs:text-[24px] text-[22px] mt-[20px] bigmd:mt-[50px] mb-[10px] font-medium text-black">
             Airport Pickup / Drop
           </div>
@@ -362,21 +362,20 @@ const AirportMap = ({ children }) => {
           {/** map center smoothly**/}
         </div>
       </div>
-      <div>
-        {!submitError && distance && duration && (
-          <div className="   flex justify-center">
-            <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-primary text-white rounded mt-8 mb-6 w-fit">
-              <div>Distance : {distance}</div>
-              <div className="font-bold xs:flex hidden">||</div>
-              <div>Duration : {duration}</div>
-            </div>
+
+      {!submitError && distance && duration && (
+        <div className="flex justify-center">
+          <div className="flex xs:flex-row flex-col text-center py-2 px-5 gap-x-3 bg-primary text-white rounded  w-fit">
+            <div>Distance : {distance}</div>
+            <div className="font-bold xs:flex hidden">||</div>
+            <div>Duration : {duration}</div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       <div>
         {isSubmit && !submitError && (
-          <div className=" flex justify-center" ref={mapRef}>
+          <div className="w-[100vw] flex justify-center" ref={mapRef}>
             <div className=" midxl:w-[1400px] mobile:w-[1000px]  w-[800px] flex gap-x-10 xs:mt-8 mt-4 mb-16 mobile:flex-row flex-col bigmd:items-start items-center border-2 border-transparent gap-5 p-4">
               <div className="midxl:w-[800px] bxs:w-full xs:w-[400px] xxxs:w-[300px] w-[250px]  midxl:h-[500px] bigmd:h-[300px]  xs:h-[400px] xxxs:h-[300px] h-[250px] aspect-square flex rounded-lg overflow-hidden shadow-md ">
                 <GoogleMap
