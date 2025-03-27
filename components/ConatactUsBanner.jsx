@@ -49,7 +49,7 @@ const ConatactUsBanner = () => {
         <div className="midxl:w-[500px] bigmd:w-[400px] w-full bg-white flex justify-center">
           <Image src={girl} alt="" className="flex w-fit h-full" />
         </div>
-        <div className="bigmd:hidden absolute bg-[#eab308d9] w-full text-center flex flex-col items-center  text-black xs:pt-5 xs:pb-5 pt-2  pb-2 bottom-0">
+        <div className="bigmd:hidden absolute bg-primary/50 w-full text-center flex flex-col items-center  text-black xs:pt-5 xs:pb-5 pt-2  pb-2 bottom-0">
           <ContactDetails />
         </div>
       </div>

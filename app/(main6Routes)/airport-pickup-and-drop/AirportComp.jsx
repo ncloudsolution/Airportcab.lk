@@ -42,16 +42,15 @@ const AirportComp = () => {
     );
   }
   return (
-    <div className="pt-[60px]">
+    <div className="pt-[60px] w-full">
       <CurrencyFullBar />
-      <div className=" flex flex-col justify-center items-center bg-gradient-to-t from-white to-gray-200 w-full ">
+      <div className=" flex flex-col justify-center items-center bg-gradient-to-t from-white to-gray-200">
         <div className="xs:mt-10 bigmd:w-[838px] bxs:w-[464px] xxxs:w-[314px] w-[294px] px-8 rounded-md flex justify-center bg-[white]/50 shadow-lg backdrop-blur-lg mt-[40px]">
           <Hierarchy />
         </div>
         <div className="flex flex-col items-center  -scroll-mb-14">
-          <div className="xs:mt-8 mt-5 bigmd:w-[838px] bxs:w-[464px] xxxs:w-[314px] w-[294px] px-8">
-            <AirportMap />
-          </div>
+          <AirportMap />
+
           <div className="my-10">
             <Flow />
           </div>

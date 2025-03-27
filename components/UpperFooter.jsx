@@ -12,6 +12,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { IoIosMailUnread } from "react-icons/io";
+import { FaTripadvisor } from "react-icons/fa";
 
 const UpperFooter = () => {
   return (
@@ -73,7 +74,7 @@ const UpperFooter = () => {
                   Call -
                   <div>
                     <Link href="tel:+94719885885">+94 71 9885 885</Link> <br />
-                    <Link href="tel:+94712100500">+94 71 2100 500</Link> <br />
+                    <Link href="tel:+94703199556">+94 71 2100 500</Link> <br />
                     <Link href="tel:+94781820820">+94 78 1820 820</Link> <br />
                     <Link href="tel:+94781720720">+94 78 1720 720</Link> <br />
                   </div>
@@ -112,7 +113,7 @@ const UpperFooter = () => {
                 </Link>
                 <Link
                   target="_blank"
-                  href="https://wa.me/+94712100500"
+                  href="https://wa.me/+94703199556"
                   className="xs:size-[50px] size-[45px] rounded-full bg-white flex justify-center items-center"
                 >
                   <BsWhatsapp className="text-primary text-[28px]" />
@@ -130,6 +131,13 @@ const UpperFooter = () => {
                   className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
                 >
                   <FaYoutube className="text-primary text-[28px] " />
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://www.tripadvisor.com/Attraction_Review-g1500185-d33021905-Reviews-Airport_Cab_LK-Katunayake_Negombo_Western_Province.html"
+                  className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
+                >
+                  <FaTripadvisor className="text-primary text-[28px] " />
                 </Link>
               </div>
             </div>
