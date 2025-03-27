@@ -228,7 +228,7 @@ const QuizBox = ({ quiz, answer, isExpanded, onToggle }) => {
 
       // If it's a phone number, determine if it's for WhatsApp or a regular call
       if (phoneRegex.test(word)) {
-        const isWhatsApp = word.includes("+94712100500"); // Assuming WhatsApp uses this number in the example
+        const isWhatsApp = word.includes("+94703199556"); // Assuming WhatsApp uses this number in the example
         const number = word.replace(/\D/g, ""); // Strip non-digit characters
         const href = isWhatsApp ? `https://wa.me/${number}` : `tel:${number}`;
 

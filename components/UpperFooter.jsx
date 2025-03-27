@@ -74,7 +74,7 @@ const UpperFooter = () => {
                   Call -
                   <div>
                     <Link href="tel:+94719885885">+94 71 9885 885</Link> <br />
-                    <Link href="tel:+94712100500">+94 71 2100 500</Link> <br />
+                    <Link href="tel:+94703199556">+94 71 2100 500</Link> <br />
                     <Link href="tel:+94781820820">+94 78 1820 820</Link> <br />
                     <Link href="tel:+94781720720">+94 78 1720 720</Link> <br />
                   </div>
@@ -113,7 +113,7 @@ const UpperFooter = () => {
                 </Link>
                 <Link
                   target="_blank"
-                  href="https://wa.me/+94712100500"
+                  href="https://wa.me/+94703199556"
                   className="xs:size-[50px] size-[45px] rounded-full bg-white flex justify-center items-center"
                 >
                   <BsWhatsapp className="text-primary text-[28px]" />

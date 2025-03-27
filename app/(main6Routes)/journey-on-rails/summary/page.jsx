@@ -55,7 +55,7 @@ const TrainSummary = () => {
   const cusEmail = useRef();
   const cusMobile = useRef();
   const cusWhatsapp = useRef();
-  const cusNicOrPassportNo = useRef();
+
   const loadingSectionRef = useRef();
   const [mobValue, setMobValue] = useState();
   const [whatsappMobValue, setWhatsappMobValue] = useState();
@@ -83,12 +83,11 @@ const TrainSummary = () => {
     e.preventDefault();
 
     if (
-      date == undefined ||
+      startDate == "" ||
       mobValue == "" ||
       whatsappMobValue == "" ||
       cusName.current.value === "" ||
       cusEmail.current.value === "" ||
-      cusNicOrPassportNo.current.value === "" ||
       noOfPassengers === ""
     ) {
       return setSubmitError("Fill all the fields ");
@@ -114,11 +113,11 @@ const TrainSummary = () => {
       trainClass: tourDetails.trainClass,
 
       availableDates: tourDetails.trainAvailableDays,
-      selectedDate: date.toDateString(),
+      selectedDate: startDate.toDateString(),
 
       cusName: cusName.current.value,
       cusEmail: cusEmail.current.value,
-      cusNicPassport: cusNicOrPassportNo.current.value,
+
       cusMobileNo: mobValue,
       cusWhatsappNo: whatsappMobValue,
 
@@ -189,7 +188,7 @@ const TrainSummary = () => {
         <div className="flex flex-col items-center">
           <CurrencyTab />
 
-          <div className=" rounded  bg-primary text-black p-4 mt-10 mb-8 font-semibold gap-y-1 w-fit">
+          <div className=" rounded  bg-white shadow-xl border-primary border-2 text-black p-4 mt-10 mb-8 font-semibold gap-y-1 w-fit">
             <div className="text-center text-[30px] mt-5">Tour Summary</div>
 
             <div className="flex flex-col border-2 border-transparent  xs:text-[15px] xxs:text-[13px] text-[12px]">
@@ -339,22 +338,6 @@ const TrainSummary = () => {
                       </div>
 
                       <div className="flex xs:flex-row flex-col xs:items-center justify-center">
-                        <div className=" xs:w-[130px] w-[100px]">
-                          NIC / Passport
-                        </div>
-                        <div className="xs:flex hidden">:</div>
-
-                        <div className="xs:ml-4 font-normal w-full flex-1">
-                          <input
-                            ref={cusNicOrPassportNo}
-                            placeholder="N6590221"
-                            type="text"
-                            className="px-3 py-1 font-normal text-[14px] outline-none  w-full shadow-md rounded  "
-                          />
-                        </div>
-                      </div>
-
-                      <div className="flex xs:flex-row flex-col xs:items-center justify-center">
                         <div className=" xs:w-[130px] w-[100px]">Mobile No</div>
                         <div className="xs:flex hidden">:</div>
 
@@ -461,7 +444,7 @@ const TrainSummary = () => {
                         </div>
                       </div>
                       {submitError && (
-                        <div className="text-errorpink bg-white px-4 py-2 rounded mb-4 text-center mt-5">
+                        <div className="text-errorpink border-2 border-errorpink bg-white px-4 py-2 rounded mb-4 text-center mt-5">
                           {submitError}
                         </div>
                       )}
