@@ -232,7 +232,7 @@ const MidSummary = () => {
                     <div className="text-[16px]">Vehicle</div>
                     <div className="w-full bg-primary h-[2px] mb-4"></div>
 
-                    <div className="bxs:w-[400px] w-full flex ">
+                    <div className=" w-full flex justify-between ">
                       <span className="bxs:w-[180px] w-[150px] bg-transparent">
                         Selected Vehicle
                       </span>
@@ -241,7 +241,7 @@ const MidSummary = () => {
                       </span>
                     </div>
 
-                    <div className="bxs:w-[400px] w-full flex ">
+                    <div className="w-full flex justify-between ">
                       <span className="bxs:w-[180px] w-[150px] bg-transparent">
                         Seat Capacity
                       </span>
@@ -250,7 +250,7 @@ const MidSummary = () => {
                       </span>
                     </div>
 
-                    <div className="bxs:w-[400px] w-full flex ">
+                    <div className="w-full flex justify-between">
                       <span className="bxs:w-[180px] w-[150px] bg-transparent">
                         Price for Vehical
                       </span>
@@ -261,7 +261,7 @@ const MidSummary = () => {
                     </div>
 
                     {boardShow && (
-                      <div className="bxs:w-[400px] w-full flex ">
+                      <div className=" w-full flex justify-between">
                         <span className="bxs:w-[180px] w-[150px] bg-transparent">
                           Board Show
                         </span>
@@ -282,7 +282,7 @@ highwayExit: station,
                     {highwayExit &&
                       highwayExit !== "None" &&
                       highwayCharge !== "No any Charge" && (
-                        <div className="bxs:w-[400px] w-full flex ">
+                        <div className="w-full flex justify-between">
                           <span className="bxs:w-[180px] w-[150px] bg-transparent">
                             Highway Charges
                           </span>
@@ -296,7 +296,7 @@ highwayExit: station,
                         </div>
                       )}
 
-                    <div className="bxs:w-[400px] w-full flex mt-5">
+                    <div className=" w-full flex justify-between mt-5">
                       <span className="bxs:w-[180px] w-[150px] bg-transparent">
                         Total Price
                       </span>
@@ -335,7 +335,7 @@ highwayExit: station,
                     )}
 
                     {tourDetails.tourType === "airport" && (
-                      <div className=" flex bigmd:w-[360px] bxs:w-[400px]  w-full bxs:items-center bxs:flex-row flex-col bxs:mt-3 bxs:my-0 my-1 justify-between">
+                      <div className=" flex items-center w-full  bxs:mt-3 bxs:my-0 my-1 justify-between">
                         <span className="bigmd:w-[140px]   bxs:w-[180px] w-[140px] bg-transparent">
                           Highway {tourDetails.isPickup ? "Exit" : "Entrance"}
                         </span>
