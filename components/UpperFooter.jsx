@@ -96,48 +96,48 @@ const UpperFooter = () => {
               </div>
             </div>
             <div>
-              <div className="flex gap-5 bigmd:mt-[30px] mt-[20px]">
+              <div className="flex xs:gap-5  gap-3 bigmd:mt-[30px] mt-[20px]">
                 <Link
                   target="_blank"
                   href="mailto:info@airportcab.lk"
-                  className="xs:size-[50px] size-[45px]  rounded-full text-green-500 bg-white flex justify-center items-center"
+                  className="xs:size-[50px] size-[40px]  rounded-full text-green-500 bg-white flex justify-center items-center"
                 >
-                  <IoIosMailUnread className="text-primary text-[32px]" />
+                  <IoIosMailUnread className="text-primary xs:text-[32px] text-[29px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://facebook.com/airportcab.lk"
-                  className="xs:size-[50px] size-[45px]   rounded-full bg-white flex justify-center items-center"
+                  className="xs:size-[50px] size-[40px]   rounded-full bg-white flex justify-center items-center"
                 >
-                  <FaFacebookF className="text-primary text-[25px]" />
+                  <FaFacebookF className="text-primary xs:text-[25px] text-[22px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://wa.me/+94703199556"
-                  className="xs:size-[50px] size-[45px] rounded-full bg-white flex justify-center items-center"
+                  className="xs:size-[50px] size-[40px] rounded-full bg-white flex justify-center items-center"
                 >
-                  <BsWhatsapp className="text-primary text-[28px]" />
+                  <BsWhatsapp className="text-primary xs:text-[28px] text-[25px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://t.me/Tourbookingsrilanka"
-                  className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
+                  className="xs:size-[50px] size-[40px]  rounded-full bg-white flex justify-center items-center"
                 >
-                  <FaTelegramPlane className="text-primary text-[28px] -translate-x-[2px]" />
+                  <FaTelegramPlane className="text-primary xs:text-[28px] text-[25px] -translate-x-[2px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://www.youtube.com/@airportcabsrilanka"
-                  className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
+                  className="xs:size-[50px] size-[40px]  rounded-full bg-white flex justify-center items-center"
                 >
-                  <FaYoutube className="text-primary text-[28px] " />
+                  <FaYoutube className="text-primary xs:text-[28px] text-[25px]" />
                 </Link>
                 <Link
                   target="_blank"
                   href="https://www.tripadvisor.com/Attraction_Review-g1500185-d33021905-Reviews-Airport_Cab_LK-Katunayake_Negombo_Western_Province.html"
-                  className="xs:size-[50px] size-[45px]  rounded-full bg-white flex justify-center items-center"
+                  className="xs:size-[50px] size-[40px]  rounded-full bg-white flex justify-center items-center"
                 >
-                  <FaTripadvisor className="text-primary text-[28px] " />
+                  <FaTripadvisor className="text-primary xs:text-[28px] text-[25px]" />
                 </Link>
               </div>
             </div>
