@@ -37,7 +37,9 @@ export const CustomerEmail = ({ tourDetails }) => {
                   <Img
                     height={60}
                     // src={"https://i.ibb.co/84NTTCw/bgremovedlogo.png"}
-                    src={"https://i.ibb.co/PZ7zsdZc/brand-new-logo2.png"}
+                    src={
+                      "https://drive.google.com/uc?export=view&id=1Q4bX4f7J4WudlNw2ip-RGmkRbzQV6APD"
+                    }
                   />
                 </Column>
                 <Column align="right">
@@ -89,7 +91,9 @@ export const CustomerEmail = ({ tourDetails }) => {
                       style={{ paddingBottom: 10, margin: "0 auto" }}
                       height={200}
                       // src={"https://i.ibb.co/wNnSdp6/thankyou.jpg"}
-                      src={"https://i.ibb.co/FkhbJBb7/thankyou.jpg"}
+                      src={
+                        "https://drive.google.com/uc?export=view&id=1Li33LF6hA7HOh9kIsw65fI7QxyjjBDH_"
+                      }
                     />
                   </Row>
 
@@ -301,7 +305,9 @@ export const CustomerEmail = ({ tourDetails }) => {
                               objectFit: "cover",
                             }}
                             // src={"https://i.ibb.co/ydtmqTh/airport.jpg"}
-                            src={"https://i.ibb.co/XxJX66p5/door.jpg"}
+                            src={
+                              "https://drive.google.com/uc?export=view&id=1SC6O0Zn_SQglhba214g0fxm69KRfQYwW"
+                            }
                           />
                         </div>
                         <Text
@@ -349,7 +355,9 @@ export const CustomerEmail = ({ tourDetails }) => {
                               objectFit: "cover",
                             }}
                             // src={"https://i.ibb.co/4d4sChq/ptop.png"}
-                            src={"https://i.ibb.co/8nYFQxmR/door3.png"}
+                            src={
+                              "https://drive.google.com/uc?export=view&id=1muQlfrMc9mgIp4ZeWVNlXRndrSVPV_Oc"
+                            }
                           />
                         </div>
                         <Text
@@ -399,7 +407,9 @@ export const CustomerEmail = ({ tourDetails }) => {
                               objectFit: "cover",
                             }}
                             // src={"https://i.ibb.co/VVZHbfX/train.jpg"}
-                            src={"https://i.ibb.co/27r5qLsx/train.jpg"}
+                            src={
+                              "https://drive.google.com/uc?export=view&id=177HzxE3bT6hKQu27UuVvDNdZDd2BVkIL"
+                            }
                           />
                         </div>
                         <Text

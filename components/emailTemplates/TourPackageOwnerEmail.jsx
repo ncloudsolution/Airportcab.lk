@@ -145,7 +145,9 @@ const TourPackageOwnerEmail = ({ tourPackage }) => {
                           <Img
                             style={{ paddingBottom: 10, margin: "0 auto" }}
                             height={450}
-                            src={"https://i.ibb.co/W3qdHpp/lady.png"}
+                            src={
+                              "https://drive.google.com/uc?export=view&id=1gDd5LJHPDvEAkMEMYOVdOYAUXWkJs6FJ"
+                            }
                           />
                         </Row>
                       </Section>

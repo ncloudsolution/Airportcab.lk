@@ -214,7 +214,7 @@ export const TrainOwnerEmail = ({ trainBookingDetails }) => {
                             style={{ paddingBottom: 10, margin: "0 auto" }}
                             height={350}
                             src={
-                              "https://i.ibb.co/PhDyfdQ/24066639-xza1-sak5-210929.jpg"
+                              "https://drive.google.com/uc?export=view&id=1O8TBDLPo6Iqjhr1RDe3v9pQsMrvZ6cJd"
                             }
                           />
                         </Row>

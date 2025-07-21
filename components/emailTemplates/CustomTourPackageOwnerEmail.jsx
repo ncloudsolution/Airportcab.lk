@@ -161,7 +161,9 @@ export const CustomTourPackageOwnerEmail = ({ customTourDetails }) => {
                           <Img
                             style={{ paddingBottom: 10, margin: "0 auto" }}
                             height={450}
-                            src={"https://i.ibb.co/GdQb2QY/man.png"}
+                            src={
+                              "https://drive.google.com/uc?export=view&id=1m4ZIfNe80hw79dcZraFtUZotnzqBP_0Y"
+                            }
                           />
                         </Row>
                       </Section>
