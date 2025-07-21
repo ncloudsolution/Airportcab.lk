@@ -4,6 +4,10 @@
     "minpassengers": 1,
     "maxpassengers": 2,
     "weightFactor": 100,
+    "pricing": {
+      "fixed": [{ "20": 3000 }, { "35": 3500 }],
+      "perKm": [{ "100": 100 }, { "5000": 90 }]
+    },
     "img": "/Vehicles/alto.png",
     "luggages": 2,
     "handbaggages": 2,
@@ -14,6 +18,10 @@
     "minpassengers": 1,
     "maxpassengers": 2,
     "weightFactor": 110,
+    "pricing": {
+      "fixed": [{ "20": 3000 }, { "35": 3500 }],
+      "perKm": [{ "120": 100 }, { "5000": 90 }]
+    },
     "img": "/Vehicles/wagonR.png",
     "luggages": 2,
     "handbaggages": 3,
@@ -24,6 +32,16 @@
     "minpassengers": 1,
     "maxpassengers": 3,
     "weightFactor": 150,
+    "pricing": {
+      "fixed": [{ "20": 4000 }, { "35": 5500 }],
+      "perKm": [
+        { "50": 150 },
+        { "100": 130 },
+        { "140": 120 },
+        { "200": 115 },
+        { "5000": 110 }
+      ]
+    },
     "img": "/Vehicles/sedan.png",
     "luggages": 3,
     "handbaggages": 3,
@@ -34,6 +52,10 @@
     "minpassengers": 1,
     "maxpassengers": 3,
     "weightFactor": 180,
+    "pricing": {
+      "fixed": [{ "20": 7000 }, { "35": 10000 }],
+      "perKm": [{ "100": 250 }, { "5000": 180 }]
+    },
     "img": "/Vehicles/vezzel.png",
     "luggages": 3,
     "handbaggages": 3,
@@ -44,6 +66,10 @@
     "minpassengers": 1,
     "maxpassengers": 3,
     "weightFactor": 140,
+    "pricing": {
+      "fixed": [{ "20": 4000 }, { "35": 5000 }],
+      "perKm": [{ "100": 130 }, { "140": 120 }, { "200": 115 }, { "5000": 110 }]
+    },
     "img": "/Vehicles/miniVanEvery.png",
     "luggages": 4,
     "handbaggages": 4,
@@ -54,6 +80,10 @@
     "minpassengers": 1,
     "maxpassengers": 5,
     "weightFactor": 160,
+    "pricing": {
+      "fixed": [{ "20": 5000 }, { "35": 7000 }],
+      "perKm": [{ "100": 200 }, { "140": 160 }, { "200": 130 }, { "5000": 120 }]
+    },
     "img": "/Vehicles/nissane200.png",
     "luggages": 6,
     "handbaggages": 6,
@@ -64,6 +94,10 @@
     "minpassengers": 1,
     "maxpassengers": 6,
     "weightFactor": 225,
+    "pricing": {
+      "fixed": [{ "20": 5000 }, { "35": 7000 }],
+      "perKm": [{ "100": 200 }, { "140": 160 }, { "200": 130 }, { "5000": 120 }]
+    },
     "img": "/Vehicles/kdh.png",
     "luggages": 7,
     "handbaggages": 7,
@@ -74,6 +108,10 @@
     "minpassengers": 1,
     "maxpassengers": 8,
     "weightFactor": 250,
+    "pricing": {
+      "fixed": [{ "20": 7000 }, { "35": 10000 }],
+      "perKm": [{ "100": 220 }, { "140": 200 }, { "200": 150 }, { "5000": 130 }]
+    },
     "img": "/Vehicles/highroof.png",
     "luggages": 10,
     "handbaggages": 10,
@@ -84,6 +122,10 @@
     "minpassengers": 10,
     "maxpassengers": 16,
     "weightFactor": 325,
+    "pricing": {
+      "fixed": [{ "20": 3000 }, { "35": 3500 }],
+      "perKm": [{ "100": 100 }, { "5000": 90 }]
+    },
     "img": "/Vehicles/rosaBus.png",
     "luggages": 20,
     "handbaggages": 20,
@@ -94,6 +136,10 @@
     "minpassengers": 16,
     "maxpassengers": 45,
     "weightFactor": 650,
+    "pricing": {
+      "fixed": [{ "20": 3000 }, { "35": 3500 }],
+      "perKm": [{ "100": 100 }, { "5000": 90 }]
+    },
     "img": "/Vehicles/coachBus.png",
     "luggages": 45,
     "handbaggages": 50,
