@@ -86,6 +86,9 @@ const AirportMap = ({ children }) => {
   console.log(tourDetails.origin, "ori");
   console.log(tourDetails.destination, "des");
 
+  const [routes, setRoutes] = useState([]); // for all alternatives
+  const [selectedRouteIndex, setSelectedRouteIndex] = useState(0); // selected one
+
   useEffect(() => {
     if (tourDetails.destinationpage) {
       setIsPickup(tourDetails.isPickup);
@@ -148,14 +151,22 @@ const AirportMap = ({ children }) => {
         origin: originRef.current.value,
         destination: destinationRef.current.value,
         travelMode: google.maps.TravelMode.DRIVING,
+        provideRouteAlternatives: true,
+      });
+      console.log(results);
+      // Find the route with the shortest distance
+      const shortestRoute = results.routes.reduce((prev, curr) => {
+        const prevDistance = prev.legs[0].distance.value;
+        const currDistance = curr.legs[0].distance.value;
+        return currDistance < prevDistance ? curr : prev;
       });
 
       setSubmitError("");
       setIsSubmit(true);
-      setDirectionsResponse(results);
-      setDistance(results.routes[0].legs[0].distance.text);
-      setDuration(results.routes[0].legs[0].duration.text);
-      setDurationForCalc(results.routes[0].legs[0].duration.value);
+      setDirectionsResponse({ ...results, routes: [shortestRoute] });
+      setDistance(shortestRoute.legs[0].distance.text);
+      setDuration(shortestRoute.legs[0].duration.text);
+      setDurationForCalc(shortestRoute.legs[0].duration.value);
 
       // const roadDetails = results.routes[0].legs[0].steps.map((step) => {
       //   return step.instructions; //{

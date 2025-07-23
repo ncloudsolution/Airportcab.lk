@@ -115,15 +115,22 @@ const PointToPointMap = ({ children }) => {
         origin: originRef.current.value,
         destination: destinationRef.current.value,
         travelMode: google.maps.TravelMode.DRIVING,
+        provideRouteAlternatives: true,
+      });
+      console.log(results);
+      // Find the route with the shortest distance
+      const shortestRoute = results.routes.reduce((prev, curr) => {
+        const prevDistance = prev.legs[0].distance.value;
+        const currDistance = curr.legs[0].distance.value;
+        return currDistance < prevDistance ? curr : prev;
       });
 
-      console.log(results, "direction results");
       setSubmitError("");
       setIsSubmit(true);
-      setDirectionsResponse(results);
-      setDistance(results.routes[0].legs[0].distance.text);
-      setDuration(results.routes[0].legs[0].duration.text);
-      setDurationForCalc(results.routes[0].legs[0].duration.value);
+      setDirectionsResponse({ ...results, routes: [shortestRoute] });
+      setDistance(shortestRoute.legs[0].distance.text);
+      setDuration(shortestRoute.legs[0].duration.text);
+      setDurationForCalc(shortestRoute.legs[0].duration.value);
 
       const selectedVehiclesListValue = SelectVehiclesList(
         passengerCountRef.current.value,
