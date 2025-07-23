@@ -12,6 +12,7 @@ import SuccessSubmission from "./loaders&Responses/SuccessSubmission";
 import FailedSubmission from "./loaders&Responses/FailedSubmission";
 
 import success from "@/public/Others/successImg.jpg";
+import CustomCurrencyDropDown from "./standalone/CustomCurrencyDropDown";
 
 const TourSummary = () => {
   const router = useRouter();
@@ -324,6 +325,17 @@ Duration: ${tourDetails.duration}`;
                     )}
 
                     {/**vehical**/}
+
+                    <div className="w-full flex h-[30px] mb-4">
+                      <div className="xs:w-[180px] xxs:w-[130px] w-[100px] flex items-center">
+                        Selected Currency
+                      </div>
+                      <div>:</div>
+                      <div className="relative xs:w-[170px] xxs:w-[150px] w-[140px] h-fit  ml-4">
+                        <CustomCurrencyDropDown />
+                      </div>
+                    </div>
+
                     <div className="flex">
                       <div className="xs:w-[180px] xxs:w-[130px] w-[100px]">
                         Selected Vehicle
