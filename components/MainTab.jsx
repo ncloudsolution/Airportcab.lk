@@ -16,6 +16,7 @@ import CurrencyTab from "./standalone/CurrencyTab";
 import { TourContext } from "@/context/TourContextProvider";
 import NewLoading from "./skeletonUI/compoundElements/NewLoading";
 import PuffAnimationArea from "./v2/PuffAnimationArea";
+import VideoSection from "./VideoSection";
 
 const MainTab = () => {
   const libraries = useMemo(() => ["places"], []);
@@ -89,18 +90,19 @@ const MainTab = () => {
 
   return (
     <div>
-      <BsCoin
-        className={` ${
-          isCurrencyActive ? "text-primary" : "text-newprimary"
-        } rounded-full  border-[4px] shadow-currencyshadow border-black absolute size-[40px]  lg:size-[45px]  lg:text-[40px] lg:right-10 bigmd:right-2 sm:right-10 xxs:right-5 right-3 bxs:translate-y-12 xs:translate-y-32 translate-y-12 z-10`}
-        onClick={() => setIsCurrencyActive(!isCurrencyActive)}
-      />
+      <VideoSection />
       <div className={`${isCurrencyActive ? "block" : "hidden"}`}>
         <CurrencyTab />
       </div>
-      <div className="flex justify-center w-full bg-transparent px-0 ">
+      <div className="flex justify-center w-full bg-transparent px-0">
         {/**bg-gradient-to-b from-primary  to-newprimary **/}
-        <div className="flex z-10 justify-center items-center flex-col bg-gradient-to-b from-white  to-gray-200  w-full ">
+        <div className="flex relative z-10 justify-center items-center flex-col bg-gradient-to-b from-white  to-gray-200  w-full ">
+          <BsCoin
+            className={` ${
+              isCurrencyActive ? "text-primary" : "text-newprimary"
+            } rounded-full  border-[4px] shadow-currencyshadow border-black absolute size-[35px]  lg:size-[45px]  lg:text-[40px] lg:right-10 bigmd:right-2 sm:right-10 xxs:right-5 right-3 bigmd:-translate-y-[250px] -translate-y-[390px] z-10`}
+            onClick={() => setIsCurrencyActive(!isCurrencyActive)}
+          />
           <div className="w-[80%] flex justify-center">
             <div
               className={` ${

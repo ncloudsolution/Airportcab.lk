@@ -3,11 +3,13 @@ import FAQ from "@/components/FAQ";
 import PopularDestination from "@/components/PopularDestination";
 import GoogleReviews from "@/components/GoogleReviews";
 import PopularTours from "@/components/v2/PopularTours";
+import VideoSection from "@/components/VideoSection";
 
 export default function Home() {
   return (
     <div className="flex flex-col pt-[60px]">
       <MainTab />
+
       <PopularTours />
       <PopularDestination />
       <FAQ />
