@@ -50,7 +50,7 @@ const PopularTours = () => {
       road: "Highway",
       distance: "210 km",
       time: "5 hours 45 mins",
-      price: "Starting from 110 USD",
+      price: "Starting from 100 USD",
       img: ella2,
     },
   ];
