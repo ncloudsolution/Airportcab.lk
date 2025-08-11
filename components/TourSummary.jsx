@@ -26,6 +26,17 @@ const TourSummary = () => {
 
   const [submitError, setSubmitError] = useState();
 
+  async function newHandleSubmit(e) {
+    e.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setIsLoading(true);
+    router.push("/tour-booking/summary/payment");
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -516,7 +527,7 @@ Duration: ${tourDetails.duration}`;
                         {tourDetails.duration}
                       </div>
                     </div>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={newHandleSubmit}>
                       <input
                         type="submit"
                         className="w-full py-2 bg-black text-white rounded-md mt-10"
