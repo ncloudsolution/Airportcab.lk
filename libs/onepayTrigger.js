@@ -1,11 +1,12 @@
 "use client";
 
-import { BaseUrl } from "@/constants";
+import { BaseUrl } from "@/constant";
 
 export const handleOnePayPayment = async ({
   orderReference,
   amount,
   currency,
+  customerData,
 }) => {
   try {
     // Request secure hash from the backend
@@ -25,13 +26,13 @@ export const handleOnePayPayment = async ({
       amount: amount,
       app_id: appId,
       reference: orderReference,
-      customer_first_name: "Saman",
-      customer_last_name: "Perera",
-      customer_phone_number: "0771234567",
-      customer_email: "samanp@gmail.com",
+      customer_first_name: customerData.customer_first_name,
+      customer_last_name: customerData.customer_last_name,
+      customer_phone_number: customerData.customer_phone_number,
+      customer_email: customerData.customer_email,
       transaction_redirect_url: `${BaseUrl}`,
       hash: hash,
-      additional_data: `Saman,0771234567,pcode,amount`,
+      additional_data: `${customerData.paymentType},${amount}`,
     };
 
     //triger the ipg api

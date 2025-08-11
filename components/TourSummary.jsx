@@ -145,6 +145,9 @@ Duration: ${tourDetails.duration}`;
       highwayCharge: tourDetails.highwayCharge,
       totalPrice: tourDetails.totalPrice,
       totalPriceInLkr: tourDetails.totalLKRPrice,
+
+      paymentType: tourDetails.paymentType,
+      payementAmount: tourDetails.payementAmount,
     };
 
     // Start loading

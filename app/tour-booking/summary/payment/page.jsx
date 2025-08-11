@@ -5,6 +5,8 @@ import Image from "next/image";
 import logoonepay from "../../../../public/payments/logo-onepay.png";
 import banneronepay from "../../../../public/payments/des-onepay.png";
 import logoonride from "../../../../public/payments/logo-onridepay.png";
+import PaymentDailogBox from "@/components/PaymentDialogBox";
+import { handleOnePayPayment } from "@/libs/onepayTrigger";
 
 const Payment = () => {
   const { tourDetails, setTourDetails } = useContext(TourContext);
@@ -12,16 +14,19 @@ const Payment = () => {
   const [selectedType, setSelectedType] = useState("");
   const [paymentPrice, setPaymentPrice] = useState("0.00");
   const [submitError, setSubmitError] = useState("");
+  const [gatewayUrl, setGatewayUrl] = useState("");
+  // https://payment.onepay.lk/redirect/F6F6119094F15E5944DA8/6Y7T119095575816C0CCA/F6F6119094F15E5944DA8
 
   const handleOnTypeChange = (type) => {
     if (type === "onride") setPaymentPrice("0.00");
     if (type === "full") setPaymentPrice(tourDetails.totalLKRPrice);
-    if (type === "advanced")
-      setPaymentPrice(
-        Math.ceil(
-          (tourDetails.totalLKRPrice * advancedPayPercentage) / 100
-        ).toFixed(2)
+    if (type === "advanced") {
+      const price = Math.ceil(
+        (tourDetails.totalLKRPrice * advancedPayPercentage) / 100
       );
+
+      setPaymentPrice(price.toFixed(2));
+    }
   };
 
   const paymentArray = [
@@ -48,15 +53,40 @@ const Payment = () => {
     },
   ];
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (selectedType === "") {
-      return setSubmitError("Choose a option to proceed");
+      return setSubmitError("Choose a payment option to proceed");
     }
+
+    const data = {
+      customer_first_name: tourDetails.customerName.split(" ")[0],
+      customer_last_name: tourDetails.customerName.split(" ")[1],
+      customer_phone_number: tourDetails.customerMobileNo,
+      customer_email: tourDetails.customerEmail,
+      paymentType: selectedType,
+    };
+
+    const { gatewayUrl } = await handleOnePayPayment({
+      orderReference: "ItemNo12345",
+      amount: paymentPrice,
+      currency: "LKR",
+      customerData: data,
+    });
+
+    console.log(gatewayUrl, "url");
+
+    setTourDetails((prevDetails) => ({
+      ...prevDetails,
+      paymentType: selectedType,
+      payementAmount: paymentPrice,
+    }));
+
+    setGatewayUrl(gatewayUrl);
   };
 
   return (
-    <div className="w-full min-h-dvh flex justify-center items-center pt-[60px]">
+    <div className="w-full min-h-dvh flex justify-center items-center pt-[60px] relative">
       {/* <div className="flex mt-3">
         <div className="xs:w-[180px] xxs:w-[130px] w-[100px] ">Total Price</div>
         <div>:</div>
@@ -148,6 +178,12 @@ const Payment = () => {
               )}
             </div>
           ))}
+
+          {submitError && (
+            <div className="text-errorpink my-2 font-normal text-left">
+              {submitError}
+            </div>
+          )}
         </div>
 
         <button
@@ -157,6 +193,7 @@ const Payment = () => {
           Place Order
         </button>
       </form>
+      {gatewayUrl !== "" && <PaymentDailogBox gatewayLink={gatewayUrl} />}
     </div>
   );
 };
