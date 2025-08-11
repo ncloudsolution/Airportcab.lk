@@ -59,28 +59,83 @@ const Payment = () => {
       return setSubmitError("Choose a payment option to proceed");
     }
 
+    setTourDetails((prevDetails) => ({
+      ...prevDetails,
+      paymentType: selectedType,
+      payementAmount: paymentPrice,
+    }));
+
+    const TourDetails = {
+      tourType: tourDetails.tourType,
+      customerName: tourDetails.customerName,
+      customerEmail: tourDetails.customerEmail,
+      customerMobileNo: tourDetails.customerMobileNo,
+      customerWhatsappMobileNo: tourDetails.customerWhatsappMobileNo,
+      customerNicPassport: tourDetails.customerNicPassport,
+      customerFlightNo: tourDetails.customerFlightNo,
+      arrivalDate:
+        tourDetails.tourType === "airport"
+          ? tourDetails.arrivalDate.toDateString()
+          : null,
+      arrivalTime:
+        tourDetails.tourType === "airport"
+          ? tourDetails.arrivalDate.toTimeString()
+          : null,
+
+      cusDisplayName: tourDetails.cusDisplayName,
+      origin: tourDetails.origin,
+      destination: tourDetails.destination,
+      startDate: tourDetails.startDate.toDateString(),
+      startTime: tourDetails.startDate.toTimeString(),
+
+      returnDate:
+        tourDetails.returnDate instanceof Date
+          ? tourDetails.returnDate.toDateString()
+          : tourDetails.returnDate,
+      returnTime:
+        tourDetails.returnDate instanceof Date
+          ? tourDetails.returnDate.toTimeString()
+          : null,
+      distance: tourDetails.distance,
+      duration: tourDetails.duration,
+      vehicleType: tourDetails.vehicleType,
+      noOfPassengers: tourDetails.noOfPassengers,
+      customerLuggageCount: tourDetails.customerLuggageCount,
+      converedCurrencySymbol: tourDetails.converedCurrencySymbol,
+      currencyType: tourDetails.currencyType,
+      convertedPrice: tourDetails.convertedPrice,
+      conversionRate: tourDetails.conversionRate,
+
+      boardShow: tourDetails.boardShow,
+      highwayExit: tourDetails.highwayExit,
+      highwayCharge: tourDetails.highwayCharge,
+      totalPrice: tourDetails.totalPrice,
+      totalPriceInLkr: tourDetails.totalLKRPrice,
+
+      paymentType: selectedType,
+      payementAmount: paymentPrice,
+    };
+
+    const tourDetailsString = JSON.stringify(TourDetails);
+    const encodedData = Buffer.from(tourDetailsString).toString("base64");
+
     const data = {
       customer_first_name: tourDetails.customerName.split(" ")[0],
       customer_last_name: tourDetails.customerName.split(" ")[1],
       customer_phone_number: tourDetails.customerMobileNo,
       customer_email: tourDetails.customerEmail,
       paymentType: selectedType,
+      additionalData: encodedData,
     };
 
     const { gatewayUrl } = await handleOnePayPayment({
-      orderReference: "ItemNo12345",
+      orderReference: "xxx",
       amount: paymentPrice,
       currency: "LKR",
       customerData: data,
     });
 
     console.log(gatewayUrl, "url");
-
-    setTourDetails((prevDetails) => ({
-      ...prevDetails,
-      paymentType: selectedType,
-      payementAmount: paymentPrice,
-    }));
 
     setGatewayUrl(gatewayUrl);
   };

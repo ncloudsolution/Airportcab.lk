@@ -1,67 +1,46 @@
 import { auth } from "@/auth";
 import { NextResponse } from "next/server";
-import { BaseUrl } from "@/constants";
 
 export const POST = auth(async function POST(req) {
   const data = await req.json();
 
   const status_message = data.status_message;
-  const additional_data = data.additional_data;
   const transaction_id = data.transaction_id;
+
+  const additional_data = data.additional_data;
+  const decodedString = Buffer.from(additional_data, "base64").toString(
+    "utf-8"
+  );
+  const tourDetails = JSON.parse(decodedString);
+  const TourDetails = { ...tourDetails, transactionId: transaction_id };
 
   try {
     console.log(data, "callback data response");
 
-    const additionalDataArray = additional_data.split(",");
-    const paymentType = additionalDataArray[0];
-    const payementAmount = additionalDataArray[1];
-
-    console.log(additionalDataArray, "additional data");
-
     if (status_message == "FAILED") {
-      return NextResponse.json({ message: "Payment Filed" }, { status: 400 });
+      return NextResponse.redirect(new URL("/failed", req.url));
     }
 
-    if (status_message === "SUCCESS") {
-      const modifiedData = {
-        email: email,
-        mobile: mobile,
-        collections: {
-          productCode: productCode,
-          sellingPrice: sellingPrice,
-          date: new Date().toISOString(),
-          transactionType: "online",
-          transactionReference: transaction_id,
-          transactionVerification: true,
-        },
-      };
-
-      // Call the /api/sales endpoint with the new payload
-      const salesResponse = await fetch(`${BaseUrl}api/sales`, {
+    const formData = new FormData();
+    formData.append("to", process.env.NEXT_PUBLIC_MY_EMAIL.split(",")); // Set the recipient's email here
+    formData.append("clientmail", tourDetails.customerEmail); // Set the sender's email here
+    formData.append("allDataBundle", JSON.stringify(TourDetails));
+    try {
+      await fetch("/api/bookingEmail", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(modifiedData),
+        body: formData, // FormData will be sent as `multipart/form-data`
       });
-
-      console.log("check point 1");
-
-      if (!salesResponse.ok) {
-        return NextResponse.json(
-          { message: "Failed to send data to /api/sales" },
-          { status: 500 }
-        );
-      }
-
-      return NextResponse.json(
-        {
-          message: "Transaction verification updated successfully!",
-          extraMsg: "Asset send to the email",
-        },
-        { status: 200 }
-      );
+      return NextResponse.redirect(new URL("/success", req.url));
+    } catch (error) {
+      console.error("Error:", error);
+      return NextResponse.redirect(new URL("/failed", req.url));
     }
+
+    // if (status_message === "SUCCESS") {
+    //   //push mail
+
+    //   return NextResponse.redirect(new URL("/success", req.url));
+    // }
   } catch (error) {
     console.error("Error in callback:", error);
     return NextResponse.json(
