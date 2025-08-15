@@ -84,12 +84,19 @@ const UpperFooter = () => {
               </div>
 
               <div className="flex flex-col text-center">
-                <Link href="/" className="mb-2 hover:text-white">
+                <Link
+                  href="/terms-and-conditions"
+                  className="mb-2 hover:text-white"
+                >
                   Terms & Conditions
                 </Link>
                 <Link href="/privacy-policy" className="my-2 hover:text-white">
                   Privacy Policy
                 </Link>
+                <Link href="/refund-policy" className="my-2 hover:text-white">
+                  Refund Policy
+                </Link>
+
                 {/* <Link href="/" className="my-2 hover:text-black">
                   Shipping and Exchange
                 </Link> */}
