@@ -87,7 +87,7 @@ const UpperFooter = () => {
                 <Link href="/" className="mb-2 hover:text-white">
                   Terms & Conditions
                 </Link>
-                <Link href="/" className="my-2 hover:text-white">
+                <Link href="/privacy-policy" className="my-2 hover:text-white">
                   Privacy Policy
                 </Link>
                 {/* <Link href="/" className="my-2 hover:text-black">
