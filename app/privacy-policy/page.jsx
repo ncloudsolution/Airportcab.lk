@@ -22,7 +22,6 @@ const PrivacyPolicy = () => {
   const weUseArray = [
     "To process and fulfill your orders, including payments.",
     "To contact you regarding your order, offer support, and respond to your inquiries.",
-    "To personalize your shopping experience and suggest relevant products or promotions.",
     "To improve our website, services, and customer experience through analytics.",
     "To detect, prevent, and address fraud or unauthorized activities on our site.",
   ];
