@@ -7,14 +7,17 @@ import banneronepay from "../../../../public/payments/des-onepay.png";
 import logoonride from "../../../../public/payments/logo-onridepay.png";
 import PaymentDailogBox from "@/components/PaymentDialogBox";
 import { handleOnePayPayment } from "@/libs/onepayTrigger";
+import { useRouter } from "next/navigation";
 
 const Payment = () => {
+  const router = useRouter();
   const { tourDetails, setTourDetails } = useContext(TourContext);
   const advancedPayPercentage = 30;
   const [selectedType, setSelectedType] = useState("");
   const [paymentPrice, setPaymentPrice] = useState("0.00");
   const [submitError, setSubmitError] = useState("");
   const [gatewayUrl, setGatewayUrl] = useState("");
+  const [loader, setLoader] = useState(false);
   // https://payment.onepay.lk/redirect/F6F6119094F15E5944DA8/6Y7T119095575816C0CCA/F6F6119094F15E5944DA8
 
   const handleOnTypeChange = (type) => {
@@ -54,8 +57,10 @@ const Payment = () => {
   ];
 
   const handleSubmit = async (e) => {
+    setLoader(true);
     e.preventDefault();
     if (selectedType === "") {
+      setLoader(false);
       return setSubmitError("Choose a payment option to proceed");
     }
 
@@ -113,9 +118,29 @@ const Payment = () => {
       totalPriceInLkr: tourDetails.totalLKRPrice,
 
       paymentType: selectedType,
-      payementAmount: paymentPrice,
+      paymentAmount: paymentPrice,
     };
 
+    if (selectedType === "onride") {
+      const formData = new FormData();
+      formData.append("to", process.env.NEXT_PUBLIC_MY_EMAIL.split(",")); // Set the recipient's email here
+      formData.append("clientmail", tourDetails.customerEmail); // Set the sender's email here
+      formData.append("allDataBundle", JSON.stringify(TourDetails));
+      try {
+        await fetch("/api/bookingEmail", {
+          method: "POST",
+          body: formData, // FormData will be sent as `multipart/form-data`
+        });
+        setLoader(false);
+        return router.push("/success");
+      } catch (error) {
+        console.error("Error:", error);
+        setLoader(false);
+        return router.push("/failed");
+      }
+    }
+
+    //for card payments
     const tourDetailsString = JSON.stringify(TourDetails);
     const encodedData = Buffer.from(tourDetailsString).toString("base64");
 
@@ -129,15 +154,19 @@ const Payment = () => {
     };
 
     const { gatewayUrl } = await handleOnePayPayment({
-      orderReference: "xxx",
-      amount: paymentPrice,
-      currency: "LKR",
+      orderReference: "xxxxxxxxxxxxx",
+      amount:
+        tourDetails.currencyType === "LKR"
+          ? paymentPrice
+          : (paymentPrice / tourDetails.slRate).toFixed(2),
+      currency: tourDetails.currencyType === "LKR" ? "LKR" : "USD",
       customerData: data,
     });
 
     console.log(gatewayUrl, "url");
 
     setGatewayUrl(gatewayUrl);
+    setLoader(false);
   };
 
   return (
@@ -155,26 +184,47 @@ const Payment = () => {
         className="flex gap-10 flex-col items-center w-[320px] xs:w-[450px] xs:p-6 p-4 rounded-md h-fit border border-input shadow-md"
       >
         <div className="flex flex-col gap-1 w-full">
-          {tourDetails.currencyType !== "LKR" && (
+          {tourDetails.currencyType !== "LKR" ? (
             <div className="text-[18px] flex justify-between">
               Total Price in {tourDetails.currencyType}
               <span className="font-black text-slate-500">
                 {tourDetails.converedCurrencySymbol} {tourDetails.totalPrice}
               </span>
             </div>
+          ) : (
+            <div className="text-[18px] flex justify-between mb-1">
+              Total Price in LKR
+              <span className="font-black text-slate-500">
+                Rs. {tourDetails.totalLKRPrice}
+              </span>
+            </div>
           )}
 
-          <div className="text-[18px] flex justify-between">
-            Total Price in LKR
-            <span className="font-black text-slate-500">
-              Rs. {tourDetails.totalLKRPrice}
-            </span>
-          </div>
-
-          <div className="text-[18px] flex justify-between ">
-            Payment in LKR
-            <span className="font-black text-primary">Rs. {paymentPrice}</span>
-          </div>
+          {tourDetails.currencyType !== "LKR" ? (
+            <div className="text-[18px] flex justify-between mt-5">
+              Payment in {tourDetails.currencyType}
+              <span className="font-black text-primary">
+                {tourDetails.converedCurrencySymbol}.{" "}
+                {(paymentPrice * tourDetails.conversionRate).toFixed(2)}
+              </span>
+            </div>
+          ) : (
+            <div className="text-[18px] flex justify-between mt-5">
+              Payment in LKR
+              <span className="font-black text-primary">
+                Rs. {paymentPrice}
+              </span>
+            </div>
+          )}
+          {tourDetails.currencyType !== "LKR" &&
+            tourDetails.currencyType !== "USD" && (
+              <div className="text-[18px] flex justify-between ">
+                Payment in USD
+                <span className="font-black text-primary">
+                  $. {(paymentPrice / tourDetails.slRate).toFixed(2)}
+                </span>
+              </div>
+            )}
         </div>
 
         <div className="flex flex-col gap-2 w-full">
@@ -242,10 +292,11 @@ const Payment = () => {
         </div>
 
         <button
+          disabled={loader}
           type="submit"
           className="w-full py-2 text-center rounded-md bg-black text-white"
         >
-          Place Order
+          {loader ? "Processing..." : " Place Order"}
         </button>
       </form>
       {gatewayUrl !== "" && <PaymentDailogBox gatewayLink={gatewayUrl} />}

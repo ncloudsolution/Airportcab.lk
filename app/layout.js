@@ -1,16 +1,15 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import AbsoluteFooter from "@/components/AbsoluteFooter";
-import NavBar from "@/components/Navbar";
-
 import TourContextProvider from "../context/TourContextProvider";
-import UpperFooter from "@/components/UpperFooter";
 
 import Script from "next/script";
+
+import UpperFooter from "@/components/UpperFooter";
 import FoloatingActionBtn from "@/components/standalone/FoloatingActionBtn";
 import CallBtn from "@/components/standalone/CallBtn";
 import NewNavBar from "@/components/v2/NewNavBar";
+import AbsoluteFooter from "@/components/AbsoluteFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 

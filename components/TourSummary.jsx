@@ -379,10 +379,22 @@ const TourSummary = () => {
                         {tourDetails.duration}
                       </div>
                     </div>
+
+                    <div class="flex flex-wrap bg-yellow-400 px-4 py-2 rounded-md font-normal my-5">
+                      <span class="min-w-0">
+                        <span class="font-semibold mr-2 flex-shrink-0">
+                          LKR
+                        </span>
+                        is only available for customers in
+                        <span class="font-semibold ml-1">Sri Lanka</span>. If
+                        you &apos; re outside Sri Lanka, please pick another
+                        currency to ensure smooth payment processing.
+                      </span>
+                    </div>
                     <form onSubmit={newHandleSubmit}>
                       <input
                         type="submit"
-                        className="w-full py-2 bg-black text-white rounded-md mt-10"
+                        className="w-full py-2 bg-black text-white rounded-md"
                         value="Submit"
                       />
                     </form>

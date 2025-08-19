@@ -27,7 +27,7 @@ export const handleOnePayPayment = async ({
       app_id: appId,
       reference: orderReference,
       customer_first_name: customerData.customer_first_name,
-      customer_last_name: customerData.customer_last_name,
+      customer_last_name: customerData.customer_last_name || "xx",
       customer_phone_number: customerData.customer_phone_number,
       customer_email: customerData.customer_email,
       transaction_redirect_url: `${BaseUrl}`,
