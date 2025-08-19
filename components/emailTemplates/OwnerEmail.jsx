@@ -214,11 +214,23 @@ export const OwnerEmail = ({ tourDetails }) => {
 
                 {/**TOTAL SECTION**/}
                 <Section style={section}>
-                  {/* <Text style={paragraph}>
-                    <b>Total Price : </b>
-                    {tourDetails.converedCurrencySymbol} {""}
-                    {tourDetails.totalPrice}
-                  </Text> */}
+                  {tourDetails.currencyType !== "LKR" && (
+                    <Text style={paragraph}>
+                      <b>Total Price in {tourDetails.currencyType} : </b>
+                      <span>
+                        {tourDetails.converedCurrencySymbol} {""}
+                        {tourDetails.totalPrice}
+                      </span>
+                    </Text>
+                  )}
+                  <Text style={paragraph}>
+                    <b>Total Price in LKR : </b>
+                    <span>{`Rs. ${tourDetails.totalPriceInLkr}`}</span>{" "}
+                  </Text>
+                </Section>
+
+                {/**PAYMENT SECTION**/}
+                <Section style={section}>
                   <div
                     style={{
                       ...paragraph,
@@ -234,11 +246,28 @@ export const OwnerEmail = ({ tourDetails }) => {
                         borderRadius: "5px",
                       }}
                     >
-                      <b>Total Price in {tourDetails.currencyType} : </b>
-                      <span>
-                        {tourDetails.converedCurrencySymbol} {""}
-                        {tourDetails.totalPrice}
-                      </span>{" "}
+                      <b>Payment Type : </b>
+                      <span>{tourDetails.paymentType}</span>
+                    </span>
+                  </div>
+
+                  <div
+                    style={{
+                      ...paragraph,
+                      marginTop: 5,
+                      display: "flex",
+                      width: "fit-content",
+                    }}
+                  >
+                    <span
+                      style={{
+                        backgroundColor: "#eab308",
+                        padding: "10px",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      <b>Paid Amount in LKR : </b>
+                      <span>{`Rs.${tourDetails.paymentAmount}`}</span>
                     </span>
                   </div>
                   <div
@@ -256,8 +285,11 @@ export const OwnerEmail = ({ tourDetails }) => {
                         borderRadius: "5px",
                       }}
                     >
-                      <b>Total Price in LKR : </b>
-                      <span>{`Rs. ${tourDetails.totalPriceInLkr}`}</span>{" "}
+                      <b>Balance Amount in LKR : </b>
+                      <span>{`Rs. ${(
+                        Number(tourDetails.totalPriceInLkr) -
+                        Number(tourDetails.paymentAmount)
+                      ).toFixed(2)}`}</span>
                     </span>
                   </div>
                 </Section>

@@ -26,7 +26,7 @@ const TourSummary = () => {
 
   const [submitError, setSubmitError] = useState();
 
-  async function handleSubmit(e) {
+  async function newHandleSubmit(e) {
     e.preventDefault();
 
     window.scrollTo({
@@ -34,144 +34,7 @@ const TourSummary = () => {
       behavior: "smooth",
     });
     setIsLoading(true);
-
-    const highwayChargesText = `${
-      tourDetails.highwayExit
-        ? `Highway Charges : ${tourDetails.highwayExit} - ${
-            tourDetails.converedCurrencySymbol
-          }${(tourDetails.highwayCharge * tourDetails.conversionRate).toFixed(
-            2
-          )}`
-        : `Highway Charges :  ${tourDetails.converedCurrencySymbol}{" "}${(
-            tourDetails.highwayCharge * tourDetails.conversionRate
-          ).toFixed(2)}`
-    }`;
-
-    const flightDetails = `${
-      tourDetails.customerFlightNo != 0 &&
-      `-------------------------------------------------
-       Flight No : ${tourDetails.customerFlightNo}
-          }${(tourDetails.highwayCharge * tourDetails.conversionRate).toFixed(
-            2
-          )}`
-    }`;
-
-    const emailText = `New Customer Details:
-Name: ${tourDetails.customerName}
-Email: ${tourDetails.customerEmail}
-Mobile No: ${tourDetails.customerMobileNo}
-
-
-${flightDetails}
-
--------------------------------------------------
-selected Vehicle: ${tourDetails.vehicleType}
-No.of Passengers: ${tourDetails.noOfPassengers}
-Requested Luggage Count: ${tourDetails.customerLuggageCount}
-Vehical Price:  ${tourDetails.converedCurrencySymbol}${(
-      tourDetails.price * tourDetails.conversionRate
-    ).toFixed(2)}
-Boardshow: ${tourDetails.converedCurrencySymbol}${(
-      tourDetails.boardShow * tourDetails.conversionRate
-    ).toFixed(2)}
-${highwayChargesText}
-
-Total Price with selected currency:${tourDetails.converedCurrencySymbol}${
-      tourDetails.totalPrice
-    }
-Total Price in LKR: Rs.${tourDetails.totalLKRPrice}
--------------------------------------------------
-Origin: ${tourDetails.origin}
-Destination: ${tourDetails.destination}
-Start Date : ${tourDetails.startDate}
-Return: ${tourDetails.returnDate}
-Distance : ${tourDetails.distance}
-Duration: ${tourDetails.duration}`;
-
-    const TourDetails = {
-      tourType: tourDetails.tourType,
-      customerName: tourDetails.customerName,
-      customerEmail: tourDetails.customerEmail,
-      customerMobileNo: tourDetails.customerMobileNo,
-      customerWhatsappMobileNo: tourDetails.customerWhatsappMobileNo,
-      customerNicPassport: tourDetails.customerNicPassport,
-      customerFlightNo: tourDetails.customerFlightNo,
-      arrivalDate:
-        tourDetails.tourType === "airport"
-          ? tourDetails.arrivalDate.toDateString()
-          : null,
-      arrivalTime:
-        tourDetails.tourType === "airport"
-          ? tourDetails.arrivalDate.toTimeString()
-          : null,
-
-      cusDisplayName: tourDetails.cusDisplayName,
-      origin: tourDetails.origin,
-      destination: tourDetails.destination,
-      startDate: tourDetails.startDate.toDateString(),
-      startTime: tourDetails.startDate.toTimeString(),
-
-      returnDate:
-        tourDetails.returnDate instanceof Date
-          ? tourDetails.returnDate.toDateString()
-          : tourDetails.returnDate,
-      returnTime:
-        tourDetails.returnDate instanceof Date
-          ? tourDetails.returnDate.toTimeString()
-          : null,
-      distance: tourDetails.distance,
-      duration: tourDetails.duration,
-      vehicleType: tourDetails.vehicleType,
-      noOfPassengers: tourDetails.noOfPassengers,
-      customerLuggageCount: tourDetails.customerLuggageCount,
-      converedCurrencySymbol: tourDetails.converedCurrencySymbol,
-      currencyType: tourDetails.currencyType,
-      convertedPrice: tourDetails.convertedPrice,
-      conversionRate: tourDetails.conversionRate,
-
-      boardShow: tourDetails.boardShow,
-      highwayExit: tourDetails.highwayExit,
-      highwayCharge: tourDetails.highwayCharge,
-      totalPrice: tourDetails.totalPrice,
-      totalPriceInLkr: tourDetails.totalLKRPrice,
-    };
-
-    // Start loading
-    setResponseMessage("");
-
-    const formData = new FormData();
-    //formData.append("file", file);
-    formData.append("to", process.env.NEXT_PUBLIC_MY_EMAIL.split(",")); // Set the recipient's email here
-    //formData.append("subject", "Sending you a file!");
-    formData.append("text", emailText);
-    formData.append("clientmail", tourDetails.customerEmail); // Set the sender's email here
-    formData.append("allDataBundle", JSON.stringify(TourDetails));
-    try {
-      const response = await fetch("/api/bookingEmail", {
-        method: "POST",
-        body: formData, // FormData will be sent as `multipart/form-data`
-      });
-      const result = await response.json();
-
-      //alert(result.message);
-      setIsLoading(false); // Stop loading
-      setResponseMessage(result.message); // Set the message from the server
-
-      // setTimeout(() => {
-      //   router.push("/"); // Redirect to the homepage after 2 seconds
-      // }, 2000);
-    } catch (error) {
-      console.error("Error:", error);
-      // alert("Failed to send the file.");
-      setIsLoading(false); // Stop loading
-      setResponseMessage("Failed to make the order. Please try again.");
-
-      // setTimeout(() => {
-      //   router.push("/"); // Redirect to the homepage after 2 seconds
-      // }, 2000);
-    }
-
-    setSubmitError("");
+    router.push("/tour-booking/summary/payment");
   }
 
   useEffect(() => {
@@ -516,7 +379,7 @@ Duration: ${tourDetails.duration}`;
                         {tourDetails.duration}
                       </div>
                     </div>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={newHandleSubmit}>
                       <input
                         type="submit"
                         className="w-full py-2 bg-black text-white rounded-md mt-10"
